@@ -1,0 +1,579 @@
+2017/04/18 21:20:00 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/screen.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/screen.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/screen.css
+HTTP_REFERER=http://localhost:8888/myNotes/
+---
+2017/04/18 21:20:00 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/form.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/form.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/form.css
+HTTP_REFERER=http://localhost:8888/myNotes/
+---
+2017/04/18 21:20:00 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/main.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/main.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/main.css
+HTTP_REFERER=http://localhost:8888/myNotes/
+---
+2017/04/18 21:20:00 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/print.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/print.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/print.css
+HTTP_REFERER=http://localhost:8888/myNotes/
+---
+2017/04/18 21:20:28 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "view". in /Users/admin/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/admin/yii/framework/web/CController.php(270): CController->missingAction('view')
+#1 /Users/admin/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#2 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/view/about')
+#3 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/myNotes/index.php/site/view/about
+HTTP_REFERER=http://localhost:8888/myNotes/
+---
+2017/04/18 21:21:00 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "view". in /Users/admin/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/admin/yii/framework/web/CController.php(270): CController->missingAction('view')
+#1 /Users/admin/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#2 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/view/about')
+#3 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/myNotes/index.php/site/view/about
+HTTP_REFERER=http://localhost:8888/myNotes/
+---
+2017/04/18 21:21:04 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/screen.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/screen.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/screen.css
+HTTP_REFERER=http://localhost:8888/myNotes/
+---
+2017/04/18 21:21:04 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/main.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/main.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/main.css
+HTTP_REFERER=http://localhost:8888/myNotes/
+---
+2017/04/18 21:21:04 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/form.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/form.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/form.css
+HTTP_REFERER=http://localhost:8888/myNotes/
+---
+2017/04/18 21:21:04 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/print.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/print.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/print.css
+HTTP_REFERER=http://localhost:8888/myNotes/
+---
+2017/04/18 21:21:06 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/main.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/main.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/main.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:21:06 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/screen.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/screen.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/screen.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:21:06 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/form.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/form.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/form.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:21:06 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/print.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/print.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/print.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:21:08 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/main.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/main.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/main.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:21:08 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/screen.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/screen.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/screen.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:21:08 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/form.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/form.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/form.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:21:08 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/print.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/print.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/print.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:21:09 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/main.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/main.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/main.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:21:09 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/screen.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/screen.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/screen.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:21:09 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/form.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/form.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/form.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:21:09 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/print.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/print.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/print.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:21:18 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/screen.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/screen.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/screen.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:21:18 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/main.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/main.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/main.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:21:18 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/form.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/form.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/form.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:21:18 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/print.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/print.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/print.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:21:20 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "about". in /Users/admin/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/admin/yii/framework/web/CController.php(270): CController->missingAction('about')
+#1 /Users/admin/yii/framework/web/CWebApplication.php(282): CController->run('about')
+#2 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/about')
+#3 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/myNotes/index.php/site/about
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:21:24 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/main.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/main.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/main.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:21:24 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/form.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/form.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/form.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:21:24 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/print.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/print.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/print.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:22:02 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/main.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/main.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/main.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:22:02 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/screen.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/screen.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/screen.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:22:02 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/form.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/form.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/form.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:22:02 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/print.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/print.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/print.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site
+---
+2017/04/18 21:22:04 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/form.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/form.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/form.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site/about
+---
+2017/04/18 21:22:04 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/main.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/main.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/main.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site/about
+---
+2017/04/18 21:22:04 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/screen.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/screen.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/screen.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site/about
+---
+2017/04/18 21:22:04 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/print.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/print.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/print.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site/about
+---
+2017/04/18 21:22:52 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/form.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/form.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/form.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site/about
+---
+2017/04/18 21:22:52 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/screen.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/screen.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/screen.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site/about
+---
+2017/04/18 21:22:52 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/main.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/main.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/main.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site/about
+---
+2017/04/18 21:22:52 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/print.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/print.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/print.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site/about
+---
+2017/04/18 21:27:46 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/screen.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/screen.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/screen.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site/about
+---
+2017/04/18 21:27:46 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/main.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/main.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/main.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site/about
+---
+2017/04/18 21:27:46 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/form.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/form.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/form.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site/about
+---
+2017/04/18 21:27:46 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/print.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/print.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/print.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/site/about
+---
+2017/04/18 21:28:25 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/form.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/form.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/form.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php
+---
+2017/04/18 21:28:25 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/main.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/main.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/main.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php
+---
+2017/04/18 21:28:25 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/screen.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/screen.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/screen.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php
+---
+2017/04/18 21:28:25 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/print.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/print.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/print.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php
+---
+2017/04/18 21:29:11 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/main.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/main.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/main.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php
+---
+2017/04/18 21:29:11 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/print.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/print.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/print.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php
+---
+2017/04/18 21:29:11 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/form.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/form.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/form.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php
+---
+2017/04/18 21:29:11 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/screen.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/screen.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/screen.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php
+---
+2017/04/18 21:30:10 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/main.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/main.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/main.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php
+---
+2017/04/18 21:31:43 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/main.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/main.css')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/main.css
+HTTP_REFERER=http://localhost:8888/myNotes/index.php
+---
+2017/04/18 22:03:47 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "about". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('about')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/about
+---
+2017/04/18 22:05:10 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "about". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('about')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/about
+HTTP_REFERER=http://localhost:8888/myNotes/index.php
+---
+2017/04/18 22:06:32 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "about". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('about')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/about
+---
+2017/04/18 22:07:04 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "about". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('about')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/about
+---
+2017/04/18 23:06:37 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "jquery". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('jquery')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/jquery
+HTTP_REFERER=http://localhost:8888/myNotes/contact
+---
+2017/04/18 23:06:37 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "jquery". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('jquery')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/jquery
+HTTP_REFERER=http://localhost:8888/myNotes/contact
+---
+2017/04/18 23:14:48 [error] [php] Array to string conversion (/Users/admin/yii/framework/web/widgets/CActiveForm.php:562)
+Stack trace:
+#0 /Users/admin/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#1 /Users/admin/yii/framework/web/CController.php(869): SiteController->renderFile()
+#2 /Users/admin/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#3 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/SiteController.php(81): SiteController->render()
+#4 /Users/admin/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionContact()
+#5 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /Users/admin/yii/framework/web/CController.php(286): SiteController->runAction()
+#7 /Users/admin/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#8 /Users/admin/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#9 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /Users/admin/Documents/WebRoot/myNotes/index.php(13): CWebApplication->run()
+REQUEST_URI=/myNotes/contact
+in /Users/admin/Documents/WebRoot/myNotes/protected/views/site/contact.php (40)
+in /Users/admin/Documents/WebRoot/myNotes/protected/controllers/SiteController.php (81)
+in /Users/admin/Documents/WebRoot/myNotes/index.php (13)

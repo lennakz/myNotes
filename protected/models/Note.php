@@ -1,27 +1,25 @@
 <?php
 
 /**
- * This is the model class for table "list".
+ * This is the model class for table "Note".
  *
- * The followings are the available columns in table 'list':
+ * The followings are the available columns in table 'Note':
  * @property integer $id
  * @property string $title
  * @property string $description
  * @property integer $item_id
- * @property integer $user_id
  * @property integer $completed
- * @property integer $due_date
  * @property integer $created
  * @property integer $updated
  */
-class Lists extends CActiveRecord
+class Note extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'list';
+		return 'Note';
 	}
 
 	/**
@@ -32,11 +30,11 @@ class Lists extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('item_id, user_id, completed, due_date, created, updated', 'numerical', 'integerOnly'=>true),
+			array('item_id, completed, created, updated', 'numerical', 'integerOnly'=>true),
 			array('title, description', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, title, description, item_id, user_id, completed, due_date, created, updated', 'safe', 'on'=>'search'),
+			array('id, title, description, item_id, completed, created, updated', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -48,18 +46,7 @@ class Lists extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'Item' => array(self::BELONGS_TO, 'Item', 'item_id'),
 		);
-	}
-
-	public function beforeSave()
-	{
-		if ($this->isNewRecord)
-			$this->created = time();
-		
-		$this->updated = time();
-		
-		return parent::beforeSave();
 	}
 
 	/**
@@ -72,9 +59,7 @@ class Lists extends CActiveRecord
 			'title' => 'Title',
 			'description' => 'Description',
 			'item_id' => 'Item',
-			'user_id' => 'User',
 			'completed' => 'Completed',
-			'due_date' => 'Due Date',
 			'created' => 'Created',
 			'updated' => 'Updated',
 		);
@@ -102,9 +87,7 @@ class Lists extends CActiveRecord
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('description',$this->description,true);
 		$criteria->compare('item_id',$this->item_id);
-		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('completed',$this->completed);
-		$criteria->compare('due_date',$this->due_date);
 		$criteria->compare('created',$this->created);
 		$criteria->compare('updated',$this->updated);
 
@@ -117,7 +100,7 @@ class Lists extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Lists the static model class
+	 * @return Note the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

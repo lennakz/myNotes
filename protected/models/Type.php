@@ -1,24 +1,23 @@
 <?php
 
 /**
- * This is the model class for table "item".
+ * This is the model class for table "Type".
  *
- * The followings are the available columns in table 'item':
+ * The followings are the available columns in table 'Type':
  * @property integer $id
  * @property string $name
- * @property string $type
- * @property integer $completed
+ * @property string $measurement
  * @property integer $created
  * @property integer $updated
  */
-class Item extends CActiveRecord
+class Type extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'item';
+		return 'Type';
 	}
 
 	/**
@@ -29,11 +28,11 @@ class Item extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('completed, created, updated', 'numerical', 'integerOnly'=>true),
-			array('name, type', 'safe'),
+			array('created, updated', 'numerical', 'integerOnly'=>true),
+			array('name, measurement', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, type, completed, created, updated', 'safe', 'on'=>'search'),
+			array('id, name, measurement, created, updated', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -45,7 +44,6 @@ class Item extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'List' => array(self::HAS_MANY, 'Lists', 'item_id'),
 		);
 	}
 
@@ -57,8 +55,7 @@ class Item extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'name' => 'Name',
-			'type' => 'Type',
-			'completed' => 'Completed',
+			'measurement' => 'Measurement',
 			'created' => 'Created',
 			'updated' => 'Updated',
 		);
@@ -84,8 +81,7 @@ class Item extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
-		$criteria->compare('type',$this->type,true);
-		$criteria->compare('completed',$this->completed);
+		$criteria->compare('measurement',$this->measurement,true);
 		$criteria->compare('created',$this->created);
 		$criteria->compare('updated',$this->updated);
 
@@ -98,7 +94,7 @@ class Item extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Item the static model class
+	 * @return Type the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

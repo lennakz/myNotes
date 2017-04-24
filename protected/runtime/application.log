@@ -577,3 +577,39 @@ REQUEST_URI=/myNotes/contact
 in /Users/admin/Documents/WebRoot/myNotes/protected/views/site/contact.php (40)
 in /Users/admin/Documents/WebRoot/myNotes/protected/controllers/SiteController.php (81)
 in /Users/admin/Documents/WebRoot/myNotes/index.php (13)
+2017/04/20 23:23:45 [error] [system.db.CDbCommand] Error in preparing SQL: DROP TABLE 'list'
+2017/04/20 23:23:45 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: list. The SQL statement executed was: DROP TABLE 'list'.
+2017/04/20 23:23:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: list. The SQL statement executed was: DROP TABLE 'list'' in /Users/admin/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/admin/yii/framework/db/CDbCommand.php(1375): CDbCommand->execute()
+#1 /Users/admin/yii/framework/db/CDbMigration.php(275): CDbCommand->dropTable('list')
+#2 /Users/admin/Documents/WebRoot/myNotes/protected/migrations/m170418_191257_list.php(38): CDbMigration->dropTable('list')
+#3 /Users/admin/yii/framework/cli/commands/MigrateCommand.php(440): m170418_191257_list->down()
+#4 /Users/admin/yii/framework/cli/commands/MigrateCommand.php(145): MigrateCommand->migrateDown('m170418_191257_...')
+#5 [internal function]: MigrateCommand->actionDown(Array)
+#6 /Users/admin/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Users/admin/yii/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /Users/admin/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Users/admin/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#10 /Users/admin/yii/framework/yiic.php(33): CApplication->run()
+#11 /Users/admin/Documents/WebRoot/myNotes/protected/yiic.php(7): require_once('/Users/admin/yi...')
+#12 {main}
+---
+2017/04/20 23:24:43 [error] [system.db.CDbCommand] Error in preparing SQL: DROP TABLE 'list'
+2017/04/20 23:24:43 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: list. The SQL statement executed was: DROP TABLE 'list'.
+2017/04/20 23:24:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: list. The SQL statement executed was: DROP TABLE 'list'' in /Users/admin/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/admin/yii/framework/db/CDbCommand.php(1375): CDbCommand->execute()
+#1 /Users/admin/yii/framework/db/CDbMigration.php(275): CDbCommand->dropTable('list')
+#2 /Users/admin/Documents/WebRoot/myNotes/protected/migrations/m170418_191257_list.php(38): CDbMigration->dropTable('list')
+#3 /Users/admin/yii/framework/cli/commands/MigrateCommand.php(440): m170418_191257_list->down()
+#4 /Users/admin/yii/framework/cli/commands/MigrateCommand.php(145): MigrateCommand->migrateDown('m170418_191257_...')
+#5 [internal function]: MigrateCommand->actionDown(Array)
+#6 /Users/admin/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Users/admin/yii/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /Users/admin/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Users/admin/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#10 /Users/admin/yii/framework/yiic.php(33): CApplication->run()
+#11 /Users/admin/Documents/WebRoot/myNotes/protected/yiic.php(7): require_once('/Users/admin/yi...')
+#12 {main}
+---

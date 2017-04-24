@@ -2,7 +2,7 @@
 
 class SiteController extends Controller
 {
-	public $layout = 'main';
+	public $layout='//layouts/main';
 	
 	/**
 	 * Declares class-based actions.
@@ -110,9 +110,5 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
-	
-	public function actionItem()
-	{
-		$this->render('item');
-	}
+
 }

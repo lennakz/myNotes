@@ -8,15 +8,15 @@ class m170420_232747_note extends CDbMigration
 			'id' => 'INTEGER PRIMARY KEY',
 			'title' => 'TEXT',
 			'description' => 'TEXT',
-			'item_id' => 'INTEGER', // Foreign key -> item.id
 			'completed' => 'INTEGER',
 			'created' => 'INTEGER',
 			'updated' => 'INTEGER',
 		));
 
 		$this->createTable('item', array(
-			'id' => 'INTEGER PRIMARY KEY', // Primary key
+			'id' => 'INTEGER PRIMARY KEY',
 			'name' => 'TEXT',
+			'note_id' => 'INTEGER', // Foreign key -> note.id
 			'type_id' => 'TEXT', // Foreign key -> type.id
 			'quantity' => 'INTEGER',
 			'completed' => 'INTEGER',
@@ -25,7 +25,7 @@ class m170420_232747_note extends CDbMigration
 		));
 
 		$this->createTable('type', array(
-			'id' => 'INTEGER PRIMARY KEY', // Primary key
+			'id' => 'INTEGER PRIMARY KEY',
 			'name' => 'TEXT',
 			'measurement' => 'TEXT',
 			'created' => 'INTEGER',

@@ -31,7 +31,7 @@
 			<ul class="nav navbar-nav">
 				<li><a href="<?php echo Yii::app()->request->baseUrl ?>/about">About</a></li>
 				<li><a href="<?php echo Yii::app()->request->baseUrl ?>/contact">Contact Us</a></li> 
-				<li><a href="#">Page 3</a></li> 
+				<li><a href="<?php echo Yii::app()->request->baseUrl ?>/note/index">Notes</a></li> 
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>

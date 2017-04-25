@@ -23,7 +23,12 @@ $this->breadcrumbs=array(
 		
 		<div id="myDIV" class="header">
 			<h2>My To Do List</h2>
-			<form class="ajax-form" data-target="#ajax-container" action="<?php echo Yii::app()->request->baseUrl ?>/item/create" method="post">
+			<div id="form-error"></div>
+			<form class="ajax-form" 
+				  data-error-target="#form-error" 
+				  data-target="#ajax-container" 
+				  action="<?php echo Yii::app()->request->baseUrl ?>/item/ajaxCreate" 
+				  method="post" >
 				<input type="text" class="form-control" name="Item[name]" placeholder="Enter your item...">
 				<input type="text" class="form-control" name="Item[type_id]" placeholder="Enter your type...">
 				<input type="hidden" name="Item[note_id]" value="<?php echo $note->id ?>">
@@ -34,7 +39,7 @@ $this->breadcrumbs=array(
 		</div>
 
 		<div id="ajax-container">
-			<?php $note->renderItemsList(); ?>
+			<?php echo $note->renderItemsList(); ?>
 		</div>
 	</div>
 

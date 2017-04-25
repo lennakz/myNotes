@@ -9,6 +9,9 @@
 
 <ul id="myUL">
 	<?php foreach ($items as $m): ?>
-		<li><?php echo $m->name ?></li>
+		<li><?php echo $m->name ?> - <?php echo $m->type_id ?>
+			<a data-target="#ajax-container" href="<?php echo Yii::app()->request->baseUrl ?>/item/delete/<?php echo $m->id ?>?ajax" class="btn button-delete btn-danger pull-right">Delete</a>
+		</li>
+		
 	<?php endforeach; ?>
 </ul>

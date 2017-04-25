@@ -24,16 +24,16 @@ class ItemController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow', // allow all users to perform 'index' and 'view' actions
-				'actions' => array('index', 'view'),
+			array('allow', // allow all users
+				'actions' => array('index', 'view', 'ajaxCreate', 'create', 'update', 'delete'),
 				'users' => array('*'),
 			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions' => array('create', 'update'),
+			array('allow', // allow authenticated user
+				'actions' => array(),
 				'users' => array('@'),
 			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions' => array('admin', 'delete'),
+			array('allow', // allow admin user
+				'actions' => array('admin'),
 				'users' => array('admin'),
 			),
 			array('deny', // deny all users
@@ -52,7 +52,29 @@ class ItemController extends Controller
 			'model' => $this->loadModel($id),
 		));
 	}
+	
+	public function actionAjaxCreate()
+	{
+		$model = new Item;
+		
+		if (!isset($_POST['Item']))
+			throw new CHttpException('No Item data received', 400);
+		
+		$model->attributes = $_POST['Item'];
 
+		if ($model->save())
+		{
+			$json = ['status' => 'ok', 'html' => $model->Note->renderItemsList()];
+		}
+		else 
+		{
+			$json = ['status' => 'error', 'errors' => $model->errors];
+		}
+		
+		echo json_encode($json);
+		exit;
+	}
+	
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
@@ -64,17 +86,14 @@ class ItemController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if (isset($_POST['Item']))
+		if (isset($_POST['Item']))			
 		{
 			$model->attributes = $_POST['Item'];
 			
 			if ($model->save())
 			{
-				echo $model->Note->renderItemsList();
-				exit;
+				$this->redirect(array('view','id'=>$model->id));
 			}
-				//$this->redirect(array('note/items', 'id' => $model->note_id));
-				
 		}
 
 		$this->render('create', array(
@@ -113,11 +132,14 @@ class ItemController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+		$model = $this->loadModel($id);
+		$model->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if (!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+		
+		echo $model->Note->renderItemsList();
 	}
 
 	/**

@@ -151,6 +151,6 @@ class Note extends CActiveRecord
 	public function renderItemsList()
 	{
 		$c = Yii::app()->controller;
-		$c->renderPartial('/note/_items', ['items' => $this->Items]);
+		return $c->renderPartial('/note/_items', ['items' => $this->Items], true);
 	}
 }

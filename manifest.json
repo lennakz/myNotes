@@ -1,7 +1,7 @@
 {
   "name": "myNote by myKola",
   "short_name": "myNote",
-  "theme_color": "#0cbb2d",
+  "theme_color": "#010101",
   "background_color": "#8e8e8e",
   "display": "standalone",
   "orientation": "portrait",

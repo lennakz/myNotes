@@ -68,7 +68,7 @@ return array(
 
 		// database settings are configured in database.php
 		'db'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/data.sqlite',
+			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/data.db',
 		),
 
 		'errorHandler'=>array(

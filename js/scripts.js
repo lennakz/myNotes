@@ -38,7 +38,6 @@ $(function() {
 				url: $link.attr('href'),
 				method: 'POST',
 			}).done(function(response) {
-				console.log(response);
 				var target = $link.data('target');
 				$(target).html(response);
 				

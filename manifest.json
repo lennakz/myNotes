@@ -3,10 +3,8 @@
   "short_name": "myNote",
   "theme_color": "#0cbb2d",
   "background_color": "#8e8e8e",
-  "display": "browser",
+  "display": "standalone",
   "orientation": "portrait",
-  "Scope": "/",
-  "start_url": "/",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
@@ -48,6 +46,6 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "splash_pages": null
+  ]
+
 }

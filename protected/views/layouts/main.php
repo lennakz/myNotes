@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 	
 	<?php Yii::app()->clientScript
@@ -12,6 +14,7 @@
 		->registerScriptFile(Yii::app()->request->baseUrl.'/js/scripts.js')
 		->registerScriptFile('//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js');
 	?>
+	
 	<link rel="manifest" href="<?php echo Yii::app()->request->baseUrl ?>/manifest.json">
 
 </head>

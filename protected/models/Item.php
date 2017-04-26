@@ -13,7 +13,8 @@
  * @property integer $created
  * @property integer $updated
  * 
- * @property Note $Note Relation
+ * @property Note $Note Relation to note
+ * @property Type $Type Relation to types
  */
 class Item extends CActiveRecord
 {
@@ -50,7 +51,8 @@ class Item extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'Note' => array(self::BELONGS_TO, 'Note', 'note_id')
+			'Note' => array(self::BELONGS_TO, 'Note', 'note_id'),
+			'Type' => array(self::BELONGS_TO, 'Type', 'type_id')
 		);
 	}
 
@@ -118,10 +120,13 @@ class Item extends CActiveRecord
 	public function beforeSave()
 	{
 		if ($this->isNewRecord)
+		{
 			$this->created = time();
-
+			$this->completed = 0;
+		}
+			
 		$this->updated = time();
-
+		
 		return parent::beforeSave();
 	}
 }

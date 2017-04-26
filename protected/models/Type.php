@@ -100,4 +100,16 @@ class Type extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	
+	public function beforeSave()
+	{
+		if ($this->isNewRecord)
+		{
+			$this->created = time();
+		}
+			
+		$this->updated = time();
+
+		return parent::beforeSave();
+	}
 }

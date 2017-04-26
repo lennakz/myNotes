@@ -96,6 +96,8 @@ class ItemController extends Controller
 			}
 		}
 
+		//dump($model->Type);exit;
+		
 		$this->render('create', array(
 			'model' => $model,
 		));

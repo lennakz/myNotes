@@ -19,7 +19,7 @@ $this->breadcrumbs=array(
 				<p><i><?php echo date('d/m/Y', $m->updated) ?> </i></p>
 				<hr>
 				<p><?php echo $m->description ?></p>
-				<p><?php echo $m->numberOfItems . ' (' . $m->percentComplete . '%)' ?></p>
+				<p><?php echo $m->numberOfCompletedItems . ' / ' . $m->numberOfItems ?></p>
 			</div>
 		</a>
     </div>

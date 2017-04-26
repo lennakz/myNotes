@@ -119,23 +119,15 @@ class Note extends CActiveRecord
 		 return Item::model()->countByAttributes(array('note_id' => $this->id, 'completed' => 1));
 	}
 
-	// Get % of completed (bought) items
-	public function getPercentComplete()
-	{
-		$numberOfItems = $this->getNumberOfItems();
-		$numberOfCompletedItems = $this->getNumberOfCompletedItems();
-
-		if ($numberOfItems == 0)
-			return 100;
-		return ($numberOfCompletedItems / $numberOfItems) * 100;
-	}
-
 	// Update date
 	public function beforeSave()
 	{
 		if ($this->isNewRecord)
+		{
 			$this->created = time();
-
+			$this->completed = 0;
+		}
+			
 		$this->updated = time();
 
 		return parent::beforeSave();

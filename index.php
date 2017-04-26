@@ -1,9 +1,11 @@
 <?php
 
 // change the following paths if necessary
-$yii='/Users/admin/yii/framework/yii.php'; // Local
+$yii='/frameworks/yii1/framework/yii.php'; // Web
+ 
 if (!file_exists($yii))
-	$yii='/frameworks/yii1/framework/yii.php'; // Web
+	$yii='/Users/admin/yii/framework/yii.php'; // Local
+	 
 $config=dirname(__FILE__).'/protected/config/main.php';
 
 // remove the following lines when in production mode

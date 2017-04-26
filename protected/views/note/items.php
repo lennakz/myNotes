@@ -22,10 +22,10 @@ $this->breadcrumbs=array(
 				  action="<?php echo Yii::app()->request->baseUrl ?>/item/ajaxCreate" 
 				  method="post" >
 				<input class="input-visible" type="text" name="Item[name]" placeholder="Enter your item..." autofocus="autofocus">
+				<?php //echo CHtml::dropDownList('Item[type_id]', $select, $note->Type); ?>
 				
 <!--			<input type="text" class="form-control" name="Item[type_id]" placeholder="Enter your type...">-->
 				<input type="hidden" name="Item[note_id]" value="<?php echo $note->id ?>">
-				<input type="hidden" name="Item[completed]" value="<?php echo $note->completed = 0 ?>">
 				<button type="submit" class="addBtn">Add</button>
 			</form>
 		</div>

@@ -3,7 +3,7 @@
 class NoteController extends Controller
 {
 	
-	public $layout='//layouts/main';
+	public $layout='//layouts/bootstrap';
 
 	/**
 	 * @return array action filters
@@ -125,6 +125,8 @@ class NoteController extends Controller
 
 	public function actionItems($id = NULL)
 	{
+		$this->layout = '//layouts/items';
+		
 		if ($id == NULL)
 			throw new CHttpException(400, 'Missing ID');
 

@@ -6,9 +6,9 @@
 
 $(function() {
 
+	// Adding new items to the list throught ajax
 	$('.ajax-form').submit(function() {
 		var $form = $(this);
-		
 		$.ajax({
 			url: $form.attr('action'),
 			method: $form.attr('method'),
@@ -22,29 +22,36 @@ $(function() {
 			else {
 				var target = $form.data('target');
 				$(target).html(response.html);
+				$('.ajax-form .input-visible').val('');
 			}
-					
 		}).fail(function( jqXHR, textStatus, errorThrown ) {
 			console.log(textStatus);
 		});
-
+		
 		return false;
 	});
 	
+	// Delete items when clicked delete-button throught ajax
 	$('body').on('click', '.button-delete', function() {
-		if (confirm("Are you sure?") == true) {
-			var $link = $(this);	
-			$.ajax({
-				url: $link.attr('href'),
-				method: 'POST',
-			}).done(function(response) {
-				var target = $link.data('target');
-				$(target).html(response);
-				
-			});
-			
-		}
+		var $link = $(this);	
+		$.ajax({
+			url: $link.attr('href'),
+			method: 'POST'
+		}).done(function(response) {
+			var target = $link.data('target');
+			$(target).html(response);
+		});
 		return false;
-	})
+	});
+	
+	// Add a "checked" symbol when clicking on a list item
+	$('body').on('click', '#item', function() {
+		if ($(this).attr('class') == 'checked') {
+			$(this).removeClass('checked');
+		}
+		else {
+			$(this).addClass('checked');
+		}
+	});
 	
 });

@@ -3,7 +3,7 @@
 class ItemController extends Controller
 {
 
-	public $layout = '//layouts/main';
+	public $layout = '//layouts/bootstrap';
 
 	/**
 	 * @return array action filters

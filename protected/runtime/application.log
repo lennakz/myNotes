@@ -1468,3 +1468,232 @@ Stack trace:
 REQUEST_URI=/myNotes/item/delete/8?ajax
 HTTP_REFERER=http://localhost:8888/myNotes/index.php/note/items/1
 ---
+2017/04/26 19:49:49 [error] [exception.CDbException] CDbException: The table "Item" for active record class "Item" cannot be found in the database. in /Users/admin/Documents/WebRoot/myNotes/framework/db/ar/CActiveRecord.php:2387
+Stack trace:
+#0 /Users/admin/Documents/WebRoot/myNotes/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Item))
+#1 /Users/admin/Documents/WebRoot/myNotes/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php(58): CActiveRecord->__construct()
+#3 /Users/admin/Documents/WebRoot/myNotes/framework/web/actions/CInlineAction.php(49): ItemController->actionAjaxCreate()
+#4 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(282): CController->run('ajaxCreate')
+#13 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(141): CWebApplication->runController('item/ajaxCreate')
+#14 /Users/admin/Documents/WebRoot/myNotes/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Users/admin/Documents/WebRoot/myNotes/index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/myNotes/item/ajaxCreate
+HTTP_REFERER=http://localhost:8888/myNotes/note/items/1
+---
+2017/04/26 19:49:52 [error] [exception.CDbException] CDbException: The table "Note" for active record class "Note" cannot be found in the database. in /Users/admin/Documents/WebRoot/myNotes/framework/db/ar/CActiveRecord.php:2387
+Stack trace:
+#0 /Users/admin/Documents/WebRoot/myNotes/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Note))
+#1 /Users/admin/Documents/WebRoot/myNotes/framework/db/ar/CActiveRecord.php(661): CActiveRecord->getMetaData()
+#2 /Users/admin/Documents/WebRoot/myNotes/framework/db/ar/CActiveRecord.php(1490): CActiveRecord->getTableSchema()
+#3 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/NoteController.php(162): CActiveRecord->findByPk('1')
+#4 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/NoteController.php(131): NoteController->loadModel('1')
+#5 [internal function]: NoteController->actionItems('1')
+#6 /Users/admin/Documents/WebRoot/myNotes/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(NoteController), Array)
+#7 /Users/admin/Documents/WebRoot/myNotes/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(NoteController), Object(ReflectionMethod), Array)
+#8 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(291): CFilterChain->run()
+#15 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(282): CController->run('items')
+#17 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(141): CWebApplication->runController('note/items')
+#18 /Users/admin/Documents/WebRoot/myNotes/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#19 /Users/admin/Documents/WebRoot/myNotes/index.php(14): CApplication->run()
+#20 {main}
+REQUEST_URI=/myNotes/note/items/1
+HTTP_REFERER=http://localhost:8888/myNotes/note/index
+---
+2017/04/26 19:49:58 [error] [exception.CDbException] CDbException: The table "Note" for active record class "Note" cannot be found in the database. in /Users/admin/Documents/WebRoot/myNotes/framework/db/ar/CActiveRecord.php:2387
+Stack trace:
+#0 /Users/admin/Documents/WebRoot/myNotes/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Note))
+#1 /Users/admin/Documents/WebRoot/myNotes/framework/db/ar/CActiveRecord.php(661): CActiveRecord->getMetaData()
+#2 /Users/admin/Documents/WebRoot/myNotes/framework/db/ar/CActiveRecord.php(1355): CActiveRecord->getTableSchema()
+#3 /Users/admin/Documents/WebRoot/myNotes/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/NoteController.php(122): CActiveRecord->findAll(Array)
+#5 /Users/admin/Documents/WebRoot/myNotes/framework/web/actions/CInlineAction.php(49): NoteController->actionIndex()
+#6 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(291): CFilterChain->run()
+#13 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(282): CController->run('index')
+#15 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(141): CWebApplication->runController('note/index')
+#16 /Users/admin/Documents/WebRoot/myNotes/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /Users/admin/Documents/WebRoot/myNotes/index.php(14): CApplication->run()
+#18 {main}
+REQUEST_URI=/myNotes/note/index
+HTTP_REFERER=http://localhost:8888/myNotes/note/items/1
+---
+2017/04/26 19:50:01 [error] [exception.CDbException] CDbException: The table "Note" for active record class "Note" cannot be found in the database. in /Users/admin/Documents/WebRoot/myNotes/framework/db/ar/CActiveRecord.php:2387
+Stack trace:
+#0 /Users/admin/Documents/WebRoot/myNotes/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Note))
+#1 /Users/admin/Documents/WebRoot/myNotes/framework/db/ar/CActiveRecord.php(661): CActiveRecord->getMetaData()
+#2 /Users/admin/Documents/WebRoot/myNotes/framework/db/ar/CActiveRecord.php(1355): CActiveRecord->getTableSchema()
+#3 /Users/admin/Documents/WebRoot/myNotes/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#4 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/NoteController.php(122): CActiveRecord->findAll(Array)
+#5 /Users/admin/Documents/WebRoot/myNotes/framework/web/actions/CInlineAction.php(49): NoteController->actionIndex()
+#6 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(291): CFilterChain->run()
+#13 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(282): CController->run('index')
+#15 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(141): CWebApplication->runController('note/index')
+#16 /Users/admin/Documents/WebRoot/myNotes/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /Users/admin/Documents/WebRoot/myNotes/index.php(14): CApplication->run()
+#18 {main}
+REQUEST_URI=/myNotes/note/index
+HTTP_REFERER=http://localhost:8888/myNotes/note/index
+---
+2017/04/26 20:32:12 [error] [exception.Error] Error: Call to a member function renderItemsList() on null in /Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php:67
+Stack trace:
+#0 /Users/admin/Documents/WebRoot/myNotes/framework/web/actions/CInlineAction.php(49): ItemController->actionAjaxCreate()
+#1 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(282): CController->run('ajaxCreate')
+#10 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(141): CWebApplication->runController('item/ajaxCreate')
+#11 /Users/admin/Documents/WebRoot/myNotes/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Users/admin/Documents/WebRoot/myNotes/index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/myNotes/item/ajaxCreate
+HTTP_REFERER=http://localhost:8888/myNotes/note/items/3
+---
+2017/04/26 20:32:18 [error] [exception.Error] Error: Call to a member function renderItemsList() on null in /Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php:67
+Stack trace:
+#0 /Users/admin/Documents/WebRoot/myNotes/framework/web/actions/CInlineAction.php(49): ItemController->actionAjaxCreate()
+#1 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(282): CController->run('ajaxCreate')
+#10 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(141): CWebApplication->runController('item/ajaxCreate')
+#11 /Users/admin/Documents/WebRoot/myNotes/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Users/admin/Documents/WebRoot/myNotes/index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/myNotes/item/ajaxCreate
+HTTP_REFERER=http://localhost:8888/myNotes/note/items/3
+---
+2017/04/26 20:32:21 [error] [exception.Error] Error: Call to a member function renderItemsList() on null in /Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php:67
+Stack trace:
+#0 /Users/admin/Documents/WebRoot/myNotes/framework/web/actions/CInlineAction.php(49): ItemController->actionAjaxCreate()
+#1 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(282): CController->run('ajaxCreate')
+#10 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(141): CWebApplication->runController('item/ajaxCreate')
+#11 /Users/admin/Documents/WebRoot/myNotes/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Users/admin/Documents/WebRoot/myNotes/index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/myNotes/item/ajaxCreate
+HTTP_REFERER=http://localhost:8888/myNotes/note/items/3
+---
+2017/04/26 20:32:42 [error] [exception.Error] Error: Call to a member function renderItemsList() on null in /Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php:67
+Stack trace:
+#0 /Users/admin/Documents/WebRoot/myNotes/framework/web/actions/CInlineAction.php(49): ItemController->actionAjaxCreate()
+#1 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(282): CController->run('ajaxCreate')
+#10 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(141): CWebApplication->runController('item/ajaxCreate')
+#11 /Users/admin/Documents/WebRoot/myNotes/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Users/admin/Documents/WebRoot/myNotes/index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/myNotes/item/ajaxCreate
+HTTP_REFERER=http://localhost:8888/myNotes/note/items/3
+---
+2017/04/26 20:32:45 [error] [exception.Error] Error: Call to a member function renderItemsList() on null in /Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php:67
+Stack trace:
+#0 /Users/admin/Documents/WebRoot/myNotes/framework/web/actions/CInlineAction.php(49): ItemController->actionAjaxCreate()
+#1 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(282): CController->run('ajaxCreate')
+#10 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(141): CWebApplication->runController('item/ajaxCreate')
+#11 /Users/admin/Documents/WebRoot/myNotes/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Users/admin/Documents/WebRoot/myNotes/index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/myNotes/item/ajaxCreate
+HTTP_REFERER=http://localhost:8888/myNotes/note/items/3
+---
+2017/04/26 20:33:58 [error] [exception.Error] Error: Call to a member function renderItemsList() on null in /Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php:67
+Stack trace:
+#0 /Users/admin/Documents/WebRoot/myNotes/framework/web/actions/CInlineAction.php(49): ItemController->actionAjaxCreate()
+#1 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(282): CController->run('ajaxCreate')
+#10 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(141): CWebApplication->runController('item/ajaxCreate')
+#11 /Users/admin/Documents/WebRoot/myNotes/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Users/admin/Documents/WebRoot/myNotes/index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/myNotes/item/ajaxCreate
+HTTP_REFERER=http://localhost:8888/myNotes/note/items/3
+---
+2017/04/26 20:37:52 [error] [exception.Error] Error: Call to a member function renderItemsList() on null in /Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php:67
+Stack trace:
+#0 /Users/admin/Documents/WebRoot/myNotes/framework/web/actions/CInlineAction.php(49): ItemController->actionAjaxCreate()
+#1 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Users/admin/Documents/WebRoot/myNotes/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/admin/Documents/WebRoot/myNotes/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(282): CController->run('ajaxCreate')
+#10 /Users/admin/Documents/WebRoot/myNotes/framework/web/CWebApplication.php(141): CWebApplication->runController('item/ajaxCreate')
+#11 /Users/admin/Documents/WebRoot/myNotes/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Users/admin/Documents/WebRoot/myNotes/index.php(14): CApplication->run()
+#13 {main}
+REQUEST_URI=/myNotes/item/ajaxCreate
+HTTP_REFERER=http://localhost:8888/myNotes/note/items/3
+---

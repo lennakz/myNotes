@@ -7,11 +7,13 @@
  */
 ?>
 
-<ul id="myUL">
+<ul>
 	<?php foreach ($items as $m): ?>
-		<li><?php echo $m->name ?> - <?php echo $m->type_id ?>
-			<a data-target="#ajax-container" href="<?php echo Yii::app()->request->baseUrl ?>/item/delete/<?php echo $m->id ?>?ajax" class="btn button-delete btn-danger pull-right">Delete</a>
+		<li id="item">
+			<?php echo $m->name ?><?php if (!empty($m->type)) echo ' - ' . $m->type_id ?>
+			<a data-target="#ajax-container" 
+			   href="<?php echo Yii::app()->request->baseUrl ?>/item/delete/<?php echo $m->id ?>?ajax" 
+			   class="button-delete"><span class="close">&times;</span></a>
 		</li>
-		
 	<?php endforeach; ?>
 </ul>

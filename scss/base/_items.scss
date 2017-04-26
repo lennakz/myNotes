@@ -8,8 +8,34 @@ and open the template in the editor.
     Author     : admin
 */
 
+/* When clicked on, add a background color and strike out text */
+.checked {
+	background: #888;
+	color: #fff;
+	text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+.checked::before {
+	content: '';
+	position: absolute;
+	border-color: #fff;
+	border-style: solid;
+	border-width: 0 2px 2px 0;
+	top: 10px;
+	left: 16px;
+	transform: rotate(45deg);
+	height: 15px;
+	width: 7px;
+}
+
 .items {
+	width: 100% !important;
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+	
 	.items-body {
+		margin-top: -20px;
 		/* Include the padding and border in an element's total width and height */
 		* {
 			box-sizing: border-box;
@@ -26,7 +52,7 @@ and open the template in the editor.
 		ul li {
 			cursor: pointer;
 			position: relative;
-			padding: 12px 8px 12px 40px;
+			padding: 12px 8px 9px 40px;
 			background: #eee;
 			font-size: 18px;
 			transition: 0.2s;
@@ -46,27 +72,6 @@ and open the template in the editor.
 		/* Darker background-color on hover */
 		ul li:hover {
 			background: #ddd;
-		}
-
-		/* When clicked on, add a background color and strike out text */
-		ul li.checked {
-			background: #888;
-			color: #fff;
-			text-decoration: line-through;
-		}
-
-		/* Add a "checked" mark when clicked on */
-		ul li.checked::before {
-			content: '';
-			position: absolute;
-			border-color: #fff;
-			border-style: solid;
-			border-width: 0 2px 2px 0;
-			top: 10px;
-			left: 16px;
-			transform: rotate(45deg);
-			height: 15px;
-			width: 7px;
 		}
 
 		/* Style the close button */

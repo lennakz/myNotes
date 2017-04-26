@@ -6,14 +6,14 @@
 	<?php Yii::app()->clientScript
 		->registerMetaTag('width=device-width, initial-scale=1', 'viewport')
 		->registerMetaTag('text/html; charset=UTF-8', 'Content-Type')
+		->registerLinkTag('shortcut icon', 'image/x-icon', Yii::app()->request->baseUrl.'/images/icons/icon-72x72.png')
+		->registerLinkTag('manifest', '', '<?php echo Yii::app()->request->baseUrl ?>/manifest.json') // For Mobile app simulation
         ->registerCssFile('//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css')
 		->registerCssFile(Yii::app()->request->baseUrl.'/css/main.css')
 		->registerScriptFile('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
 		->registerScriptFile('//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js')
 		->registerScriptFile(Yii::app()->request->baseUrl.'/js/scripts.js');
 	?>
-	<!-- For mobile app looks (to use in your browser press settings->Add to home screen (Chrome)) -->
-	<link rel="manifest" href="<?php echo Yii::app()->request->baseUrl ?>/manifest.json">
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 	

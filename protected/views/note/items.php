@@ -21,7 +21,7 @@ $this->breadcrumbs=array(
 				  data-target="#ajax-container" 
 				  action="<?php echo Yii::app()->request->baseUrl ?>/item/ajaxCreate" 
 				  method="post" >
-				<input class="input-visible" type="text" name="Item[name]" placeholder="Enter your item..." autofocus="autofocus">
+				<input class="input-visible" type="text" name="Item[name]" placeholder="Enter your item..." autofocus="autofocus" autocomplete="off">
 				<?php //echo CHtml::dropDownList('Item[type_id]', $select, $note->Type); ?>
 				
 <!--			<input type="text" class="form-control" name="Item[type_id]" placeholder="Enter your type...">-->

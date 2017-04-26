@@ -1,7 +1,7 @@
 <?php
 
 // change the following paths if necessary
-$yii='~/frameworks/yii1/framework/yii.php'; // Web
+$yii='/home/lennakz/frameworks/yii1/framework/yii.php'; // Web
  
 if (!file_exists($yii))
 	$yii='/Users/admin/yii/framework/yii.php'; // Local

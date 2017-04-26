@@ -46,12 +46,18 @@ $(function() {
 	
 	// Add a "checked" symbol when clicking on a list item
 	$('body').on('click', '#item', function() {
-		if ($(this).attr('class') == 'checked') {
-			$(this).removeClass('checked');
-		}
-		else {
-			$(this).addClass('checked');
-		}
+		var $item = $(this);
+		$.ajax({
+			url: $item.attr('data-link'),
+			
+			//method: 'POST'
+		}).done(function(response) {
+			console.log(response);
+			var target = $item.data('target');
+			$(target).html(response);
+		});
+		
+		return false;
 	});
 	
 });

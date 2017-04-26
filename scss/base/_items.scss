@@ -10,7 +10,7 @@ and open the template in the editor.
 
 /* When clicked on, add a background color and strike out text */
 .checked {
-	background: #888;
+	background: #888 !important;
 	color: #fff;
 	text-decoration: line-through;
 }

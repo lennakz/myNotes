@@ -25,6 +25,7 @@ $this->breadcrumbs=array(
 				
 <!--			<input type="text" class="form-control" name="Item[type_id]" placeholder="Enter your type...">-->
 				<input type="hidden" name="Item[note_id]" value="<?php echo $note->id ?>">
+				<input type="hidden" name="Item[completed]" value="<?php echo $note->completed = 0 ?>">
 				<button type="submit" class="addBtn">Add</button>
 			</form>
 		</div>

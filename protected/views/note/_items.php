@@ -9,7 +9,10 @@
 
 <ul>
 	<?php foreach ($items as $m): ?>
-		<li id="item">
+		<li id="item" 
+			class="<?php if ($m->completed == 0) echo 'unchecked'; else echo 'checked'; ?>"
+			data-link="<?php echo Yii::app()->request->baseUrl ?>/item/ajaxCompleteUpdate/<?php echo $m->id ?>"
+			data-target="#ajax-container" >
 			<?php echo $m->name ?><?php if (!empty($m->type)) echo ' - ' . $m->type_id ?>
 			<a data-target="#ajax-container" 
 			   href="<?php echo Yii::app()->request->baseUrl ?>/item/delete/<?php echo $m->id ?>?ajax" 

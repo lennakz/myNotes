@@ -124,6 +124,19 @@ class ItemController extends Controller
 			'model' => $model,
 		));
 	}
+	
+	public function actionAjaxCompleteUpdate($id)
+	{
+		$model = $this->loadModel($id);
+		
+		if ($model->completed == 0)
+			$model->completed = 1;
+		else
+			$model->completed = 0;
+		//dump($model->completed);exit;
+		if ($model->save())
+			echo $model->Note->renderItemsList();
+	}
 
 	/**
 	 * Deletes a particular model.

@@ -273,7 +273,7 @@ and open the template in the editor.
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 25%;
+    top: 20%;
     color: white; }
     .notes #overlay-text p {
       font-size: 20px; }
@@ -281,6 +281,11 @@ and open the template in the editor.
       font-size: 15px; }
     .notes #overlay-text hr {
       width: 75%; }
+    .notes #overlay-text .note-update-form {
+      display: none; }
+      .notes #overlay-text .note-update-form input {
+        width: 75%;
+        margin-top: 15px; }
 
 .breadcrumb {
   border-radius: 0; }

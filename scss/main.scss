@@ -25,32 +25,42 @@ and open the template in the editor.
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 100px;
+	height: 75px;
 	background-color: rgba(255, 255, 255, 0.8);
-}
-.button-round {
-	background-color: #57A429;
-	border-radius: 999em;
-	width: 70px;
-	height: 70px;
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-	line-height: 1;
-	font-size: 36px;
-	position: fixed;
-	bottom: 15px;
-	left: 50%;
-	transform: translateX(-50%);
-	cursor: pointer;
-	display: inline-block;
-}
-
-.button-round span {
-    position: absolute;
-	left: 0;
-	top: 50%;
-	height: 100%;
-	width: 100%;
-	text-align: center;
-	margin-top: -22px;
-	color: #FFF;
+	box-shadow: 0 -15px 10px rgba(255, 255, 255, 0.8);
+	.button-round {
+		background-color: #57A429;
+		border-radius: 999em;
+		width: 70px;
+		height: 70px;
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+		line-height: 1;
+		font-size: 36px;
+		position: fixed;
+		bottom: 15px;
+		left: 50%;
+		transform: translateX(-50%);
+		cursor: pointer;
+		display: inline-block;
+		transition: all 0.5s;
+		&:hover {
+			background-color: #060;
+			transition: all 0.5s;
+			span {
+				transform: scale(1.5) rotateZ(90deg);
+				transition: all 0.5s;
+			}
+			
+		}
+		span {
+			position: absolute;
+			line-height: 65px;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			text-align: center;
+			color: #FFF;
+			transition: all 0.5s;
+		}
+	}
 }

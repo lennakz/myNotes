@@ -24,6 +24,12 @@
 
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="<?php echo Yii::app()->request->baseUrl ?>/">
+					<img class="icon-brand" src="<?php echo Yii::app()->request->baseUrl ?>/images/icons/icon-72x72.png">
+					<i>my Notes</i>
+				</a>
+			</div>
 			<div class="pull-right">
 				<div id="menu-button">
 					<div class="icon-bar1"></div>
@@ -54,15 +60,6 @@
 	</nav>
 
 	<main>
-
-		<?php if(isset($this->breadcrumbs)):?>
-			<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-				'links'=>$this->breadcrumbs,
-				'htmlOptions'=>array(
-					'class'=>'breadcrumb',
-				),
-			)); ?>
-		<?php endif?>
 
 		<?php echo $content; ?>
 

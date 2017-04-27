@@ -9,8 +9,24 @@ and open the template in the editor.
 */
 
 #info-button {
+	color: #bbb;
 	margin-right: 25px;
 	font-size: 20px;
+	background-color: #fff;
+	border: none;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	i {
+		vertical-align: text-top;
+	}
+}
+#close-button {
+	font-size: xx-large;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	left: 10px;
 }
 
 .notes {
@@ -18,8 +34,8 @@ and open the template in the editor.
 	
 	#overlay {
 		position: fixed;
-		display: none;
-		width: 100%;
+		display: block;
+		width: 0;
 		height: 100%;
 		top: 0;
 		left: 0;
@@ -28,19 +44,25 @@ and open the template in the editor.
 		background-color: rgba(0,0,0,0.8);
 		z-index: 2;
 		cursor: pointer;
+		overflow-x: hidden;
+		transition: 0.5s;
 	}
 
 	#overlay-text{
+		text-align: center;
+		width: 100%;
+		height: 100%;
 		position: absolute;
-		top: 50%;
-		left: 50%;
+		top: 25%;
 		color: white;
-		transform: translate(-50%,-50%);
 		p {
 			font-size: 20px;
 		}
 		i {
 			font-size: 15px;
+		}
+		hr {
+			width: 75%;
 		}
 	}
 	

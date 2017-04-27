@@ -10,9 +10,19 @@ and open the template in the editor.
 nav {
 	border: none !important;
 	border-radius: 0 !important;
-	margin-bottom: 0 !important;
 	#menu-button {
 		display: none;
+	}
+	.navbar-header {
+		float: left !important;
+		a {
+			padding: 10px !important;
+		}
+		.icon-brand {
+			filter: invert(100%);
+			width: 30px;
+			height: auto;
+		}
 	}
 	.navbar-right {
 		margin-right: 15px !important;

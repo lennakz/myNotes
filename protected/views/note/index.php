@@ -17,13 +17,14 @@ $this->breadcrumbs=array(
 		</a>
 		<hr>
 		
-		<div onclick="overlayOff(<?php echo $m->id; ?>)" id="overlay" data-overlay="<?php echo $m->id; ?>">
+		<div id="overlay" data-overlay="<?php echo $m->id; ?>">
 			<div id="overlay-text">
 				<h2><?php echo $m->title ?></h2>
 				<p><i><?php echo date('d/m/Y', $m->updated) ?> </i></p>
 				<hr>
 				<p><?php echo $m->description ?></p>
 			</div>
+			<button onclick="overlayOff(<?php echo $m->id; ?>)" id="close-button">X</button>
 		</div>
 	<?php endforeach; ?>
 	
@@ -36,9 +37,9 @@ $this->breadcrumbs=array(
 <script>
 	// Overlay effect on note/index for information
 	function overlayOn(id) {
-		$('#overlay[data-overlay="' + id + '"]').css('display', 'block');
+		$('#overlay[data-overlay="' + id + '"]').css({'width': '100%'});
 	}
 	function overlayOff(id) {
-		$('#overlay[data-overlay="' + id + '"]').css('display', 'none');
+		$('#overlay[data-overlay="' + id + '"]').css({'width': '0'});
 	}
 </script>

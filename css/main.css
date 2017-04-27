@@ -17,9 +17,65 @@ and open the template in the editor.
     Author     : admin
 */
 nav {
+  border: none !important;
   border-radius: 0 !important;
   margin-bottom: 0 !important; }
+  nav #menu-button {
+    display: none; }
+  nav .navbar-right {
+    margin-right: 15px !important; }
+  nav .sidenav {
+    display: none; }
 
+@media only screen and (max-width: 767px) {
+  nav .nav {
+    display: none; }
+  nav #menu-button {
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 10px; }
+  nav .icon-bar1, nav .icon-bar2, nav .icon-bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s; }
+  nav .change .icon-bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px); }
+  nav .change .icon-bar2 {
+    opacity: 0; }
+  nav .change .icon-bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px); }
+  nav .sidenav {
+    display: block;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: center; }
+    nav .sidenav li {
+      display: block; }
+    nav .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s; }
+    nav .sidenav:hover {
+      color: #f1f1f1; }
+    nav .sidenav hr {
+      width: 70%;
+      color: #818181; } }
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -152,7 +208,87 @@ and open the template in the editor.
     .items .items-body .addBtn:hover {
       background-color: #bbb; }
 
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26-Apr-2017, 9:30:49 PM
+    Author     : admin
+*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26-Apr-2017, 9:45:48 PM
+    Author     : admin
+*/
+#info-button {
+  margin-right: 25px;
+  font-size: 20px; }
+
+.notes {
+  margin-top: -20px; }
+  .notes #overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    cursor: pointer; }
+  .notes #overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%); }
+    .notes #overlay-text p {
+      font-size: 20px; }
+    .notes #overlay-text i {
+      font-size: 15px; }
+
 .breadcrumb {
   border-radius: 0; }
+
+.button-background {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.8); }
+
+.button-round {
+  background-color: #57A429;
+  border-radius: 999em;
+  width: 70px;
+  height: 70px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  line-height: 1;
+  font-size: 36px;
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  display: inline-block; }
+
+.button-round span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin-top: -22px;
+  color: #FFF; }
 
 /*# sourceMappingURL=main.css.map */

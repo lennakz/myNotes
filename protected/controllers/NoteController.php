@@ -68,7 +68,7 @@ class NoteController extends Controller
 		{
 			$model->attributes=$_POST['Note'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(Yii::app()->request->baseUrl . '/note/index');
 		}
 
 		$this->render('create',array(

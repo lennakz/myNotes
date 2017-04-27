@@ -11,6 +11,7 @@
         ->registerCssFile('//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css')
 		->registerCssFile(Yii::app()->request->baseUrl.'/css/main.css')
 		->registerScriptFile('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+		->registerScriptFile('https://use.fontawesome.com/b860453c18.js')
 		->registerScriptFile('//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js')
 		->registerScriptFile(Yii::app()->request->baseUrl.'/js/scripts.js');
 	?>
@@ -23,15 +24,14 @@
 
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span> 
-				</button>
-				<a class="navbar-brand" href="<?php echo Yii::app()->request->baseUrl ?>/"><?php echo CHtml::encode(Yii::app()->name); ?></a>
+			<div class="pull-right">
+				<div id="menu-button">
+					<div class="icon-bar1"></div>
+					<div class="icon-bar2"></div>
+					<div class="icon-bar3"></div> 
+				</div>
 			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
+			<div>
 				<ul class="nav navbar-nav">
 					<li><a href="<?php echo Yii::app()->request->baseUrl ?>/about">About</a></li>
 					<li><a href="<?php echo Yii::app()->request->baseUrl ?>/note/index">Notes</a></li> 
@@ -42,6 +42,15 @@
 				</ul>
 			</div>
 		</div>
+		<!-- Navigation for mobile -->
+		<div id="mySidenav" class="sidenav">
+			<a href="<?php echo Yii::app()->request->baseUrl ?>/about">About</a>
+			<a href="<?php echo Yii::app()->request->baseUrl ?>/note/index">Notes</a>
+			<hr>
+			<a href="#">Sign Up</a>
+			<a href="<?php echo Yii::app()->request->baseUrl ?>/login">Login</a>
+		</div>
+		<!-- End Navigation for mobile -->
 	</nav>
 
 	<main>
@@ -63,3 +72,9 @@
 	
 </body>
 </html>
+
+<!-- 
+
+<a class="navbar-brand" href="<?php //echo Yii::app()->request->baseUrl ?>/"><?php //echo CHtml::encode(Yii::app()->name); ?></a>
+
+-->

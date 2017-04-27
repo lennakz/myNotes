@@ -48,9 +48,7 @@ $(function() {
 	$('body').on('click', '#item', function() {
 		var $item = $(this);
 		$.ajax({
-			url: $item.attr('data-link'),
-			
-			//method: 'POST'
+			url: $item.attr('data-link')
 		}).done(function(response) {
 			console.log(response);
 			var target = $item.data('target');
@@ -60,4 +58,12 @@ $(function() {
 		return false;
 	});
 	
+	$('#menu-button').on('click', function() {
+		$(this).toggleClass('change');
+		if ($('#mySidenav').width() === 0)
+			$('#mySidenav').css('width', '100%');
+		else
+			$('#mySidenav').css('width', '0');
+	});
+
 });

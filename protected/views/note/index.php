@@ -7,21 +7,38 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h1 class="text-center">Notes</h1>
-<p class="text-center">Here are all your Notes</p>
+<section class="notes" id="notes">
 
-<div class="row text-center">
+	
 	<?php foreach ($notes as $m): ?>
-    <div class="col-sm-4">
+		<button onclick="overlayOn(<?php echo $m->id; ?>)" id="info-button" class="pull-left"><i class="fa fa-info" aria-hidden="true"></i></button>
 		<a href="<?php echo Yii::app()->request->baseUrl . '/note/items/' . $m->id ?>">
-			<div class="thumbnail">
-				<h3><?php echo $m->title ?></h3>
+			<h3><?php echo $m->title ?><span class="small pull-right"><?php echo $m->numberOfCompletedItems . ' / ' . $m->numberOfItems ?></span></h3>
+		</a>
+		<hr>
+		
+		<div onclick="overlayOff(<?php echo $m->id; ?>)" id="overlay" data-overlay="<?php echo $m->id; ?>">
+			<div id="overlay-text">
+				<h2><?php echo $m->title ?></h2>
 				<p><i><?php echo date('d/m/Y', $m->updated) ?> </i></p>
 				<hr>
 				<p><?php echo $m->description ?></p>
-				<p><?php echo $m->numberOfCompletedItems . ' / ' . $m->numberOfItems ?></p>
 			</div>
-		</a>
-    </div>
+		</div>
 	<?php endforeach; ?>
-</div>
+	
+	<div class="button-background">
+		<a href="<?php echo Yii::app()->request->baseUrl ?>/note/create/" class="button-round"><span>+</span></a>
+	</div>
+		
+</section>
+
+<script>
+	// Overlay effect on note/index for information
+	function overlayOn(id) {
+		$('#overlay[data-overlay="' + id + '"]').css('display', 'block');
+	}
+	function overlayOff(id) {
+		$('#overlay[data-overlay="' + id + '"]').css('display', 'none');
+	}
+</script>

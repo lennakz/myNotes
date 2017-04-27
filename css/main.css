@@ -23,12 +23,18 @@ nav {
     display: none; }
   nav .navbar-header {
     float: left !important; }
+    nav .navbar-header .navbar-brand {
+      font-size: 22px !important; }
     nav .navbar-header a {
-      padding: 10px !important; }
+      padding: 10px !important;
+      color: #57A429 !important; }
     nav .navbar-header .icon-brand {
       filter: invert(100%);
       width: 30px;
       height: auto; }
+    nav .navbar-header span {
+      letter-spacing: 0.15em;
+      font-family: 'Pacifico', cursive; }
   nav .navbar-right {
     margin-right: 15px !important; }
   nav .sidenav {
@@ -37,6 +43,11 @@ nav {
 @media only screen and (max-width: 767px) {
   nav .nav {
     display: none; }
+  nav .navbar-header span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15px; }
   nav #menu-button {
     display: inline-block;
     cursor: pointer;
@@ -252,6 +263,19 @@ and open the template in the editor.
   top: 0;
   left: 10px; }
 
+#edit-button {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  background-color: transparent;
+  font-size: 15px; }
+  #edit-button:active, #edit-button:focus, #edit-button:visited {
+    outline: 0 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none  !important; }
+
 .notes {
   margin-top: -20px; }
   .notes #overlay {
@@ -271,9 +295,9 @@ and open the template in the editor.
   .notes #overlay-text {
     text-align: center;
     width: 100%;
-    height: 100%;
+    height: 90%;
     position: absolute;
-    top: 20%;
+    top: 10%;
     color: white; }
     .notes #overlay-text p {
       font-size: 20px; }

@@ -23,7 +23,7 @@ $this->breadcrumbs=array(
 				<p><i><?php echo date('d/m/Y', $m->updated) ?> </i></p>
 				<hr>
 				<p><?php echo $m->description ?></p>
-				<button onclick="editNote(<?php echo $m->id; ?>)" id="edit-button" class="btn btn-default">Edit</button>
+				<button onclick="editNote(<?php echo $m->id; ?>)" id="edit-button" data-id="<?php echo $m->id ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> EDIT</button>
 				<form action="<?php echo Yii::app()->request->baseUrl ?>/note/update/<?php echo $m->id ?>" method="post" class="note-update-form" data-form="<?php echo $m->id; ?>">
 					<input type="text" name="Note[title]" placeholder="Name..." autocomplete="off">
 					<input type="text" name="Note[description]" placeholder="Description..." style="height: 70px" autocomplete="off">
@@ -52,13 +52,14 @@ $this->breadcrumbs=array(
 	}
 	// Show and hide update form in overlay part
 	function editNote(id) {
+		$('#edit-button[data-id="' + id + '"]').text('');
 		if ($('.note-update-form[data-form="'+ id + '"]').css('display') == 'none') {
 			$('.note-update-form[data-form="'+ id + '"]').css('display', 'block');
-			$('#edit-button').text('Close');
+			$('#edit-button[data-id="' + id + '"]').append('<i class="fa fa-times" aria-hidden="true"></i> CLOSE');
 		}
 		else {
 			$('.note-update-form[data-form="'+ id + '"]').css('display', 'none');
-			$('#edit-button').text('Edit');
+			$('#edit-button[data-id="' + id + '"]').append('<i class="fa fa-pencil-square-o" aria-hidden="true"></i> EDIT');
 		}
 
 	}

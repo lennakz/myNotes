@@ -8,6 +8,7 @@
 		->registerMetaTag('text/html; charset=UTF-8', 'Content-Type')
 		->registerLinkTag('shortcut icon', 'image/x-icon', Yii::app()->request->baseUrl.'/images/icons/icon-72x72.png')
 		->registerLinkTag('manifest', '', '<?php echo Yii::app()->request->baseUrl ?>/manifest.json') // For Mobile app simulation
+		->registerCssFile('https://fonts.googleapis.com/css?family=Pacifico') // Google Fonts
         ->registerCssFile('//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css')
 		->registerCssFile(Yii::app()->request->baseUrl.'/css/main.css')
 		->registerScriptFile('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
@@ -25,9 +26,11 @@
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="<?php echo Yii::app()->request->baseUrl ?>/">
+				<a class="navbar-brand" href="<?php echo Yii::app()->request->baseUrl ?>/note/index">
 					<img class="icon-brand" src="<?php echo Yii::app()->request->baseUrl ?>/images/icons/icon-72x72.png">
-					<i>my Notes</i>
+				</a>
+				<a class="navbar-brand" href="<?php echo Yii::app()->request->baseUrl ?>/">
+					<span>myNotes</span>
 				</a>
 			</div>
 			<div class="pull-right">

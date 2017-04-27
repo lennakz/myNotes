@@ -15,13 +15,21 @@ nav {
 	}
 	.navbar-header {
 		float: left !important;
+		.navbar-brand {
+			font-size: 22px !important;
+		}
 		a {
 			padding: 10px !important;
+			color: #57A429 !important;
 		}
 		.icon-brand {
 			filter: invert(100%);
 			width: 30px;
 			height: auto;
+		}
+		span {
+			letter-spacing: 0.15em;
+			font-family: 'Pacifico', cursive;
 		}
 	}
 	.navbar-right {
@@ -36,6 +44,14 @@ nav {
 	nav {
 		.nav {
 			display: none;
+		}
+		.navbar-header {
+			span {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				top: 15px;
+			}
 		}
 		#menu-button {
 			display: inline-block;

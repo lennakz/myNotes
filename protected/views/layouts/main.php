@@ -34,7 +34,6 @@
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
 					<li><a href="<?php echo Yii::app()->request->baseUrl ?>/about">About</a></li>
-					<li><a href="<?php echo Yii::app()->request->baseUrl ?>/contact">Contact Us</a></li> 
 					<li><a href="<?php echo Yii::app()->request->baseUrl ?>/note/index">Notes</a></li> 
 				</ul>
 				<ul class="nav navbar-nav navbar-right">

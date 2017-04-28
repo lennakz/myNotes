@@ -24,6 +24,7 @@ $this->breadcrumbs=array(
 				<hr>
 				<p><?php echo $m->description ?></p>
 				<button onclick="editNote(<?php echo $m->id; ?>)" id="edit-button" data-id="<?php echo $m->id ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> EDIT</button>
+				<a href="<?php echo Yii::app()->request->baseUrl . '/note/delete/' . $m->id ?>" id="note-delete-button"><i class="fa fa-trash-o" aria-hidden="true"></i> DELETE</a>
 				<form action="<?php echo Yii::app()->request->baseUrl ?>/note/update/<?php echo $m->id ?>" method="post" class="note-update-form" data-form="<?php echo $m->id; ?>">
 					<input type="text" name="Note[title]" placeholder="Name..." autocomplete="off">
 					<input type="text" name="Note[description]" placeholder="Description..." style="height: 70px" autocomplete="off">

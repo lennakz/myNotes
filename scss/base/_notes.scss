@@ -20,15 +20,25 @@ and open the template in the editor.
 	i {
 		vertical-align: text-top;
 	}
+	&:active, &:focus, &:visited {
+		outline: 0 !important;
+		box-shadow: none  !important;
+	}
 }
 #close-button {
+	background-color: rgba(0,0,0,0);
+	border: none;
 	font-size: xx-large;
 	color: #fff;
 	position: absolute;
 	top: 0;
 	left: 10px;
+	&:active, &:focus, &:visited {
+		outline: 0 !important;
+		box-shadow: none  !important;
+	}
 }
-#edit-button {
+#edit-button, #note-delete-button {
 	margin-top: 20px;
 	margin-bottom: 10px;
 	color: #fff;
@@ -38,9 +48,11 @@ and open the template in the editor.
 	font-size: 15px;
 	&:active, &:focus, &:visited {
 		outline: 0 !important;
-		-webkit-box-shadow: none !important;
 		box-shadow: none  !important;
 	}
+}
+#note-delete-button {
+	padding: 7px 10px;
 }
 
 .notes {

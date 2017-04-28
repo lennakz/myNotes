@@ -83,7 +83,7 @@ nav {
     nav .sidenav li {
       display: block; }
     nav .sidenav a {
-      padding: 8px 8px 8px 32px;
+      padding: 8px;
       text-decoration: none;
       font-size: 25px;
       color: #818181;
@@ -189,6 +189,9 @@ and open the template in the editor.
       background: #f9f9f9; }
     .items .items-body ul li:hover {
       background: #ddd; }
+    .items .items-body .items-quantity {
+      position: absolute;
+      left: 60%; }
     .items .items-body .close {
       position: absolute;
       right: 0;
@@ -202,6 +205,9 @@ and open the template in the editor.
       padding: 30px 40px;
       color: white;
       text-align: center; }
+      .items .items-body .header input:active, .items .items-body .header input:focus, .items .items-body .header input:visited {
+        outline: 0 !important;
+        box-shadow: none  !important; }
     .items .items-body .header:after {
       content: "";
       display: table;
@@ -255,15 +261,23 @@ and open the template in the editor.
   height: 30px; }
   #info-button i {
     vertical-align: text-top; }
+  #info-button:active, #info-button:focus, #info-button:visited {
+    outline: 0 !important;
+    box-shadow: none  !important; }
 
 #close-button {
+  background-color: transparent;
+  border: none;
   font-size: xx-large;
   color: #fff;
   position: absolute;
   top: 0;
   left: 10px; }
+  #close-button:active, #close-button:focus, #close-button:visited {
+    outline: 0 !important;
+    box-shadow: none  !important; }
 
-#edit-button {
+#edit-button, #note-delete-button {
   margin-top: 20px;
   margin-bottom: 10px;
   color: #fff;
@@ -271,10 +285,12 @@ and open the template in the editor.
   padding: 5px 10px;
   background-color: transparent;
   font-size: 15px; }
-  #edit-button:active, #edit-button:focus, #edit-button:visited {
+  #edit-button:active, #edit-button:focus, #edit-button:visited, #note-delete-button:active, #note-delete-button:focus, #note-delete-button:visited {
     outline: 0 !important;
-    -webkit-box-shadow: none !important;
     box-shadow: none  !important; }
+
+#note-delete-button {
+  padding: 7px 10px; }
 
 .notes {
   margin-top: -20px; }

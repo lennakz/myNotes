@@ -13,7 +13,8 @@
 			class="<?php if ($m->completed == 0) echo 'unchecked'; else echo 'checked'; ?>"
 			data-link="<?php echo Yii::app()->request->baseUrl ?>/item/ajaxCompleteUpdate/<?php echo $m->id ?>"
 			data-target="#ajax-container" >
-			<?php echo $m->name ?><?php if (!empty($m->type_id)) echo ' - ' . $m->Type->name ?>
+			<?php echo $m->name ?>
+			<span class="items-quantity"><?php echo $m->quantity ?></span>
 			<a data-target="#ajax-container" 
 			   href="<?php echo Yii::app()->request->baseUrl ?>/item/delete/<?php echo $m->id ?>?ajax" 
 			   class="button-delete"><span class="close">&times;</span></a>

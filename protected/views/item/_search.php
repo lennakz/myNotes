@@ -27,11 +27,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'type_id'); ?>
-		<?php echo $form->textArea($model,'type_id',array('rows'=>6, 'cols'=>50)); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'quantity'); ?>
 		<?php echo $form->textField($model,'quantity'); ?>
 	</div>

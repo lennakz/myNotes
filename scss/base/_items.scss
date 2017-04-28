@@ -73,6 +73,11 @@ and open the template in the editor.
 		ul li:hover {
 			background: #ddd;
 		}
+		
+		.items-quantity {
+		    position: absolute;
+			left: 60%;
+		}
 
 		/* Style the close button */
 		.close {
@@ -93,6 +98,12 @@ and open the template in the editor.
 			padding: 30px 40px;
 			color: white;
 			text-align: center;
+			input {
+				&:active, &:focus, &:visited {
+					outline: 0 !important;
+					box-shadow: none  !important;
+				}
+			}
 		}
 
 		/* Clear floats after the header */

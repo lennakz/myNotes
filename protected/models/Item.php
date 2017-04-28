@@ -7,8 +7,7 @@
  * @property integer $id
  * @property string $name
  * @property integer $note_id
- * @property string $type_id
- * @property integer $quantity
+ * @property string $quantity
  * @property integer $completed
  * @property integer $created
  * @property integer $updated
@@ -34,11 +33,11 @@ class Item extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('note_id, quantity, completed, created, updated', 'numerical', 'integerOnly'=>true),
-			array('name, type_id', 'safe'),
+			array('note_id, completed, created, updated', 'numerical', 'integerOnly'=>true),
+			array('name', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, note_id, type_id, quantity, completed, created, updated', 'safe', 'on'=>'search'),
+			array('id, name, note_id, quantity, completed, created, updated', 'safe', 'on'=>'search'),
 			array('name', 'required'),
 		);
 	}
@@ -51,8 +50,7 @@ class Item extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'Note' => array(self::BELONGS_TO, 'Note', 'note_id'),
-			'Type' => array(self::BELONGS_TO, 'Type', 'type_id')
+			'Note' => array(self::BELONGS_TO, 'Note', 'note_id')
 		);
 	}
 
@@ -65,7 +63,6 @@ class Item extends CActiveRecord
 			'id' => 'ID',
 			'name' => 'Name',
 			'note_id' => 'Note',
-			'type_id' => 'Type',
 			'quantity' => 'Quantity',
 			'completed' => 'Completed',
 			'created' => 'Created',
@@ -94,7 +91,6 @@ class Item extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('note_id',$this->note_id);
-		$criteria->compare('type_id',$this->type_id,true);
 		$criteria->compare('quantity',$this->quantity);
 		$criteria->compare('completed',$this->completed);
 		$criteria->compare('created',$this->created);

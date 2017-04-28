@@ -61,15 +61,19 @@ class ItemController extends Controller
 			throw new CHttpException('No Item data received', 400);
 		
 		$model->attributes = $_POST['Item'];
-
+		
+		// Split string when 2 whitespaces, put first part to name, second part to quantity
+		$entries = preg_split('/(\s{2,})/', $_POST['Item']['name']);
+		if (!empty($entries[1]))
+		{
+			$model->name = $entries[0];
+			$model->quantity = $entries[1];
+		}
+		
 		if ($model->save())
-		{
 			$json = ['status' => 'ok', 'html' => $model->Note->renderItemsList()];
-		}
 		else 
-		{
 			$json = ['status' => 'error', 'errors' => $model->errors];
-		}
 		
 		echo json_encode($json);
 		exit;
@@ -90,13 +94,16 @@ class ItemController extends Controller
 		{
 			$model->attributes = $_POST['Item'];
 			
-			if ($model->save())
+			$entries = preg_split('/(\s{2,})/', $_POST['Item']['name']);
+			if (!empty($entries[1]))
 			{
-				$this->redirect(array('view','id'=>$model->id));
+				$model->name = $entries[0];
+				$model->quantity = $entries[1];
 			}
+			
+			if ($model->save())
+				$this->redirect(array('view','id'=>$model->id));
 		}
-
-		//dump($model->Type);exit;
 		
 		$this->render('create', array(
 			'model' => $model,

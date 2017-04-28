@@ -32,12 +32,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'type_id'); ?>
-		<?php echo $form->dropDownList($model,'type_id', CHtml::listData(Type::model()->findAll(array('order' => 'name')), 'id', 'name')); ?>
-		<?php echo $form->error($model,'type_id'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'quantity'); ?>
 		<?php echo $form->textField($model,'quantity'); ?>
 		<?php echo $form->error($model,'quantity'); ?>

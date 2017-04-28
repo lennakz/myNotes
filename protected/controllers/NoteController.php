@@ -12,7 +12,7 @@ class NoteController extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
+			//'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
 
@@ -29,11 +29,11 @@ class NoteController extends Controller
 				'users' => array('*'),
 			),
 			array('allow', // allow authenticated user
-				'actions' => array('create', 'update'),
+				'actions' => array('create', 'update', 'delete'),
 				'users' => array('@'),
 			),
 			array('allow', // allow admin user
-				'actions' => array('admin', 'delete'),
+				'actions' => array('admin'),
 				'users' => array('admin'),
 			),
 			array('deny', // deny all users
@@ -107,7 +107,9 @@ class NoteController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+		$model = $this->loadModel($id);
+		$model->delete();
+			$this->redirect(Yii::app()->request->baseUrl . '/note/index');
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))

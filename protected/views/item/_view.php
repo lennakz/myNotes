@@ -17,10 +17,6 @@
 	<?php echo CHtml::encode($data->note_id); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('type_id')); ?>:</b>
-	<?php echo CHtml::encode($data->type_id); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('quantity')); ?>:</b>
 	<?php echo CHtml::encode($data->quantity); ?>
 	<br />

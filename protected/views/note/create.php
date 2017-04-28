@@ -2,17 +2,47 @@
 /* @var $this NoteController */
 /* @var $model Note */
 
-$this->breadcrumbs=array(
-	'Notes'=>array('index'),
-	'Create',
-);
-
-$this->menu=array(
-	array('label'=>'List Note', 'url'=>array('index')),
-	array('label'=>'Manage Note', 'url'=>array('admin')),
-);
 ?>
+<div class="container">
+	<h1 class="text-center">Create Note</h1>
 
-<h1>Create Note</h1>
+	<?php
+	$form = $this->beginWidget('CActiveForm', array(
+		'id' => 'note-form',
+		'htmlOptions' => array(
+			'class' => 'form-horizontal',
+		),
+		// Please note: When you enable ajax validation, make sure the corresponding
+		// controller action is handling ajax validation correctly.
+		// There is a call to performAjaxValidation() commented in generated controller code.
+		// See class documentation of CActiveForm for details on this.
+		'enableAjaxValidation' => false,
+		));
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+	?>
+
+	<p class="text-center text-danger">Fields with <span>*</span> are required.</p>
+
+	<div class="alert alert-danger">
+		<?php echo $form->errorSummary($model); ?>
+	</div>
+
+	<div class="form-group">
+	<?php echo $form->labelEx($model, 'title', array('class' => 'control-label')); ?>
+		<?php echo $form->textArea($model, 'title'); ?>
+		<?php echo $form->error($model, 'title', array('class' => 'text-danger text-center')); ?>
+	</div>
+
+	<div class="form-group">
+	<?php echo $form->labelEx($model, 'description', array('class' => 'control-label')); ?>
+		<?php echo $form->textArea($model, 'description', array('rows' => 6, 'cols' => 50)); ?>
+		<?php echo $form->error($model, 'description', array('class' => 'text-danger text-center')); ?>
+	</div>
+
+	<div class="form-group">
+	<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class' => 'btn btn-success')); ?>
+	</div>
+
+	<?php $this->endWidget(); ?>
+
+</div>

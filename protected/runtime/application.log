@@ -2958,3 +2958,24 @@ Stack trace:
 REQUEST_URI=/myNotes/index.php/item/65
 HTTP_REFERER=http://localhost:8888/myNotes/item/create
 ---
+2017/04/28 10:16:54 [error] [php] Array to string conversion (/Users/admin/yii/framework/web/helpers/CHtml.php:2217)
+Stack trace:
+#0 /Users/admin/yii/framework/web/CBaseController.php(126): require()
+#1 /Users/admin/yii/framework/web/CBaseController.php(95): NoteController->renderInternal()
+#2 /Users/admin/yii/framework/web/CController.php(869): NoteController->renderFile()
+#3 /Users/admin/yii/framework/web/CController.php(782): NoteController->renderPartial()
+#4 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/NoteController.php(75): NoteController->render()
+#5 /Users/admin/yii/framework/web/actions/CInlineAction.php(49): NoteController->actionCreate()
+#6 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): NoteController->runAction()
+#8 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /Users/admin/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): NoteController->filterAccessControl()
+#11 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#13 /Users/admin/yii/framework/web/CController.php(265): NoteController->runActionWithFilters()
+#14 /Users/admin/yii/framework/web/CWebApplication.php(282): NoteController->run()
+#15 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/note/create/

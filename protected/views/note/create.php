@@ -23,9 +23,7 @@
 
 	<p class="text-center text-danger">Fields with <span>*</span> are required.</p>
 
-	<div class="alert alert-danger">
-		<?php echo $form->errorSummary($model); ?>
-	</div>
+	<?php echo $form->errorSummary($model, '', '', array('class' => 'alert alert-danger')); ?>
 
 	<div class="form-group">
 	<?php echo $form->labelEx($model, 'title', array('class' => 'control-label')); ?>

@@ -7,7 +7,8 @@
 		->registerMetaTag('width=device-width, initial-scale=1', 'viewport')
 		->registerMetaTag('text/html; charset=UTF-8', 'Content-Type')
 		->registerLinkTag('shortcut icon', 'image/x-icon', Yii::app()->request->baseUrl.'/images/icons/icon-72x72.png')
-		->registerLinkTag('manifest', '', Yii::app()->request->baseUrl.'/manifest.json') // For Mobile app simulation
+		->registerLinkTag('manifest', null, Yii::app()->request->baseUrl.'/manifest.json') // For Mobile app simulation
+		->registerLinkTag('icon', null, Yii::app()->request->baseUrl.'/images/icons/icon-home-screen.png', null, array('sizes' => '256x256')) // Icon for home screnn
 		->registerCssFile('https://fonts.googleapis.com/css?family=Pacifico') // Google Fonts
         ->registerCssFile('//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css')
 		->registerCssFile(Yii::app()->request->baseUrl.'/css/main.css')
@@ -17,8 +18,6 @@
 		->registerScriptFile(Yii::app()->request->baseUrl.'/js/scripts.js');
 	?>
 
-	<link rel="icon" sizes="192x192" href="<?php echo Yii::app()->request->baseUrl?>/images/icons/icon-192x192.png">
-	
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 	
 </head>

@@ -7,7 +7,7 @@
 		->registerMetaTag('width=device-width, initial-scale=1', 'viewport')
 		->registerMetaTag('text/html; charset=UTF-8', 'Content-Type')
 		->registerLinkTag('shortcut icon', 'image/x-icon', Yii::app()->request->baseUrl.'/images/icons/icon-72x72.png')
-		->registerLinkTag('manifest', '', '<?php echo Yii::app()->request->baseUrl ?>/manifest.json') // For Mobile app simulation
+		->registerLinkTag('manifest', '', Yii::app()->request->baseUrl.'/manifest.json') // For Mobile app simulation
 		->registerCssFile('https://fonts.googleapis.com/css?family=Pacifico') // Google Fonts
         ->registerCssFile('//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css')
 		->registerCssFile(Yii::app()->request->baseUrl.'/css/main.css')
@@ -75,7 +75,7 @@
 			<?php if(Yii::app()->user->isGuest): ?>
 				<a href="<?php echo Yii::app()->request->baseUrl ?>/site/login">Login</a>
 			<?php else: ?>
-				<a href="<?php echo Yii::app()->request->baseUrl ?>/user/index">Account</a>
+				<a href="<?php echo Yii::app()->request->baseUrl ?>/user/view/<?php echo Yii::app()->user->id ?>">Account</a>
 				<a href="<?php echo Yii::app()->request->baseUrl ?>/site/logout">Logout</a>
 			<?php endif ?>
 		</div>

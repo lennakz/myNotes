@@ -69,8 +69,8 @@ class User extends CActiveRecord
 			'phone' => 'Phone',
 			'created' => 'Created',
 			'updated' => 'Updated',
-			'fname' => 'Fname',
-            'lname' => 'Lname'
+			'fname' => 'First Name',
+            'lname' => 'Last Name'
 		);
 	}
 

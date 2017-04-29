@@ -3,6 +3,10 @@
 /* @var $model User */
 ?>
 
-<h1>Create User</h1>
+<div class="container">
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+	<h1 class="text-center">Create New User</h1>
+
+	<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+
+</div>

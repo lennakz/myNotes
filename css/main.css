@@ -78,7 +78,6 @@ nav {
     background-color: rgba(0, 0, 0, 0.9);
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
     text-align: center; }
     nav .sidenav li {
       display: block; }
@@ -93,7 +92,10 @@ nav {
       color: #f1f1f1; }
     nav .sidenav hr {
       width: 70%;
-      color: #818181; } }
+      color: #818181; }
+    nav .sidenav h3 {
+      color: #fff;
+      margin-bottom: 50px; } }
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -116,7 +118,7 @@ form input, form textarea {
   width: 100%; }
 form .btn {
   width: 40%;
-  margin-right: 20px; }
+  margin: auto; }
 form .text-danger {
   margin-top: 5px; }
 form label {
@@ -126,8 +128,7 @@ form label {
 @media only screen and (max-width: 767px) {
   form .btn {
     display: block;
-    width: 40%;
-    margin: auto; } }
+    width: 40%; } }
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -207,12 +208,14 @@ and open the template in the editor.
       color: white; }
     .items .items-body .header {
       background-color: #060;
-      padding: 30px 40px;
+      padding: 10px 30px 30px 30px;
       color: white;
       text-align: center; }
       .items .items-body .header input:active, .items .items-body .header input:focus, .items .items-body .header input:visited {
         outline: 0 !important;
         box-shadow: none  !important; }
+      .items .items-body .header h2 {
+        margin-bottom: 20px; }
     .items .items-body .header:after {
       content: "";
       display: table;
@@ -257,7 +260,7 @@ and open the template in the editor.
 */
 #info-button {
   color: #bbb;
-  margin-right: 25px;
+  margin-right: 10px;
   font-size: 20px;
   background-color: #fff;
   border: none;
@@ -277,25 +280,26 @@ and open the template in the editor.
   color: #fff;
   position: absolute;
   top: 0;
-  left: 10px; }
+  right: 10px; }
   #close-button:active, #close-button:focus, #close-button:visited {
     outline: 0 !important;
     box-shadow: none  !important; }
 
 #edit-button, #note-delete-button {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  width: 30%;
+  display: inline-block;
   color: #fff;
   border: 1px solid #fff;
-  padding: 5px 10px;
+  padding: 8px 10px;
   background-color: transparent;
   font-size: 15px; }
   #edit-button:active, #edit-button:focus, #edit-button:visited, #note-delete-button:active, #note-delete-button:focus, #note-delete-button:visited {
     outline: 0 !important;
-    box-shadow: none  !important; }
+    box-shadow: none  !important;
+    text-decoration: none; }
 
-#note-delete-button {
-  padding: 7px 10px; }
+#edit-button {
+  margin-right: 20px; }
 
 .notes {
   margin-top: -20px; }
@@ -326,6 +330,8 @@ and open the template in the editor.
       font-size: 15px; }
     .notes #overlay-text hr {
       width: 75%; }
+    .notes #overlay-text form {
+      margin-top: 25px; }
     .notes #overlay-text .note-update-form {
       display: none; }
       .notes #overlay-text .note-update-form input {
@@ -361,9 +367,6 @@ and open the template in the editor.
     .button-background .button-round:hover {
       background-color: #060;
       transition: all 0.5s; }
-      .button-background .button-round:hover span {
-        transform: scale(1.5) rotateZ(90deg);
-        transition: all 0.5s; }
     .button-background .button-round span {
       position: absolute;
       line-height: 65px;

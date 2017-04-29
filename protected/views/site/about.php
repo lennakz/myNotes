@@ -15,3 +15,6 @@ $this->breadcrumbs=array(
 <br>
 <p>Hope you will enjoy using it!</p>
 <p>We are working to improve it...</p>
+<hr>
+<p>If you have any questions or suggestions, you can reach my at my email: <a href="mailto:mykola.kotok@gmail.com">mykola.kotok@gmail.com</a></p>
+<p>Or visit my <a href="http://mkotok.com" target="_blank">Web Site</a></p>

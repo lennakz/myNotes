@@ -95,7 +95,7 @@ and open the template in the editor.
 		/* Style the header */
 		.header {
 			background-color: #060;
-			padding: 30px 40px;
+			padding: 10px 30px 30px 30px;
 			color: white;
 			text-align: center;
 			input {
@@ -103,6 +103,9 @@ and open the template in the editor.
 					outline: 0 !important;
 					box-shadow: none  !important;
 				}
+			}
+			h2 {
+				margin-bottom: 20px;
 			}
 		}
 

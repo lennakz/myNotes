@@ -2979,3 +2979,254 @@ Stack trace:
 #16 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
 #17 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
 REQUEST_URI=/myNotes/note/create/
+2017/04/28 22:00:10 [error] [exception.CException] CException: Property "Note.name" is not defined. in /Users/admin/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/admin/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('name')
+#1 /Users/admin/Documents/WebRoot/myNotes/protected/views/note/index.php(29): CActiveRecord->__get('name')
+#2 /Users/admin/yii/framework/web/CBaseController.php(126): require('/Users/admin/Do...')
+#3 /Users/admin/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/admin/Do...', Array, true)
+#4 /Users/admin/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/admin/Do...', Array, true)
+#5 /Users/admin/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#6 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/NoteController.php(125): CController->render('index', Array)
+#7 /Users/admin/yii/framework/web/actions/CInlineAction.php(49): NoteController->actionIndex()
+#8 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Users/admin/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /Users/admin/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /Users/admin/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#17 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('note/index')
+#18 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#19 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#20 {main}
+REQUEST_URI=/myNotes/note/index
+HTTP_REFERER=http://localhost:8888/myNotes/item/create
+---
+2017/04/28 22:49:04 [error] [exception.CException] CException: Property "CHttpRequest.id" is not defined. in /Users/admin/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/admin/Documents/WebRoot/myNotes/protected/views/layouts/main.php(59): CComponent->__get('id')
+#1 /Users/admin/yii/framework/web/CBaseController.php(126): require('/Users/admin/Do...')
+#2 /Users/admin/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/admin/Do...', Array, true)
+#3 /Users/admin/yii/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/Users/admin/Do...', Array, true)
+#4 /Users/admin/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('\n\t\n<section cla...')
+#5 /Users/admin/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('\n\t\n<section cla...')
+#6 /Users/admin/yii/framework/web/CBaseController.php(214): COutputProcessor->run()
+#7 /Users/admin/yii/framework/web/CBaseController.php(308): CBaseController->endWidget('CContentDecorat...')
+#8 /Users/admin/Documents/WebRoot/myNotes/protected/views/layouts/items.php(14): CBaseController->endContent()
+#9 /Users/admin/yii/framework/web/CBaseController.php(126): require('/Users/admin/Do...')
+#10 /Users/admin/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/admin/Do...', Array, true)
+#11 /Users/admin/yii/framework/web/CController.php(784): CBaseController->renderFile('/Users/admin/Do...', Array, true)
+#12 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/NoteController.php(139): CController->render('items', Array)
+#13 [internal function]: NoteController->actionItems('1')
+#14 /Users/admin/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(NoteController), Array)
+#15 /Users/admin/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(NoteController), Object(ReflectionMethod), Array)
+#16 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#17 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /Users/admin/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /Users/admin/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /Users/admin/yii/framework/web/CWebApplication.php(282): CController->run('items')
+#25 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('note/items')
+#26 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#27 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#28 {main}
+REQUEST_URI=/myNotes/note/items/1
+HTTP_REFERER=http://localhost:8888/myNotes/note/index
+---
+2017/04/28 22:59:18 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "logout". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('logout')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/logout
+HTTP_REFERER=http://localhost:8888/myNotes/login
+---
+2017/04/28 22:59:42 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "logout". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('logout')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/logout
+HTTP_REFERER=http://localhost:8888/myNotes/login
+---
+2017/04/28 23:01:46 [error] [php] Object of class CWebUser could not be converted to string (/Users/admin/Documents/WebRoot/myNotes/protected/views/layouts/main.php:56)
+Stack trace:
+#0 /Users/admin/yii/framework/web/widgets/CContentDecorator.php(76): SiteController->renderFile()
+#1 /Users/admin/yii/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate()
+#2 /Users/admin/yii/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput()
+#3 /Users/admin/yii/framework/web/CBaseController.php(214): CContentDecorator->run()
+#4 /Users/admin/yii/framework/web/CBaseController.php(308): SiteController->endWidget()
+#5 /Users/admin/Documents/WebRoot/myNotes/protected/views/layouts/bootstrap.php(18): SiteController->endContent()
+#6 /Users/admin/yii/framework/web/CBaseController.php(126): require()
+#7 /Users/admin/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#8 /Users/admin/yii/framework/web/CController.php(784): SiteController->renderFile()
+#9 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/SiteController.php(29): SiteController->render()
+#10 /Users/admin/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#11 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#12 /Users/admin/yii/framework/web/CController.php(286): SiteController->runAction()
+#13 /Users/admin/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#14 /Users/admin/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#15 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/index.php
+2017/04/29 00:13:15 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "create". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('create')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/create
+---
+2017/04/29 00:25:42 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: user.phone. The SQL statement executed was: INSERT INTO 'user' ("username", "password", "email", "phone", "created", "updated") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5).
+2017/04/29 00:25:42 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: user.phone in /Users/admin/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/admin/yii/framework/db/ar/CActiveRecord.php(1080): CDbCommand->execute()
+#1 /Users/admin/yii/framework/db/ar/CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/UserController.php(70): CActiveRecord->save()
+#3 /Users/admin/yii/framework/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#4 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/admin/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/admin/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/admin/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#14 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/myNotes/user/create
+HTTP_REFERER=http://localhost:8888/myNotes/user/create
+---
+2017/04/29 01:00:10 [error] [exception.CException] CException: Property "User.fullName" is not defined. in /Users/admin/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/admin/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('fullName')
+#1 /Users/admin/Documents/WebRoot/myNotes/protected/views/note/index.php(22): CActiveRecord->__get('fullName')
+#2 /Users/admin/yii/framework/web/CBaseController.php(126): require('/Users/admin/Do...')
+#3 /Users/admin/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/admin/Do...', Array, true)
+#4 /Users/admin/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/admin/Do...', Array, true)
+#5 /Users/admin/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#6 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/NoteController.php(129): CController->render('index', Array)
+#7 /Users/admin/yii/framework/web/actions/CInlineAction.php(49): NoteController->actionIndex()
+#8 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Users/admin/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /Users/admin/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /Users/admin/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#17 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('note/index')
+#18 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#19 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#20 {main}
+REQUEST_URI=/myNotes/note/index
+HTTP_REFERER=http://localhost:8888/myNotes/note/create/
+---
+2017/04/29 01:16:53 [error] [exception.CException] CException: CDbCriteria and its behaviors do not have a method or closure named "with". in /Users/admin/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/NoteController.php(126): CComponent->__call('with', Array)
+#1 /Users/admin/yii/framework/web/actions/CInlineAction.php(49): NoteController->actionIndex()
+#2 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/admin/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/admin/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/admin/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#11 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('note/index')
+#12 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#14 {main}
+REQUEST_URI=/myNotes/note/index
+HTTP_REFERER=http://localhost:8888/myNotes/note/index
+---
+2017/04/29 02:24:09 [error] [php] Methods with the same name as their class will not be constructors in a future version of PHP; Text_Diff has a deprecated constructor (/Users/admin/yii/framework/gii/components/Pear/Text/Diff.php:20)
+Stack trace:
+#0 unknown(0): autoload()
+#1 /Users/admin/yii/framework/gii/CCodeGenerator.php(109): spl_autoload_call()
+#2 /Users/admin/yii/framework/web/actions/CInlineAction.php(49): ModelGenerator->actionDiff()
+#3 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Users/admin/yii/framework/web/CController.php(286): ModelGenerator->runAction()
+#5 /Users/admin/yii/framework/web/CController.php(265): ModelGenerator->runActionWithFilters()
+#6 /Users/admin/yii/framework/web/CWebApplication.php(282): ModelGenerator->run()
+#7 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/index.php/gii/model/diff/id/0
+2017/04/29 02:25:03 [error] [php] Methods with the same name as their class will not be constructors in a future version of PHP; Text_Diff has a deprecated constructor (/Users/admin/yii/framework/gii/components/Pear/Text/Diff.php:20)
+Stack trace:
+#0 unknown(0): autoload()
+#1 /Users/admin/yii/framework/gii/CCodeGenerator.php(109): spl_autoload_call()
+#2 /Users/admin/yii/framework/web/actions/CInlineAction.php(49): ModelGenerator->actionDiff()
+#3 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Users/admin/yii/framework/web/CController.php(286): ModelGenerator->runAction()
+#5 /Users/admin/yii/framework/web/CController.php(265): ModelGenerator->runActionWithFilters()
+#6 /Users/admin/yii/framework/web/CWebApplication.php(282): ModelGenerator->run()
+#7 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/index.php/gii/model/diff/id/0
+2017/04/29 02:26:24 [error] [php] Methods with the same name as their class will not be constructors in a future version of PHP; Text_Diff has a deprecated constructor (/Users/admin/yii/framework/gii/components/Pear/Text/Diff.php:20)
+Stack trace:
+#0 unknown(0): autoload()
+#1 /Users/admin/yii/framework/gii/CCodeGenerator.php(109): spl_autoload_call()
+#2 /Users/admin/yii/framework/web/actions/CInlineAction.php(49): CrudGenerator->actionDiff()
+#3 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Users/admin/yii/framework/web/CController.php(286): CrudGenerator->runAction()
+#5 /Users/admin/yii/framework/web/CController.php(265): CrudGenerator->runActionWithFilters()
+#6 /Users/admin/yii/framework/web/CWebApplication.php(282): CrudGenerator->run()
+#7 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/index.php/gii/crud/diff/id/0
+2017/04/29 02:29:46 [error] [php] Methods with the same name as their class will not be constructors in a future version of PHP; Text_Diff has a deprecated constructor (/Users/admin/yii/framework/gii/components/Pear/Text/Diff.php:20)
+Stack trace:
+#0 unknown(0): autoload()
+#1 /Users/admin/yii/framework/gii/CCodeGenerator.php(109): spl_autoload_call()
+#2 /Users/admin/yii/framework/web/actions/CInlineAction.php(49): ModelGenerator->actionDiff()
+#3 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Users/admin/yii/framework/web/CController.php(286): ModelGenerator->runAction()
+#5 /Users/admin/yii/framework/web/CController.php(265): ModelGenerator->runActionWithFilters()
+#6 /Users/admin/yii/framework/web/CWebApplication.php(282): ModelGenerator->run()
+#7 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/index.php/gii/model/diff/id/0
+2017/04/29 02:34:39 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: user.username. The SQL statement executed was: INSERT INTO 'user' ("username", "password", "fname", "lname", "email", "phone", "created", "updated") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7).
+2017/04/29 02:34:39 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 19 UNIQUE constraint failed: user.username in /Users/admin/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/admin/yii/framework/db/ar/CActiveRecord.php(1080): CDbCommand->execute()
+#1 /Users/admin/yii/framework/db/ar/CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/UserController.php(70): CActiveRecord->save()
+#3 /Users/admin/yii/framework/web/actions/CInlineAction.php(49): UserController->actionCreate()
+#4 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/admin/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/admin/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/admin/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#14 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/myNotes/index.php/user/create
+HTTP_REFERER=http://localhost:8888/myNotes/index.php/user/create
+---

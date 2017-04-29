@@ -1,6 +1,6 @@
 <?php
 
-class NoteController extends Controller
+class UserController extends Controller
 {
 
 	public $layout = '//layouts/bootstrap';
@@ -12,7 +12,7 @@ class NoteController extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
-			//'postOnly + delete', // we only allow deletion via POST request
+			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
 
@@ -25,11 +25,11 @@ class NoteController extends Controller
 	{
 		return array(
 			array('allow', // allow all users
-				'actions' => array('index', 'view', 'items'),
+				'actions' => array('index', 'view', 'create', 'update', 'delete'),
 				'users' => array('*'),
 			),
 			array('allow', // allow authenticated user
-				'actions' => array('create', 'update', 'delete'),
+				'actions' => array(),
 				'users' => array('@'),
 			),
 			array('allow', // allow admin user
@@ -59,18 +59,20 @@ class NoteController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model = new Note;
+		$model = new User;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if (isset($_POST['Note']))
+		if (isset($_POST['User']))
 		{
-			$model->attributes = $_POST['Note'];
+			$model->attributes = $_POST['User'];
 			if ($model->save())
-				$this->redirect(Yii::app()->request->baseUrl . '/note/index');
+				$this->redirect(array('view', 'id' => $model->id));
 		}
 
+		
+		
 		$this->render('create', array(
 			'model' => $model,
 		));
@@ -88,13 +90,15 @@ class NoteController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if (isset($_POST['Note']))
+		if (isset($_POST['User']))
 		{
-			$model->attributes = $_POST['Note'];
+			$model->attributes = $_POST['User'];
 			if ($model->save())
-				$this->redirect(Yii::app()->request->baseUrl . '/note/index');
+				$this->redirect(array('view', 'id' => $model->id));
 		}
 
+		//dump($model);exit;
+		
 		$this->render('update', array(
 			'model' => $model,
 		));
@@ -107,9 +111,7 @@ class NoteController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$model = $this->loadModel($id);
-		$model->delete();
-		$this->redirect(Yii::app()->request->baseUrl . '/note/index');
+		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if (!isset($_GET['ajax']))
@@ -122,27 +124,13 @@ class NoteController extends Controller
 	public function actionIndex()
 	{
 		$criteria = new CDbCriteria;
-		$criteria->compare('t.user_id', Yii::app()->user->id);
-		$criteria->with = array('User');
-		$criteria->order = 't.updated DESC, t.completed DESC';
+		$criteria->compare('t.id', Yii::app()->user->id);
 		
-		$p['notes'] = Note::model()->findAll($criteria);
+		$dataProvider = new CActiveDataProvider('User', array('criteria' => $criteria));
 		
-		$this->render('index', $p);
-	}
-
-	public function actionItems($id = NULL)
-	{
-		$this->layout = '//layouts/items';
-
-		if ($id == NULL)
-			throw new CHttpException(400, 'Missing ID');
-
-		$p['note'] = $this->loadModel($id);
-		if (empty($p['note']))
-			throw new CHttpException(400, 'No project with that ID exists');
-
-		$this->render('items', $p);
+		$this->render('index', array(
+			'dataProvider' => $dataProvider,
+		));
 	}
 
 	/**
@@ -150,10 +138,10 @@ class NoteController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model = new Note('search');
+		$model = new User('search');
 		$model->unsetAttributes();  // clear any default values
-		if (isset($_GET['Note']))
-			$model->attributes = $_GET['Note'];
+		if (isset($_GET['User']))
+			$model->attributes = $_GET['User'];
 
 		$this->render('admin', array(
 			'model' => $model,
@@ -164,12 +152,12 @@ class NoteController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Note the loaded model
+	 * @return User the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model = Note::model()->findByPk($id);
+		$model = User::model()->findByPk($id);
 		if ($model === null)
 			throw new CHttpException(404, 'The requested page does not exist.');
 		return $model;
@@ -177,11 +165,11 @@ class NoteController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Note $model the model to be validated
+	 * @param User $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if (isset($_POST['ajax']) && $_POST['ajax'] === 'note-form')
+		if (isset($_POST['ajax']) && $_POST['ajax'] === 'user-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

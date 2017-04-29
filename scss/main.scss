@@ -46,11 +46,6 @@ and open the template in the editor.
 		&:hover {
 			background-color: #060;
 			transition: all 0.5s;
-			span {
-				transform: scale(1.5) rotateZ(90deg);
-				transition: all 0.5s;
-			}
-			
 		}
 		span {
 			position: absolute;

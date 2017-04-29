@@ -17,6 +17,7 @@
  */
 class Item extends CActiveRecord
 {
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -33,11 +34,12 @@ class Item extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('note_id, completed, created, updated', 'numerical', 'integerOnly'=>true),
+			array('name', 'required'),
+			array('note_id, completed, created, updated', 'numerical', 'integerOnly' => true),
 			array('name', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, note_id, quantity, completed, created, updated', 'safe', 'on'=>'search'),
+			array('id, name, note_id, quantity, completed, created, updated', 'safe', 'on' => 'search'),
 			array('name', 'required'),
 		);
 	}
@@ -86,18 +88,18 @@ class Item extends CActiveRecord
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
-		$criteria=new CDbCriteria;
+		$criteria = new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('note_id',$this->note_id);
-		$criteria->compare('quantity',$this->quantity);
-		$criteria->compare('completed',$this->completed);
-		$criteria->compare('created',$this->created);
-		$criteria->compare('updated',$this->updated);
+		$criteria->compare('id', $this->id);
+		$criteria->compare('name', $this->name, true);
+		$criteria->compare('note_id', $this->note_id);
+		$criteria->compare('quantity', $this->quantity);
+		$criteria->compare('completed', $this->completed);
+		$criteria->compare('created', $this->created);
+		$criteria->compare('updated', $this->updated);
 
 		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
+			'criteria' => $criteria,
 		));
 	}
 
@@ -107,11 +109,11 @@ class Item extends CActiveRecord
 	 * @param string $className active record class name.
 	 * @return Item the static model class
 	 */
-	public static function model($className=__CLASS__)
+	public static function model($className = __CLASS__)
 	{
 		return parent::model($className);
 	}
-	
+
 	// Update date
 	public function beforeSave()
 	{
@@ -120,9 +122,10 @@ class Item extends CActiveRecord
 			$this->created = time();
 			$this->completed = 0;
 		}
-			
+
 		$this->updated = time();
-		
+
 		return parent::beforeSave();
 	}
+
 }

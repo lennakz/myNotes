@@ -26,9 +26,11 @@
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="<?php echo Yii::app()->request->baseUrl ?>/note/index">
-					<img class="icon-brand" src="<?php echo Yii::app()->request->baseUrl ?>/images/icons/icon-72x72.png">
-				</a>
+				<?php if(!Yii::app()->user->isGuest): ?>
+					<a class="navbar-brand" href="<?php echo Yii::app()->request->baseUrl ?>/note/index">
+						<img class="icon-brand" src="<?php echo Yii::app()->request->baseUrl ?>/images/icons/icon-72x72.png">
+					</a>
+				<?php endif ?>
 				<a class="navbar-brand" href="<?php echo Yii::app()->request->baseUrl ?>/">
 					<span>myNotes</span>
 				</a>
@@ -43,21 +45,39 @@
 			<div>
 				<ul class="nav navbar-nav">
 					<li><a href="<?php echo Yii::app()->request->baseUrl ?>/about">About</a></li>
-					<li><a href="<?php echo Yii::app()->request->baseUrl ?>/note/index">Notes</a></li> 
+					<li><?php if(!Yii::app()->user->isGuest): ?>
+							<a href="<?php echo Yii::app()->request->baseUrl ?>/note/index">Notes</a>
+						<?php endif ?>
+					</li> 
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-					<li><a href="<?php echo Yii::app()->request->baseUrl ?>/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					<li>
+						<?php if(Yii::app()->user->isGuest) echo '<a href="' . Yii::app()->request->baseUrl . '/user/create"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a>' ?>
+					</li>
+					<?php if(Yii::app()->user->isGuest): ?>
+					<li><a href="<?php echo Yii::app()->request->baseUrl ?>/site/login">Login</a></li>
+					<?php else: ?>
+					<li><a href="<?php echo Yii::app()->request->baseUrl ?>/user/view/<?php echo Yii::app()->user->id ?>">Account</a></li>
+					<li><a href="<?php echo Yii::app()->request->baseUrl ?>/site/logout">Logout</a></li>
+					<?php endif ?>
 				</ul>
 			</div>
 		</div>
 		<!-- Navigation for mobile -->
 		<div id="mySidenav" class="sidenav">
+			<h3 class="text-center"><i>Greetings, <?php if(Yii::app()->user->isGuest) echo 'Stranger'; else echo ucwords(User::model()->findByPk (Yii::app()->user->id)->fname); ?>!</i></h3>
 			<a href="<?php echo Yii::app()->request->baseUrl ?>/about">About</a>
-			<a href="<?php echo Yii::app()->request->baseUrl ?>/note/index">Notes</a>
+			<?php if(!Yii::app()->user->isGuest): ?>
+				<a href="<?php echo Yii::app()->request->baseUrl ?>/note/index">Notes</a>
+			<?php endif ?>
 			<hr>
-			<a href="#">Sign Up</a>
-			<a href="<?php echo Yii::app()->request->baseUrl ?>/login">Login</a>
+			<?php if(Yii::app()->user->isGuest) echo '<a href="' . Yii::app()->request->baseUrl . '/user/create">Sign Up</a>' ?>
+			<?php if(Yii::app()->user->isGuest): ?>
+				<a href="<?php echo Yii::app()->request->baseUrl ?>/site/login">Login</a>
+			<?php else: ?>
+				<a href="<?php echo Yii::app()->request->baseUrl ?>/user/index">Account</a>
+				<a href="<?php echo Yii::app()->request->baseUrl ?>/site/logout">Logout</a>
+			<?php endif ?>
 		</div>
 		<!-- End Navigation for mobile -->
 	</nav>

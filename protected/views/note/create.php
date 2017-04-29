@@ -26,19 +26,21 @@
 	<?php echo $form->errorSummary($model, '', '', array('class' => 'alert alert-danger')); ?>
 
 	<div class="form-group">
-	<?php echo $form->labelEx($model, 'title', array('class' => 'control-label')); ?>
+		<?php echo $form->labelEx($model, 'title', array('class' => 'control-label')); ?>
 		<?php echo $form->textArea($model, 'title'); ?>
 		<?php echo $form->error($model, 'title', array('class' => 'text-danger text-center')); ?>
 	</div>
 
 	<div class="form-group">
-	<?php echo $form->labelEx($model, 'description', array('class' => 'control-label')); ?>
+		<?php echo $form->labelEx($model, 'description', array('class' => 'control-label')); ?>
 		<?php echo $form->textArea($model, 'description', array('rows' => 6, 'cols' => 50)); ?>
 		<?php echo $form->error($model, 'description', array('class' => 'text-danger text-center')); ?>
 	</div>
-
+	
+	<?php echo $form->hiddenField($model, 'user_id', array('value' => Yii::app()->user->id)) ?>
+	
 	<div class="form-group">
-	<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class' => 'btn btn-success')); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class' => 'btn btn-success')); ?>
 	</div>
 
 	<?php $this->endWidget(); ?>

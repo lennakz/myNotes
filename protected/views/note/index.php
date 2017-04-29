@@ -1,10 +1,6 @@
 <?php
 /* @var $this NoteController */
 /* @var $p['notes'] */
-
-$this->breadcrumbs=array(
-	'Notes',
-);
 ?>
 
 <section class="notes" id="notes">
@@ -13,22 +9,22 @@ $this->breadcrumbs=array(
 	<?php foreach ($notes as $m): ?>
 		<button onclick="overlayOn(<?php echo $m->id; ?>)" id="info-button" class="pull-left"><i class="fa fa-info" aria-hidden="true"></i></button>
 		<a href="<?php echo Yii::app()->request->baseUrl . '/note/items/' . $m->id ?>">
-			<h3><?php echo $m->title ?><span class="small pull-right"><?php echo $m->numberOfCompletedItems . ' / ' . $m->numberOfItems ?></span></h3>
+			<h3><?php echo ucwords($m->title) ?><span class="small pull-right" style="margin-top: 6px"><?php echo $m->numberOfCompletedItems . ' / ' . $m->numberOfItems ?></span></h3>
 		</a>
 		<hr>
 		
 		<div id="overlay" data-overlay="<?php echo $m->id; ?>">
 			<div id="overlay-text">
-				<h2><?php echo $m->title ?></h2>
-				<p><i><?php echo date('d/m/Y', $m->updated) ?> </i></p>
+				<h2><?php echo ucwords($m->title) . ' (User: ' . ucwords($m->User->fname) . ')' ?></h2>
 				<hr>
-				<p><?php echo $m->description ?></p>
-				<button onclick="editNote(<?php echo $m->id; ?>)" id="edit-button" data-id="<?php echo $m->id ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> EDIT</button>
+				<p><?php echo ucfirst($m->description) ?></p>
+				<?php if (!empty($m->description)) echo '<hr style="margin-bottom: 40px">' ?>
+				<a href="javascript:void(0)" onclick="editNote(<?php echo $m->id; ?>)" id="edit-button" data-id="<?php echo $m->id ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> EDIT</a>
 				<a href="<?php echo Yii::app()->request->baseUrl . '/note/delete/' . $m->id ?>" id="note-delete-button"><i class="fa fa-trash-o" aria-hidden="true"></i> DELETE</a>
 				<form action="<?php echo Yii::app()->request->baseUrl ?>/note/update/<?php echo $m->id ?>" method="post" class="note-update-form" data-form="<?php echo $m->id; ?>">
-					<input type="text" name="Note[title]" placeholder="Name..." autocomplete="off">
-					<input type="text" name="Note[description]" placeholder="Description..." style="height: 70px" autocomplete="off">
-					<input type="submit" value="Update" class="btn btn-success" style="margin-right: 0">
+					<input type="text" name="Note[title]" placeholder="Name..." autocomplete="off" value="<?php echo $m->title ?>">
+					<input type="text" name="Note[description]" placeholder="Description..." style="height: 70px" autocomplete="off" value="<?php echo $m->description ?>">
+					<input type="submit" value="Update" class="btn btn-success">
 				</form>
 			</div>
 			<button onclick="overlayOff(<?php echo $m->id; ?>)" id="close-button">X</button>

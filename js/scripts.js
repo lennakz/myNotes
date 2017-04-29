@@ -18,10 +18,13 @@ $(function() {
 			if (response.status === 'error') {
 				var target = $form.data('error-target');
 				$(target).html(response.errors.name[0]);
+				$(target).addClass('alert alert-danger');
 			}
 			else {
 				var target = $form.data('target');
 				$(target).html(response.html);
+				$($form.data('error-target')).text('');
+				$($form.data('error-target')).removeClass('alert alert-danger');
 				$('.ajax-form .input-visible').val('');
 			}
 		}).fail(function( jqXHR, textStatus, errorThrown ) {

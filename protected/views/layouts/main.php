@@ -17,6 +17,8 @@
 		->registerScriptFile(Yii::app()->request->baseUrl.'/js/scripts.js');
 	?>
 
+	<link rel="icon" sizes="192x192" href="<?php echo Yii::app()->request->baseUrl?>/images/icons/icon-192x192.png">
+	
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 	
 </head>

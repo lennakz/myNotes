@@ -8,7 +8,7 @@
 	
 	<?php foreach ($notes as $m): ?>
 		<button onclick="overlayOn(<?php echo $m->id; ?>)" id="info-button" class="pull-left"><i class="fa fa-info" aria-hidden="true"></i></button>
-		<a class="pull-left" id="place-on-map-button" href=<?php echo Yii::app()->request->baseUrl . "/note/map/" . $m->id ?>><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+		<a class="pull-left" id="place-on-map-button" href=<?php echo Yii::app()->request->baseUrl . "/note/addmap/" . $m->id ?>><i class="fa fa-map-marker" aria-hidden="true"></i></a>
 		<a href="<?php echo Yii::app()->request->baseUrl . '/note/items/' . $m->id ?>">
 			<h3><?php echo ucwords($m->title) ?>
 				<span class="small pull-right" style="margin-top: 6px"><?php echo $m->numberOfCompletedItems . ' / ' . $m->numberOfItems ?></span>
@@ -35,7 +35,8 @@
 	<?php endforeach; ?>
 	
 	<div class="button-background">
-		<a href="<?php echo Yii::app()->request->baseUrl ?>/note/create/" class="button-round"><span>+</span></a>
+		<a href="<?php echo Yii::app()->request->baseUrl ?>/note/create/" id="create-note-button" class="button-round"><span>+</span></a>
+		<a href="<?php echo Yii::app()->request->baseUrl ?>/note/viewmap/" id="view-all-notes-map-button" class="button-round"><span>GM</span></a>
 	</div>
 		
 </section>

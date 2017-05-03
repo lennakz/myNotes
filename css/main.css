@@ -369,7 +369,7 @@ and open the template in the editor.
   height: 75px;
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 -15px 10px rgba(255, 255, 255, 0.8); }
-  .button-background .button-round {
+  .button-background #create-note-button {
     background-color: #57A429;
     border-radius: 999em;
     width: 70px;
@@ -384,10 +384,37 @@ and open the template in the editor.
     cursor: pointer;
     display: inline-block;
     transition: all 0.5s; }
-    .button-background .button-round:hover {
+    .button-background #create-note-button:hover {
       background-color: #060;
       transition: all 0.5s; }
-    .button-background .button-round span {
+    .button-background #create-note-button span {
+      position: absolute;
+      line-height: 65px;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      color: #FFF;
+      transition: all 0.5s; }
+  .button-background #view-all-notes-map-button {
+    background-color: #57A429;
+    border-radius: 999em;
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    line-height: 1;
+    font-size: 36px;
+    position: fixed;
+    bottom: 15px;
+    left: 20%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.5s; }
+    .button-background #view-all-notes-map-button:hover {
+      background-color: #060;
+      transition: all 0.5s; }
+    .button-background #view-all-notes-map-button span {
       position: absolute;
       line-height: 65px;
       left: 0;

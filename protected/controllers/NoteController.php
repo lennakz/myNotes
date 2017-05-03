@@ -29,7 +29,7 @@ class NoteController extends Controller
 				'users' => array('*'),
 			),
 			array('allow', // allow authenticated user
-				'actions' => array('create', 'update', 'delete', 'map', 'savePosition'),
+				'actions' => array('create', 'update', 'delete', 'addmap', 'savePosition', 'viewmap'),
 				'users' => array('@'),
 			),
 			array('allow', // allow admin user
@@ -131,12 +131,9 @@ class NoteController extends Controller
 		$this->render('index', $p);
 	}
 
-	public function actionItems($id = NULL)
+	public function actionItems($id)
 	{
 		$this->layout = '//layouts/items';
-
-		if ($id == NULL)
-			throw new CHttpException(400, 'Missing ID');
 
 		$p['note'] = $this->loadModel($id);
 		if (empty($p['note']))
@@ -145,21 +142,22 @@ class NoteController extends Controller
 		$this->render('items', $p);
 	}
 	
-	public function actionMap($id = NULL)
+	public function actionAddmap($id)
 	{
-		if ($id == NULL)
-			throw new CHttpException(400, 'Missing ID');
-		
 		$p['note'] = $this->loadModel($id);
 		
-		$this->render('map', $p);
+		$this->render('addmap', $p);
 	}
 	
-	public function actionSavePosition($id = NULL)
-	{	
-		if ($id == NULL)
-			throw new CHttpException(400, 'Missing ID');
+	public function actionViewmap()
+	{
+		$p['notes'] = Note::model()->findAllByAttributes(array('user_id' => Yii::app()->user->id));
 		
+		$this->render('viewmap', $p);
+	}
+	
+	public function actionSavePosition($id)
+	{	
 		$model = $this->loadModel($id);
 		
 		if (isset($_POST['Note']))
@@ -170,9 +168,7 @@ class NoteController extends Controller
 				$this->redirect(Yii::app()->request->baseUrl . '/note/index');
 		}
 		
-		
-		
-		//$this->redirect(Yii::app()->request->baseUrl . '/note/index');
+		throw new CHttpException(400, 'Your request is empty');
 	}
 
 	/**

@@ -29,7 +29,7 @@ class NoteController extends Controller
 				'users' => array('*'),
 			),
 			array('allow', // allow authenticated user
-				'actions' => array('create', 'update', 'delete', 'map'),
+				'actions' => array('create', 'update', 'delete', 'map', 'savePosition'),
 				'users' => array('@'),
 			),
 			array('allow', // allow admin user
@@ -145,11 +145,34 @@ class NoteController extends Controller
 		$this->render('items', $p);
 	}
 	
-	public function actionMap($id)
+	public function actionMap($id = NULL)
 	{
+		if ($id == NULL)
+			throw new CHttpException(400, 'Missing ID');
+		
 		$p['note'] = $this->loadModel($id);
 		
 		$this->render('map', $p);
+	}
+	
+	public function actionSavePosition($id = NULL)
+	{	
+		if ($id == NULL)
+			throw new CHttpException(400, 'Missing ID');
+		
+		$model = $this->loadModel($id);
+		
+		if (isset($_POST['Note']))
+		{
+			$model->attributes = $_POST['Note'];
+			
+			if ($model->save())
+				$this->redirect(Yii::app()->request->baseUrl . '/note/index');
+		}
+		
+		
+		
+		//$this->redirect(Yii::app()->request->baseUrl . '/note/index');
 	}
 
 	/**

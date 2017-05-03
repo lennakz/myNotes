@@ -11,6 +11,8 @@
  * @property integer $user_id
  * @property integer $created
  * @property integer $updated
+ * @property double $lat
+ * @property double $lng
  * 
  * @property Item[] $Items Relation to Item model
  * @property User $User Relation to User model
@@ -36,6 +38,7 @@ class Note extends CActiveRecord
 		return array(
 			array('title, user_id', 'required'),
 			array('completed, user_id, created, updated', 'numerical', 'integerOnly' => true),
+			array('lat, lng', 'numerical'),
 			array('title, description, user_id', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -69,6 +72,8 @@ class Note extends CActiveRecord
 			'user_id' => 'User Id',
 			'created' => 'Created',
 			'updated' => 'Updated',
+			'lat' => 'Latitude',
+            'lng' => 'Longitude'
 		);
 	}
 
@@ -97,6 +102,8 @@ class Note extends CActiveRecord
 		$criteria->compare('user_id', $this->user_id);
 		$criteria->compare('created', $this->created);
 		$criteria->compare('updated', $this->updated);
+		$criteria->compare('lat',$this->lat);
+        $criteria->compare('lng',$this->lng);
 
 		return new CActiveDataProvider($this, array(
 			'criteria' => $criteria,

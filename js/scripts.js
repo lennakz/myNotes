@@ -69,6 +69,4 @@ $(function() {
 			$('#mySidenav').css('width', '0');
 	});
 
-	// Google Maps API AIzaSyCPjo_cCYIkkWKcnfpPsGV4d7G5nQ5GqmA
-
 });

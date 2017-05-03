@@ -29,7 +29,7 @@ class NoteController extends Controller
 				'users' => array('*'),
 			),
 			array('allow', // allow authenticated user
-				'actions' => array('create', 'update', 'delete'),
+				'actions' => array('create', 'update', 'delete', 'map'),
 				'users' => array('@'),
 			),
 			array('allow', // allow admin user
@@ -143,6 +143,13 @@ class NoteController extends Controller
 			throw new CHttpException(400, 'No project with that ID exists');
 
 		$this->render('items', $p);
+	}
+	
+	public function actionMap($id)
+	{
+		$p['note'] = $this->loadModel($id);
+		
+		$this->render('map', $p);
 	}
 
 	/**

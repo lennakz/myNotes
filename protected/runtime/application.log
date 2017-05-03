@@ -3230,3 +3230,68 @@ Stack trace:
 REQUEST_URI=/myNotes/index.php/user/create
 HTTP_REFERER=http://localhost:8888/myNotes/index.php/user/create
 ---
+2017/05/02 20:08:00 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('map')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/map
+---
+2017/05/02 20:08:20 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('map')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/map
+---
+2017/05/02 20:08:21 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('map')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/map
+---
+2017/05/02 20:36:39 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "phpsqlinfo_addrow.php". in /Users/admin/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/admin/yii/framework/web/CController.php(270): CController->missingAction('phpsqlinfo_addr...')
+#1 /Users/admin/yii/framework/web/CWebApplication.php(282): CController->run('phpsqlinfo_addr...')
+#2 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('note/phpsqlinfo...')
+#3 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#5 {main}
+REQUEST_URI=/myNotes/note/phpsqlinfo_addrow.php?name=&address=&type=bar&lat=37.44256366057609&lng=-122.20212936401367
+HTTP_REFERER=http://localhost:8888/myNotes/note/map
+---
+2017/05/03 01:32:35 [error] [php] Trying to get property of non-object (/Users/admin/Documents/WebRoot/myNotes/protected/views/note/map.php:8)
+Stack trace:
+#0 /Users/admin/yii/framework/web/CController.php(869): NoteController->renderFile()
+#1 /Users/admin/yii/framework/web/CController.php(782): NoteController->renderPartial()
+#2 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/NoteController.php(157): NoteController->render()
+#3 /Users/admin/yii/framework/web/actions/CInlineAction.php(49): NoteController->actionMap()
+#4 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): NoteController->runAction()
+#6 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/admin/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): NoteController->filterAccessControl()
+#9 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/admin/yii/framework/web/CController.php(265): NoteController->runActionWithFilters()
+#12 /Users/admin/yii/framework/web/CWebApplication.php(282): NoteController->run()
+#13 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/note/map
+2017/05/03 01:42:26 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "map4". in /Users/admin/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/admin/yii/framework/web/CController.php(270): CController->missingAction('map4')
+#1 /Users/admin/yii/framework/web/CWebApplication.php(282): CController->run('map4')
+#2 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('note/map4')
+#3 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#5 {main}
+REQUEST_URI=/myNotes/note/map4
+HTTP_REFERER=http://localhost:8888/myNotes/note/index
+---

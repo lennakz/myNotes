@@ -216,6 +216,9 @@ and open the template in the editor.
         box-shadow: none  !important; }
       .items .items-body .header h2 {
         margin-bottom: 20px; }
+      .items .items-body .header p {
+        position: relative;
+        top: 15px; }
     .items .items-body .header:after {
       content: "";
       display: table;
@@ -355,9 +358,21 @@ and open the template in the editor.
     Author     : admin
 */
 #map {
-  height: 700px;
+  height: 100px;
   width: 100%; }
 
+#save-marker {
+  margin-right: 20px; }
+
+@media screen and (min-width: 768px) {
+  #map {
+    height: 400px;
+    width: 100%; }
+
+  #map-note {
+    padding: 15px 0 15px 20px; }
+    #map-note form {
+      margin-top: 20px; } }
 .breadcrumb {
   border-radius: 0; }
 

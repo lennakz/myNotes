@@ -9,7 +9,28 @@ and open the template in the editor.
 */
 
 #map {
-	height: 700px;
+	height: 100px;
 	width: 100%;
 }
+#save-marker, #delete-marker {
+	
+}
+#save-marker {
+	margin-right: 20px;
+}
+
+@media screen and (min-width: 768px) {
+	#map {
+		height: 400px;
+		width: 100%;
+	}
+	#map-note {
+		padding: 15px 0 15px 20px;
+		form {
+			margin-top: 20px;
+		}
+	}
+}
+
+
 

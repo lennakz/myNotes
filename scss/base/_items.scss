@@ -107,6 +107,10 @@ and open the template in the editor.
 			h2 {
 				margin-bottom: 20px;
 			}
+			p {
+				position: relative;
+				top: 15px;
+			}
 		}
 
 		/* Clear floats after the header */

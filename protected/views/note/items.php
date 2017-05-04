@@ -27,6 +27,7 @@
 					   value="<?php echo $note->id ?>">
 				<button type="submit" class="addBtn">Add</button>
 			</form>
+			<p class="small">Double space to enter quantity of purchase</p>
 		</div>
 
 		<div id="ajax-container">

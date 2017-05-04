@@ -144,6 +144,8 @@ class NoteController extends Controller
 	
 	public function actionAddmap($id)
 	{
+		$this->layout = '//layouts/items';
+		
 		$p['note'] = $this->loadModel($id);
 		
 		$this->render('addmap', $p);
@@ -151,6 +153,8 @@ class NoteController extends Controller
 	
 	public function actionViewmap()
 	{
+		$this->layout = '//layouts/items';
+		
 		$p['notes'] = Note::model()->findAllByAttributes(array('user_id' => Yii::app()->user->id));
 		
 		$this->render('viewmap', $p);

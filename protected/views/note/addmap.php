@@ -34,19 +34,32 @@
 			content: content
 		});
 		
-
+		marker = new google.maps.Marker({
+			map: map,
+			draggable: true
+		});
+		
+		<?php if (!empty($note->lat) and !empty($note->lng)): ?>
+				
+			savedLocation = new google.maps.LatLng(<?=$note->lat?>, <?=$note->lng?>);
+			marker.setPosition(savedLocation);
+				
+		<?php endif ?>
+		
 		google.maps.event.addListener(map, 'click', function (event) {
+
 			marker = new google.maps.Marker({
 				position: event.latLng,
-				map: map
+				map: map,
+				draggable: true
 			});
 
-			google.maps.event.addListener(marker, 'click', function () {
-				infoWindow.open(map, marker);
-				document.getElementById('note-lat').value = marker.getPosition().lat();
-				document.getElementById('note-lng').value = marker.getPosition().lng();
-			});
+			document.getElementById('note-lat').value = marker.getPosition().lat();
+			document.getElementById('note-lng').value = marker.getPosition().lng();
+
 		});
+		
+		infoWindow.open(map, marker);
 
 		// Get current location
 		if (navigator.geolocation) {

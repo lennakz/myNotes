@@ -3,6 +3,40 @@
 
 <div id="map"></div>
 
+<section class="items" id="items">
+	
+	<div class="items-body">
+		
+		<div class="header">
+			<h2 class="text-center"><?php echo $note->title ?></h2>
+			<div id="form-error"></div>
+			<form class="ajax-form" 
+				  data-error-target="#form-error" 
+				  data-target="#ajax-container" 
+				  action="<?php echo Yii::app()->request->baseUrl ?>/item/ajaxCreate" 
+				  method="post" >
+				<input class="input-visible" 
+					   type="text" 
+					   name="Item[name]" 
+					   placeholder="Enter your item..." 
+					   autofocus="autofocus" 
+					   autocomplete="off">
+				<input type="hidden" 
+					   name="Item[note_id]" 
+					   value="<?php echo $note->id ?>">
+				<button type="submit" class="addBtn">Add</button>
+			</form>
+			<p class="small">Double space to enter quantity of purchase</p>
+		</div>
+
+		<div id="ajax-container">
+			<?php echo $note->renderItemsList(); ?>
+		</div>
+	</div>
+
+	
+</section>
+
 
 <script>
 	var content = 
@@ -46,14 +80,8 @@
 				
 		<?php endif ?>
 		
-		google.maps.event.addListener(map, 'click', function (event) {
-
-			marker = new google.maps.Marker({
-				position: event.latLng,
-				map: map,
-				draggable: true
-			});
-
+		map.addListener('click', function (event) {
+			marker.setPosition(event.latLng);
 			document.getElementById('note-lat').value = marker.getPosition().lat();
 			document.getElementById('note-lng').value = marker.getPosition().lng();
 
@@ -61,6 +89,10 @@
 		
 		infoWindow.open(map, marker);
 
+		marker.addListener('click', function() {
+			infoWindow.open(map, marker);
+		});
+		
 		// Get current location
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(function (position) {

@@ -36,6 +36,12 @@
 		<?php echo $form->textField($model,'quantity'); ?>
 		<?php echo $form->error($model,'quantity'); ?>
 	</div>
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'exclamation'); ?>
+		<?php echo $form->textField($model,'exclamation'); ?>
+		<?php echo $form->error($model,'exclamation'); ?>
+	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'created'); ?>

@@ -9,6 +9,7 @@
  * @property integer $note_id
  * @property string $quantity
  * @property integer $completed
+ * @property integer $exclamation
  * @property integer $created
  * @property integer $updated
  * 
@@ -35,11 +36,11 @@ class Item extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name', 'required'),
-			array('note_id, completed, created, updated', 'numerical', 'integerOnly' => true),
+			array('note_id, completed, exclamation, created, updated', 'numerical', 'integerOnly' => true),
 			array('name', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, note_id, quantity, completed, created, updated', 'safe', 'on' => 'search'),
+			array('id, name, note_id, quantity, completed, exclamation, created, updated', 'safe', 'on' => 'search'),
 			array('name', 'required'),
 		);
 	}
@@ -67,6 +68,7 @@ class Item extends CActiveRecord
 			'note_id' => 'Note',
 			'quantity' => 'Quantity',
 			'completed' => 'Completed',
+			'exclamation' => 'Exclamation',
 			'created' => 'Created',
 			'updated' => 'Updated',
 		);
@@ -95,6 +97,7 @@ class Item extends CActiveRecord
 		$criteria->compare('note_id', $this->note_id);
 		$criteria->compare('quantity', $this->quantity);
 		$criteria->compare('completed', $this->completed);
+		$criteria->compare('exclamation', $this->completed);
 		$criteria->compare('created', $this->created);
 		$criteria->compare('updated', $this->updated);
 
@@ -121,6 +124,7 @@ class Item extends CActiveRecord
 		{
 			$this->created = time();
 			$this->completed = 0;
+			$this->exclamation = 0;
 		}
 
 		$this->updated = time();

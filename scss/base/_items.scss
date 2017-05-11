@@ -32,6 +32,10 @@ and open the template in the editor.
 	}
 }
 
+.exclamation {
+	background: #d68d8d !important;
+}
+
 .items {
 	width: 100% !important;
 	padding-right: 0 !important;
@@ -57,7 +61,7 @@ and open the template in the editor.
 				top: 0;
 				padding: 0;
 				
-				#button-danger {
+				#button-exclamation {
 					position: absolute;
 					right: 45px;
 					top: 0;
@@ -82,7 +86,7 @@ and open the template in the editor.
 					}
 				}
 
-				#button-notice {
+				#button-edit {
 					position: absolute;
 					right: 90px;
 					top: 0;
@@ -262,13 +266,13 @@ and open the template in the editor.
 					top: 0;
 					padding: 0;
 
-					#button-danger {
+					#button-exclamation {
 						position: absolute;
 						right: 45px;
 						top: 0;
 					}
 
-					#button-notice {
+					#button-edit {
 						position: absolute;
 						right: 90px;
 						top: 0;

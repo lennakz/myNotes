@@ -12,19 +12,19 @@
 		<!-- Swipeleft additional buttons -->
 		<li class="hidden-buttons">
 			<a data-target="#ajax-container" 
-			   href="<?php echo Yii::app()->request->baseUrl ?>/item/delete/<?php echo $m->id ?>?ajax" 
-			   id="button-danger"><i class="fa fa-exclamation" aria-hidden="true"></i></a>
-			<a data-target="#ajax-container" 
-			   href="<?php echo Yii::app()->request->baseUrl ?>/item/delete/<?php echo $m->id ?>?ajax" 
-			   id="button-notice"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+			   href="javascript:void(0)" 
+			   id="button-exclamation"><i class="fa fa-exclamation" aria-hidden="true"></i></a>
+			<a href="<?php echo Yii::app()->request->baseUrl ?>/item/update/<?php echo $m->id ?>" 
+			   id="button-edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
 			<a data-target="#ajax-container"
 			   class="visible-xs-block"
 			   href="<?php echo Yii::app()->request->baseUrl ?>/item/delete/<?php echo $m->id ?>?ajax" 
 			   id="button-delete"><i class="fa fa-times" aria-hidden="true"></i></a>
 		</li>
 		<li	id="item"
-			class="<?php if ($m->completed == 0) echo 'unchecked'; else echo 'checked'; ?>"
+			class="<?php if ($m->completed == 0) echo 'unchecked'; else echo 'checked'; if ($m->exclamation == 1) echo ' exclamation'; ?>"
 			data-link="<?php echo Yii::app()->request->baseUrl ?>/item/ajaxCompleteUpdate/<?php echo $m->id ?>"
+			data-link2="<?php echo Yii::app()->request->baseUrl ?>/item/ajaxExclamationUpdate/<?php echo $m->id ?>"
 			data-target="#ajax-container" >
 				<!-- Check/uncheck button -->
 				<a href="javascript:void(0)" id="item-check"><?php if ($m->completed == 0): ?><i class="fa fa-square-o" aria-hidden="true"></i><?php else: ?><i class="fa fa-check-square-o" aria-hidden="true"></i><?php endif ?></a>

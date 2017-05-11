@@ -11,22 +11,24 @@
 		<div class="header">
 			<h2 class="text-center"><?php echo $note->title ?></h2>
 			<div id="form-error"></div>
-			<form class="ajax-form" 
-				  data-error-target="#form-error" 
-				  data-target="#ajax-container" 
-				  action="<?php echo Yii::app()->request->baseUrl ?>/item/ajaxCreate" 
-				  method="post" >
-				<input class="input-visible" 
-					   type="text" 
-					   name="Item[name]" 
-					   placeholder="Enter your item..." 
-					   autofocus="autofocus" 
-					   autocomplete="off">
-				<input type="hidden" 
-					   name="Item[note_id]" 
-					   value="<?php echo $note->id ?>">
-				<button type="submit" class="addBtn">Add</button>
-			</form>
+			<div style="height: 42px">
+				<form class="ajax-form" 
+					  data-error-target="#form-error" 
+					  data-target="#ajax-container" 
+					  action="<?php echo Yii::app()->request->baseUrl ?>/item/ajaxCreate" 
+					  method="post" >
+					<input class="input-visible" 
+						   type="text" 
+						   name="Item[name]" 
+						   placeholder="Enter your item..." 
+						   autofocus="autofocus" 
+						   autocomplete="off">
+					<input type="hidden" 
+						   name="Item[note_id]" 
+						   value="<?php echo $note->id ?>">
+					<button type="submit" class="addBtn">Add</button>
+				</form>
+			</div>
 			<p class="small">Double space to enter quantity of purchase</p>
 		</div>
 

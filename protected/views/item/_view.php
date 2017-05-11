@@ -20,6 +20,10 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('quantity')); ?>:</b>
 	<?php echo CHtml::encode($data->quantity); ?>
 	<br />
+	
+	<b><?php echo CHtml::encode($data->getAttributeLabel('exclamation')); ?>:</b>
+	<?php echo CHtml::encode($data->exclamation); ?>
+	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('completed')); ?>:</b>
 	<?php echo CHtml::encode($data->completed); ?>

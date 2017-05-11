@@ -139,7 +139,10 @@ class ItemController extends Controller
 		$model = $this->loadModel($id);
 		
 		if ($model->completed == 0)
+		{
 			$model->completed = 1;
+			$model->exclamation = 0;
+		}
 		else
 			$model->completed = 0;
 		//dump($model->completed);exit;
@@ -147,6 +150,19 @@ class ItemController extends Controller
 			echo $model->Note->renderItemsList();
 	}
 
+	public function actionAjaxExclamationUpdate($id)
+	{
+		$model = $this->loadModel($id);
+		
+		if ($model->exclamation == 0)
+			$model->exclamation = 1;
+		else
+			$model->exclamation = 0;
+		//dump($model->completed);exit;
+		if ($model->save())
+			echo $model->Note->renderItemsList();
+	}
+	
 	/**
 	 * Deletes a particular model.
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.

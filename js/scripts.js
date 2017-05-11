@@ -53,13 +53,27 @@ $(function() {
 		$.ajax({
 			url: $item.attr('data-link')
 		}).done(function(response) {
-			console.log(response);
 			var target = $item.data('target');
 			$(target).html(response);
 		});
 		
 		return false;
 	});
+	
+	// Add a "exclamation" background when clicking on a exclamation button
+	$('body').on('click', '#button-exclamation', function() {
+		var $item = $(this).parent().next();
+		$.ajax({
+			url: $item.attr('data-link2')
+		}).done(function(response) {
+			var target = $item.data('target');
+			$(target).html(response);
+		});
+		
+		return false;
+	});
+	
+	
 	
 	$('#menu-button').on('click', function() {
 		$(this).toggleClass('change');

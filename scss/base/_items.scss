@@ -13,6 +13,10 @@ and open the template in the editor.
 	background: #888 !important;
 	color: #fff;
 	text-decoration: line-through;
+	
+	#item-check:hover {
+		background: #eee !important;
+	}
 }
 
 /* Add a "checked" mark when clicked on */
@@ -22,8 +26,10 @@ and open the template in the editor.
 	border-width: 0 2px 2px 0;
 }
 
-.item-check {
-	margin-right: 15px;
+.unchecked {
+	#item-check:hover {
+		background: #888 !important;
+	}
 }
 
 .items {
@@ -55,12 +61,24 @@ and open the template in the editor.
 					position: absolute;
 					right: 45px;
 					top: 0;
-					padding: 12px 19px 13px 16px;
+					padding: 12px 19px 13px 19px;
 					width: 45px;
+					height: 46px;
+					
+					i {
+						color: #000;
+						text-shadow: 0 1px 0 #fff;
+						opacity: .2;
+					}
 					
 					&:hover {
 						background-color: yellow;
 						color: white;
+						
+							i {
+							opacity: .8;
+							text-shadow: 0 0 0 #000;
+						}
 					}
 				}
 
@@ -70,16 +88,67 @@ and open the template in the editor.
 					top: 0;
 					padding: 12px 12px 13px 16px;
 					width: 45px;
+					height: 46px;
+					
+					i {
+						color: #000;
+						text-shadow: 0 1px 0 #fff;
+						opacity: .2;
+					}
 					
 					&:hover {
 						background-color: green;
 						color: white;
+						
+						i {
+							opacity: .8;
+							text-shadow: 0 0 0 #000;
+						}
+					}
+				}
+			}
+			
+			#button-delete {
+				width: 45px;
+				height: 46px;
+				
+				i {
+					color: #000;
+					text-shadow: 0 1px 0 #fff;
+					opacity: .2;
+				}
+				
+				&:hover {
+					i {
+						opacity: .8;
+						text-shadow: 0 0 0 #000;
+					}
+				}
+			}
+			
+			#item-check {
+				margin-right: 15px;
+				padding: 14px 15px 12px 16px;
+				width: 45px;
+				height: 46px;
+				 
+				i {
+					color: #000;
+					text-shadow: 0 1px 0 #fff;
+					opacity: .2;
+				}
+				
+				&:hover {
+					background-color: yellow;
+					color: white;
+					i {
+						opacity: .8;
+						text-shadow: 0 0 0 #000;
 					}
 				}
 			}
 					
 			li {
-				cursor: pointer;
 				position: relative;
 				padding: 12px 8px 9px 20px;
 				background: #eee;
@@ -183,9 +252,11 @@ and open the template in the editor.
 		.items-body {
 
 			ul {
+				li {
+					z-index: 999;
+				}
 
 				.hidden-buttons {
-					display: none;
 					position: relative;
 					right: 0;
 					top: 0;
@@ -202,8 +273,14 @@ and open the template in the editor.
 						right: 90px;
 						top: 0;
 					}
+					
+					#button-delete {
+						position: absolute;
+						right: 0;
+						top: 0;
+					}
 				}
-
+				
 			}
 
 			.items-quantity {

@@ -143,6 +143,8 @@ and open the template in the editor.
   background: #888 !important;
   color: #fff;
   text-decoration: line-through; }
+  .checked #item-check:hover {
+    background: #eee !important; }
 
 /* Add a "checked" mark when clicked on */
 .checked::before {
@@ -150,8 +152,8 @@ and open the template in the editor.
   border-style: solid;
   border-width: 0 2px 2px 0; }
 
-.item-check {
-  margin-right: 15px; }
+.unchecked #item-check:hover {
+  background: #888 !important; }
 
 .items {
   width: 100% !important;
@@ -181,22 +183,62 @@ and open the template in the editor.
           position: absolute;
           right: 45px;
           top: 0;
-          padding: 12px 19px 13px 16px;
-          width: 45px; }
+          padding: 12px 19px 13px 19px;
+          width: 45px;
+          height: 46px; }
+          .items .items-body ul .hidden-buttons #button-danger i {
+            color: #000;
+            text-shadow: 0 1px 0 #fff;
+            opacity: .2; }
           .items .items-body ul .hidden-buttons #button-danger:hover {
             background-color: yellow;
             color: white; }
+            .items .items-body ul .hidden-buttons #button-danger:hover i {
+              opacity: .8;
+              text-shadow: 0 0 0 #000; }
         .items .items-body ul .hidden-buttons #button-notice {
           position: absolute;
           right: 90px;
           top: 0;
           padding: 12px 12px 13px 16px;
-          width: 45px; }
+          width: 45px;
+          height: 46px; }
+          .items .items-body ul .hidden-buttons #button-notice i {
+            color: #000;
+            text-shadow: 0 1px 0 #fff;
+            opacity: .2; }
           .items .items-body ul .hidden-buttons #button-notice:hover {
             background-color: green;
             color: white; }
+            .items .items-body ul .hidden-buttons #button-notice:hover i {
+              opacity: .8;
+              text-shadow: 0 0 0 #000; }
+      .items .items-body ul #button-delete {
+        width: 45px;
+        height: 46px; }
+        .items .items-body ul #button-delete i {
+          color: #000;
+          text-shadow: 0 1px 0 #fff;
+          opacity: .2; }
+        .items .items-body ul #button-delete:hover i {
+          opacity: .8;
+          text-shadow: 0 0 0 #000; }
+      .items .items-body ul #item-check {
+        margin-right: 15px;
+        padding: 14px 15px 12px 16px;
+        width: 45px;
+        height: 46px; }
+        .items .items-body ul #item-check i {
+          color: #000;
+          text-shadow: 0 1px 0 #fff;
+          opacity: .2; }
+        .items .items-body ul #item-check:hover {
+          background-color: yellow;
+          color: white; }
+          .items .items-body ul #item-check:hover i {
+            opacity: .8;
+            text-shadow: 0 0 0 #000; }
       .items .items-body ul li {
-        cursor: pointer;
         position: relative;
         padding: 12px 8px 9px 20px;
         background: #eee;
@@ -264,8 +306,9 @@ and open the template in the editor.
   .items .items-body {
     /* Style the input */
     /* Style the "Add" button */ }
+    .items .items-body ul li {
+      z-index: 999; }
     .items .items-body ul .hidden-buttons {
-      display: none;
       position: relative;
       right: 0;
       top: 0;
@@ -277,6 +320,10 @@ and open the template in the editor.
       .items .items-body ul .hidden-buttons #button-notice {
         position: absolute;
         right: 90px;
+        top: 0; }
+      .items .items-body ul .hidden-buttons #button-delete {
+        position: absolute;
+        right: 0;
         top: 0; }
     .items .items-body .items-quantity {
       position: absolute;

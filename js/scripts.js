@@ -48,7 +48,7 @@ $(function() {
 	});
 	
 	// Add a "checked" symbol when clicking on a list item
-	$('body').on('click', '.item-check', function() {
+	$('body').on('click', '#item-check', function() {
 		var $item = $(this).parent();
 		$.ajax({
 			url: $item.attr('data-link')

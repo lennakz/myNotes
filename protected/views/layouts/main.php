@@ -17,7 +17,7 @@
 		->registerScriptFile('//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js')
 		->registerScriptFile(Yii::app()->request->baseUrl.'/js/scripts.js');
 	?>
-
+	
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 	
 </head>

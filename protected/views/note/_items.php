@@ -38,39 +38,46 @@
 
 <ul>
 	<?php foreach ($items as $m): ?>
+		<!-- Swipeleft additional buttons -->
+		<li class="hidden-buttons">
+			<a data-target="#ajax-container" 
+			   href="<?php echo Yii::app()->request->baseUrl ?>/item/delete/<?php echo $m->id ?>?ajax" 
+			   id="button-danger"><span class="button-danger close"><i class="fa fa-exclamation" aria-hidden="true"></i></span></a>
+			<a data-target="#ajax-container" 
+			   href="<?php echo Yii::app()->request->baseUrl ?>/item/delete/<?php echo $m->id ?>?ajax" 
+			   id="button-notice"><span class="button-notice close"><i class="fa fa-pencil" aria-hidden="true"></i></span></a>
+		</li>
 		<li	id="item"
 			class="<?php if ($m->completed == 0) echo 'unchecked'; else echo 'checked'; ?>"
 			data-link="<?php echo Yii::app()->request->baseUrl ?>/item/ajaxCompleteUpdate/<?php echo $m->id ?>"
 			data-target="#ajax-container" >
-			<a href="javascript:void(0)" class="item-check">
-				<?php if ($m->completed == 0): ?> 
-					<i class="fa fa-square-o" aria-hidden="true"></i>
-				<?php else: ?>
-					<i class="fa fa-check-square-o" aria-hidden="true"></i>
-				<?php endif ?>
-			</a>
-			<?php echo ucwords($m->name) ?>
-			<span class="items-quantity"><?php echo $m->quantity ?></span>
-			<a data-target="#ajax-container" 
-			   href="<?php echo Yii::app()->request->baseUrl ?>/item/delete/<?php echo $m->id ?>?ajax" 
-			   class="button-delete"><span class="close">&times;</span></a>
+				<!-- Check/uncheck button -->
+				<a href="javascript:void(0)" class="item-check"><?php if ($m->completed == 0): ?><i class="fa fa-square-o" aria-hidden="true"></i><?php else: ?><i class="fa fa-check-square-o" aria-hidden="true"></i><?php endif ?></a>
+				<!-- Item text itself -->
+				<?php echo ucwords($m->name) ?>
+				<!-- On double space show quantity separated -->
+				<span class="items-quantity"><?php echo $m->quantity ?></span>
+				<!-- Delete item button -->
+				<a data-target="#ajax-container" 
+				   href="<?php echo Yii::app()->request->baseUrl ?>/item/delete/<?php echo $m->id ?>?ajax" 
+				   id="button-delete"><span class="close">&times;</span></a>
 		</li>
 	<?php endforeach; ?>
 </ul>
 
 <script>
-//	$(document).on("click", "ul span", function() {
-//	  $(this).toggleClass("off on");
-//	}).on("swipeleft", "ul li", function(e) {
-//	  $(this).off("click");
-//	  $(this).css({
-//		transform: "translateX(-40px)"
-//	  }).one("transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd", function() {
-//		$(this).one("click", function() {
-//		  $(this).css({
-//			transform: "translateX(0)"
-//		  });
-//		});
-//	  });
-//	});
+	$(document).on("click", "ul span", function() {
+	  $(this).toggleClass("off on");
+	}).on("swipeleft", ".hidden-buttons", function(e) {
+	  $(this).off("click");
+	  $(this).css({
+		transform: "translateX(-40px)"
+	  }).one("transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd", function() {
+		$(this).one("click", function() {
+		  $(this).css({
+			transform: "translateX(0)"
+		  });
+		});
+	  });
+	});
 </script>

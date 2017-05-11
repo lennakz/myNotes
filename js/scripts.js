@@ -35,7 +35,7 @@ $(function() {
 	});
 	
 	// Delete items when clicked delete-button throught ajax
-	$('body').on('click', '.button-delete', function() {
+	$('body').on('click', '#button-delete', function() {
 		var $link = $(this);	
 		$.ajax({
 			url: $link.attr('href'),

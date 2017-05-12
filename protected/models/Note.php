@@ -160,7 +160,7 @@ class Note extends CActiveRecord
 		
 		$array = $this->Items;
 		
-		$p['items'] = array_msort($array, array('exclamation' => SORT_DESC, 'updated' => SORT_DESC));
+		$p['items'] = array_msort($array, array('exclamation' => SORT_DESC, 'completed' => SORT_ASC, 'updated' => SORT_DESC));
 		
 		return $c->renderPartial('/note/_items', $p, true);
 	}

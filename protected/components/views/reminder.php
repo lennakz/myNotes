@@ -12,7 +12,7 @@
 	<div class="container">
 		<div class="alert alert-danger alert-dismissable fade in">
 			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-			<strong>Reminder!</strong> You have something <a href="#" class="alert-link">to remember</a>.
+			<strong>Reminder!</strong> You have something to remember.
 			<a href="#demo" data-toggle="collapse">See more...</a>
 			<div id="demo" class="collapse"><br>
 				<ul>

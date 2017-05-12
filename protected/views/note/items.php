@@ -4,6 +4,18 @@
 /* @var $note Note */
 ?>
 
+<style>
+	#add-picture {
+		position: absolute;
+		top: 133px;
+		right: 28%;
+		color: #000;
+		padding: 11px 14px;		
+	}
+
+</style>
+	
+
 <section class="items" id="items">
 	
 	<div class="items-body">
@@ -29,6 +41,7 @@
 					<button type="submit" class="addBtn">Add</button>
 				</form>
 			</div>
+			<a href="#" id="add-picture"><i class="fa fa-camera" aria-hidden="true"></i></a>
 			<p class="small">Double space to enter quantity of purchase</p>
 		</div>
 

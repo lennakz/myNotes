@@ -36,6 +36,7 @@ nav {
 		margin-right: 15px !important;
 	}
 	.sidenav {
+		z-index: 9999;
 		display: none;
 	}
 }
@@ -82,7 +83,7 @@ nav {
 			height: 100%;
 			width: 0;
 			position: fixed;
-			z-index: 1;
+			z-index: 9999;
 			top: 50px;
 			left: 0;
 			background-color: rgba(0,0,0,0.9);

@@ -125,8 +125,11 @@ class ItemController extends Controller
 		if (isset($_POST['Item']))
 		{
 			$model->attributes = $_POST['Item'];
+			$model->quantity = $_POST['Item']['quantity'];
+			$model->comment = $_POST['Item']['comment'];
+			
 			if ($model->save())
-				$this->redirect(array('view', 'id' => $model->id));
+				$this->redirect(Yii::app()->request->baseUrl . '/note/items/' . $model->Note->id);
 		}
 
 		$this->render('update', array(
@@ -216,6 +219,7 @@ class ItemController extends Controller
 	public function loadModel($id)
 	{
 		$model = Item::model()->findByPk($id);
+		
 		if ($model === null)
 			throw new CHttpException(404, 'The requested page does not exist.');
 		return $model;

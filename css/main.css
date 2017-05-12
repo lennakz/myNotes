@@ -38,6 +38,7 @@ nav {
   nav .navbar-right {
     margin-right: 15px !important; }
   nav .sidenav {
+    z-index: 9999;
     display: none; }
 
 @media only screen and (max-width: 767px) {
@@ -72,7 +73,7 @@ nav {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 9999;
     top: 50px;
     left: 0;
     background-color: rgba(0, 0, 0, 0.9);
@@ -177,7 +178,7 @@ and open the template in the editor.
       margin: 0;
       padding: 0; }
       .items .items-body ul .hidden-buttons {
-        z-index: 999;
+        z-index: 2;
         position: relative;
         right: 0;
         top: 0;

@@ -8,17 +8,16 @@
  * @property string $name
  * @property integer $note_id
  * @property string $quantity
+ * @property string $comment
  * @property integer $completed
  * @property integer $exclamation
  * @property integer $created
  * @property integer $updated
  * 
  * @property Note $Note Relation to note
- * @property Type $Type Relation to types
  */
 class Item extends CActiveRecord
 {
-
 	/**
 	 * @return string the associated database table name
 	 */
@@ -40,8 +39,7 @@ class Item extends CActiveRecord
 			array('name', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, note_id, quantity, completed, exclamation, created, updated', 'safe', 'on' => 'search'),
-			array('name', 'required'),
+			array('id, name, note_id, quantity, comment, completed, exclamation, created, updated', 'safe', 'on' => 'search'),
 		);
 	}
 
@@ -67,6 +65,7 @@ class Item extends CActiveRecord
 			'name' => 'Name',
 			'note_id' => 'Note',
 			'quantity' => 'Quantity',
+			'comment' => 'Comment',
 			'completed' => 'Completed',
 			'exclamation' => 'Exclamation',
 			'created' => 'Created',
@@ -96,6 +95,7 @@ class Item extends CActiveRecord
 		$criteria->compare('name', $this->name, true);
 		$criteria->compare('note_id', $this->note_id);
 		$criteria->compare('quantity', $this->quantity);
+		$criteria->compare('comment', $this->comment);
 		$criteria->compare('completed', $this->completed);
 		$criteria->compare('exclamation', $this->completed);
 		$criteria->compare('created', $this->created);

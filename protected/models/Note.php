@@ -157,7 +157,12 @@ class Note extends CActiveRecord
 	public function renderItemsList()
 	{
 		$c = Yii::app()->controller;
-		return $c->renderPartial('/note/_items', ['items' => $this->Items], true);
+		
+		$array = $this->Items;
+		
+		$p['items'] = array_msort($array, array('exclamation' => SORT_DESC, 'updated' => SORT_DESC));
+		
+		return $c->renderPartial('/note/_items', $p, true);
 	}
-
+	
 }

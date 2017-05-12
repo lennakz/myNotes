@@ -126,6 +126,7 @@ class ItemController extends Controller
 		{
 			$model->attributes = $_POST['Item'];
 			$model->quantity = $_POST['Item']['quantity'];
+			$model->reminder = $_POST['Item']['reminder'];
 			$model->comment = $_POST['Item']['comment'];
 			
 			if ($model->save())

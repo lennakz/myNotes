@@ -14,7 +14,7 @@
 		->registerCssFile(Yii::app()->request->baseUrl.'/css/main.css')
 		->registerScriptFile('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
 		->registerScriptFile('https://use.fontawesome.com/b860453c18.js')
-		->registerScriptFile('//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js')
+		->registerScriptFile('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
 		->registerScriptFile(Yii::app()->request->baseUrl.'/js/scripts.js')
 		->registerScriptFile(Yii::app()->request->baseUrl.'/js/swiped.min.js');
 	?>
@@ -85,7 +85,10 @@
 	</nav>
 
 	<main>
-
+		
+		<!-- Reminder -->
+		<?php $this->widget('Reminder'); ?>
+		
 		<?php echo $content; ?>
 
 	</main>
@@ -94,9 +97,3 @@
 	
 </body>
 </html>
-
-<!-- 
-
-<a class="navbar-brand" href="<?php //echo Yii::app()->request->baseUrl ?>/"><?php //echo CHtml::encode(Yii::app()->name); ?></a>
-
--->

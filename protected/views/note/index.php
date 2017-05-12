@@ -7,13 +7,14 @@
 
 	
 	<?php foreach ($notes as $m): ?>
-		<button onclick="overlayOn(<?php echo $m->id; ?>)" id="info-button" class="pull-left"><i class="fa fa-info" aria-hidden="true"></i></button>
-		<a class="pull-left" id="place-on-map-button" href=<?php echo Yii::app()->request->baseUrl . "/note/addmap/" . $m->id ?>><i class="fa fa-map-marker" aria-hidden="true"></i></a>
-		<a href="<?php echo Yii::app()->request->baseUrl . '/note/items/' . $m->id ?>">
-			<h3><?php echo ucwords($m->title) ?>
-				<span class="small pull-right" style="margin-top: 6px"><?php echo $m->numberOfCompletedItems . ' / ' . $m->numberOfItems ?></span>
-			</h3>
-		</a>
+		<div class="note">
+			<a href="javascript:void(0)" onclick="overlayOn(<?php echo $m->id; ?>)" id="info-button" class="pull-left"><i class="fa fa-info" aria-hidden="true"></i></a>
+			<a class="pull-left" id="place-on-map-button" href=<?php echo Yii::app()->request->baseUrl . "/note/addmap/" . $m->id ?>><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+			<a class="pull-left" id="note-button" href="<?php echo Yii::app()->request->baseUrl . '/note/items/' . $m->id ?>">
+				<h3><?php echo ucwords($m->title) ?></h3>
+			</a>
+			<span class="pull-right" style="margin-top: 6px"><?php echo $m->numberOfCompletedItems . ' / ' . $m->numberOfItems ?></span>
+		</div>
 		<hr>
 		
 		<div id="overlay" data-overlay="<?php echo $m->id; ?>">

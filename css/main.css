@@ -231,7 +231,9 @@ and open the template in the editor.
         margin-right: 15px;
         padding: 14px 15px 12px 16px;
         width: 45px;
-        height: 46px; }
+        height: 46px;
+        position: relative;
+        top: -12px; }
         .items .items-body ul #item-check i {
           color: #000;
           text-shadow: 0 1px 0 #fff;
@@ -259,7 +261,8 @@ and open the template in the editor.
           background: #f9f9f9; }
     .items .items-body .items-quantity {
       position: absolute;
-      left: 60%; }
+      left: 70%;
+      top: 10px; }
     .items .items-body #button-delete {
       position: absolute;
       right: 0;
@@ -330,8 +333,12 @@ and open the template in the editor.
         right: 0;
         top: 0; }
     .items .items-body .items-quantity {
-      position: absolute;
-      left: 60%; }
+      left: 80%; }
+    .items .items-body #item-check {
+      position: relative;
+      top: -12px; }
+    .items .items-body #item-text {
+      width: 75%; }
     .items .items-body .header {
       background-color: #060;
       padding: 10px 30px 30px 30px;
@@ -388,18 +395,23 @@ and open the template in the editor.
 */
 #info-button {
   color: #bbb;
-  margin-right: 10px;
   font-size: 20px;
   background-color: #fff;
   border: none;
   border-radius: 50%;
-  width: 30px;
-  height: 30px; }
+  width: 45px;
+  height: 46px;
+  padding: 12px 19px 13px 19px;
+  position: relative;
+  bottom: 5px; }
   #info-button i {
     vertical-align: text-top; }
   #info-button:active, #info-button:focus, #info-button:visited {
     outline: 0 !important;
     box-shadow: none  !important; }
+  #info-button:hover {
+    background-color: grey;
+    color: #fff; }
 
 #close-button {
   background-color: transparent;
@@ -429,50 +441,70 @@ and open the template in the editor.
 #place-on-map-button {
   color: #bbb;
   font-size: 20px;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px; }
+  width: 45px;
+  height: 46px;
+  margin-right: 20px;
+  padding: 10px 19px 13px 17px;
+  position: relative;
+  bottom: 5px;
+  border: none;
+  border-radius: 50%; }
+  #place-on-map-button:hover {
+    background-color: grey;
+    color: #fff; }
 
 #edit-button {
   margin-right: 20px; }
 
-.notes {
-  margin-top: -20px; }
-  .notes #overlay {
-    position: fixed;
-    display: block;
-    width: 0;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 2;
-    cursor: pointer;
-    overflow-x: hidden;
-    transition: 0.5s; }
-  .notes #overlay-text {
-    text-align: center;
-    width: 100%;
-    height: 90%;
-    position: absolute;
-    top: 10%;
-    color: white; }
-    .notes #overlay-text p {
-      font-size: 20px; }
-    .notes #overlay-text i {
-      font-size: 15px; }
-    .notes #overlay-text hr {
-      width: 75%; }
-    .notes #overlay-text form {
-      margin-top: 25px; }
-    .notes #overlay-text .note-update-form {
-      display: none; }
-      .notes #overlay-text .note-update-form input {
-        width: 75%;
-        margin-top: 15px; }
+#note-button {
+  position: relative;
+  bottom: 15px;
+  word-wrap: break-word;
+  width: 80%; }
 
+.notes hr {
+  clear: left; }
+.notes span {
+  color: #bbb;
+  font-size: 15px; }
+.notes #overlay {
+  position: fixed;
+  display: block;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  cursor: pointer;
+  overflow-x: hidden;
+  transition: 0.5s; }
+.notes #overlay-text {
+  text-align: center;
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  top: 10%;
+  color: white; }
+  .notes #overlay-text p {
+    font-size: 20px; }
+  .notes #overlay-text i {
+    font-size: 15px; }
+  .notes #overlay-text hr {
+    width: 75%; }
+  .notes #overlay-text form {
+    margin-top: 25px; }
+  .notes #overlay-text .note-update-form {
+    display: none; }
+    .notes #overlay-text .note-update-form input {
+      width: 75%;
+      margin-top: 15px; }
+
+@media screen and (max-width: 767px) {
+  #note-button {
+    width: 50%; } }
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -528,6 +560,7 @@ and open the template in the editor.
       background-color: #060;
       transition: all 0.5s; }
     .button-background #create-note-button span {
+      font-size: 35px;
       position: absolute;
       line-height: 65px;
       left: 0;

@@ -27,9 +27,9 @@
 			data-link2="<?php echo Yii::app()->request->baseUrl ?>/item/ajaxExclamationUpdate/<?php echo $m->id ?>"
 			data-target="#ajax-container" >
 				<!-- Check/uncheck button -->
-				<a href="javascript:void(0)" id="item-check"><?php if ($m->completed == 0): ?><i class="fa fa-square-o" aria-hidden="true"></i><?php else: ?><i class="fa fa-check-square-o" aria-hidden="true"></i><?php endif ?></a>
+				<a href="javascript:void(0)" id="item-check" class="pull-left"><?php if ($m->completed == 0): ?><i class="fa fa-square-o" aria-hidden="true"></i><?php else: ?><i class="fa fa-check-square-o" aria-hidden="true"></i><?php endif ?></a>
 				<!-- Item text itself -->
-				<?php echo ucwords($m->name) ?>
+				<div id="item-text"><?php echo ucwords($m->name) ?></div>
 				<!-- On double space show quantity separated -->
 				<span class="items-quantity"><?php echo $m->quantity ?></span>
 				<!-- Delete item button -->

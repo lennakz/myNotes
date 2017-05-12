@@ -2,9 +2,6 @@
 /* @var $this SiteController */
 
 $this->pageTitle=Yii::app()->name . ' | About';
-$this->breadcrumbs=array(
-	'About',
-);
 ?>
 
 <h1 class="text-center">About</h1>
@@ -16,5 +13,5 @@ $this->breadcrumbs=array(
 <p>Hope you will enjoy using it!</p>
 <p>We are working to improve it...</p>
 <hr>
-<p>If you have any questions or suggestions, you can reach my at my email: <a href="mailto:mykola.kotok@gmail.com">mykola.kotok@gmail.com</a></p>
+<p>If you have any questions or suggestions, you can reach me at: <a href="mailto:mykola.kotok@gmail.com">mykola.kotok@gmail.com</a></p>
 <p>Or visit my <a href="http://mkotok.com" target="_blank">Web Site</a></p>

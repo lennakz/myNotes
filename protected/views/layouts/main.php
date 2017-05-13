@@ -13,6 +13,7 @@
         ->registerCssFile('//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css')
 		->registerCssFile(Yii::app()->request->baseUrl.'/css/main.css')
 		->registerScriptFile('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+		->registerScriptFile('https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js')		
 		->registerScriptFile('https://use.fontawesome.com/b860453c18.js')
 		->registerScriptFile('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
 		->registerScriptFile(Yii::app()->request->baseUrl.'/js/scripts.js')

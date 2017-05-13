@@ -46,11 +46,18 @@
 		<?php echo $form->error($model, 'comment'); ?>
 	</div>
 
-	<div class="form-group">
-		<?php echo $form->labelEx($model, 'reminder', array('class' => 'control-label')); ?>
-		<?php echo $form->textArea($model, 'reminder'); ?>
-		<?php echo $form->error($model, 'reminder'); ?>
-	</div>
+<!--	<div class="form-group">
+		<?php //echo $form->labelEx($model, 'reminder', array('class' => 'control-label')); ?>
+		<?php //echo $form->textArea($model, 'reminder'); ?>
+		<?php //echo $form->error($model, 'reminder'); ?>
+	</div>-->
+	
+	<?php 
+		$this->widget('Timepicker', array(
+			'model'=>$model,
+			'name'=>'reminder',
+		));
+	?>
 
 	<div class="form-group">
 		<?php echo $form->labelEx($model, 'image', array('class' => 'control-label')); ?>

@@ -11,6 +11,9 @@
 
 	<div class="container">
 
+		<!-- Reminder -->
+		<?php $this->widget('Reminder'); ?>
+		
 		<?php echo $content; ?>
 
 	</div>

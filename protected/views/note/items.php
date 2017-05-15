@@ -3,6 +3,7 @@
 /* @var $items Item[] */
 /* @var $note Note */
 ?>
+<script src="<?php echo Yii::app()->request->baseUrl ?>/js/swiped.min.js"></script>
 
 <style>
 	#add-picture {

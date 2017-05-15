@@ -73,8 +73,7 @@ $(function() {
 		return false;
 	});
 	
-	
-	
+	// Show and hide navigation menu for mobile
 	$('#menu-button').on('click', function() {
 		$(this).toggleClass('change');
 		if ($('#mySidenav').width() === 0)

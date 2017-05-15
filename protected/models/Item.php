@@ -11,7 +11,7 @@
  * @property string $comment
  * @property integer $completed
  * @property integer $exclamation
- * @property integer $reminder
+ * @property string $reminder
  * @property string $image
  * @property integer $created
  * @property integer $updated
@@ -37,7 +37,7 @@ class Item extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name', 'required'),
-			array('note_id, completed, exclamation, reminder, created, updated', 'numerical', 'integerOnly' => true),
+			array('note_id, completed, exclamation, created, updated', 'numerical', 'integerOnly' => true),
 			array('name, completed, exclamation, reminder, image', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -130,7 +130,6 @@ class Item extends CActiveRecord
 			$this->created = time();
 			$this->completed = 0;
 			$this->exclamation = 0;
-			$this->reminder = time();
 		}
 
 		$this->updated = time();

@@ -11,6 +11,9 @@ return array(
 
 	// preloading 'log' component
 	'preload'=>array('log'),
+	
+	// language
+	'language' => 'en',
 
 	// autoloading model and component classes
 	'import'=>array(
@@ -37,8 +40,8 @@ return array(
 
         // disable default yii scripts
 			'scriptMap' => array(
-				'jquery.js'     => 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js',
-				//'jquery.min.js' => false,
+				//'jquery.js'     => false,
+				'jquery.min.js' => 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js',
 				//'core.css'      => false,
 				//'styles.css'    => false,
 				//'pager.css'     => false,

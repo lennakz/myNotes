@@ -6462,3 +6462,73 @@ Stack trace:
 REQUEST_URI=/myNotes/item/update/39
 HTTP_REFERER=http://localhost:8888/myNotes/note/items/1
 ---
+2017/05/15 21:28:22 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/ui-theme/jquery-ui-1.7.3.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/ui-theme/jq...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/ui-theme/jquery-ui-1.7.3.css
+HTTP_REFERER=http://localhost:8888/myNotes/item/update/38
+---
+2017/05/15 21:28:24 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/ui-theme/jquery-ui-1.7.3.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/ui-theme/jq...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/ui-theme/jquery-ui-1.7.3.css
+HTTP_REFERER=http://localhost:8888/myNotes/item/update/38
+---
+2017/05/15 21:28:26 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/ui-theme/jquery-ui-1.7.3.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/ui-theme/jq...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/ui-theme/jquery-ui-1.7.3.css
+HTTP_REFERER=http://localhost:8888/myNotes/item/update/38
+---
+2017/05/15 21:28:30 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/ui-theme/jquery-ui-1.7.3.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/ui-theme/jq...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/ui-theme/jquery-ui-1.7.3.css
+HTTP_REFERER=http://localhost:8888/myNotes/item/update/38
+---
+2017/05/15 23:06:27 [error] [php] A non well formed numeric value encountered (/Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php:130)
+Stack trace:
+#0 /Users/admin/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#1 /Users/admin/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): ItemController->runAction()
+#4 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/admin/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): ItemController->filterAccessControl()
+#7 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/admin/yii/framework/web/CController.php(265): ItemController->runActionWithFilters()
+#10 /Users/admin/yii/framework/web/CWebApplication.php(282): ItemController->run()
+#11 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/item/update/38
+2017/05/15 23:06:32 [error] [php] A non well formed numeric value encountered (/Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php:130)
+Stack trace:
+#0 /Users/admin/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#1 /Users/admin/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): ItemController->runAction()
+#4 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/admin/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): ItemController->filterAccessControl()
+#7 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/admin/yii/framework/web/CController.php(265): ItemController->runActionWithFilters()
+#10 /Users/admin/yii/framework/web/CWebApplication.php(282): ItemController->run()
+#11 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/item/update/38

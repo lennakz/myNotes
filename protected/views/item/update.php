@@ -4,7 +4,7 @@
 
 ?>
 
-<div class="container">
+
 
 	<h1 class="text-center"><?php echo $model->name; ?></h1>
 
@@ -46,18 +46,22 @@
 		<?php echo $form->error($model, 'comment'); ?>
 	</div>
 
-<!--	<div class="form-group">
-		<?php //echo $form->labelEx($model, 'reminder', array('class' => 'control-label')); ?>
-		<?php //echo $form->textArea($model, 'reminder'); ?>
-		<?php //echo $form->error($model, 'reminder'); ?>
-	</div>-->
-	
-	<?php 
-		$this->widget('Timepicker', array(
-			'model'=>$model,
-			'name'=>'reminder',
-		));
-	?>
+	<div class="form-group">
+		<?php echo $form->labelEx($model,'reminder',array('class'=>'control-label')); ?>
+		<?php Yii::import('application.extensions.CJuiDateTimePicker.CJuiDateTimePicker');
+			$this->widget('CJuiDateTimePicker',array(
+				'model'=>$model, //Model object
+				'attribute'=>'reminder', //attribute name
+				'mode'=>'datetime', //use "time","date" or "datetime" (default)
+				'options'=>array(
+					"dateFormat"=>'D M d',
+					'stepMinute' => '15',
+					'hourMax' => '23',
+				) // jquery plugin options
+			));
+		?>
+		<?php echo $form->error($model,'reminder'); ?>
+	</div>
 
 	<div class="form-group">
 		<?php echo $form->labelEx($model, 'image', array('class' => 'control-label')); ?>
@@ -71,4 +75,3 @@
 
 <?php $this->endWidget(); ?>
 
-</div>

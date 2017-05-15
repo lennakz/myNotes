@@ -118,15 +118,17 @@ class ItemController extends Controller
 	public function actionUpdate($id)
 	{
 		$model = $this->loadModel($id);
+		$model->reminder = date('D M j H:i', $model->reminder);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if (isset($_POST['Item']))
 		{
+			$time =$_POST['Item']['reminder'];
 			$model->attributes = $_POST['Item'];
 			$model->quantity = $_POST['Item']['quantity'];
-			$model->reminder = $_POST['Item']['reminder'];
+			$model->reminder = strtotime($_POST['Item']['reminder']);
 			$model->comment = $_POST['Item']['comment'];
 			
 			if ($model->save())

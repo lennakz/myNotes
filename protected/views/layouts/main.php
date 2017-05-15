@@ -9,7 +9,6 @@
 		->registerLinkTag('shortcut icon', 'image/x-icon', Yii::app()->request->baseUrl.'/images/icons/icon-72x72.png')
 		->registerLinkTag('manifest', null, Yii::app()->request->baseUrl.'/manifest.json') // For Mobile app simulation
 		->registerLinkTag('icon', null, Yii::app()->request->baseUrl.'/images/icons/icon-home-screen.png', null, array('sizes' => '256x256')) // Icon for home screnn
-		->registerCssFile('https://fonts.googleapis.com/css?family=Pacifico') // Google Fonts
         ->registerCssFile('//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css')
 		->registerCssFile(Yii::app()->request->baseUrl.'/css/main.css')
 		->registerScriptFile('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
@@ -17,7 +16,6 @@
 		->registerScriptFile('https://use.fontawesome.com/b860453c18.js')
 		->registerScriptFile('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
 		->registerScriptFile(Yii::app()->request->baseUrl.'/js/scripts.js')
-		->registerScriptFile(Yii::app()->request->baseUrl.'/js/swiped.min.js');
 	?>
 	
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
@@ -86,9 +84,6 @@
 	</nav>
 
 	<main>
-		
-		<!-- Reminder -->
-		<?php $this->widget('Reminder'); ?>
 		
 		<?php echo $content; ?>
 

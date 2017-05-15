@@ -42,6 +42,7 @@
 </ul>
 
 <script>
+	// Swipe left each items
 	$(function() {
 		var a2 = Swiped.init({
 			query: '.list #item',

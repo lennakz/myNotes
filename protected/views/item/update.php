@@ -54,15 +54,18 @@
 				'attribute'=>'reminder', //attribute name
 				'mode'=>'datetime', //use "time","date" or "datetime" (default)
 				'options'=>array(
-					"dateFormat"=>'D M d',
-					'stepMinute' => '15',
-					'hourMax' => '23',
+					'currentText' => 'Now',
+					'dateFormat'=>'D M d',
+					'hourMax' => '24',
+					'minuteMax' => '60',
+					'timezone' => null,
+					//'separator' => '-'
 				) // jquery plugin options
 			));
 		?>
 		<?php echo $form->error($model,'reminder'); ?>
 	</div>
-
+	
 	<div class="form-group">
 		<?php echo $form->labelEx($model, 'image', array('class' => 'control-label')); ?>
 		<?php echo CHtml::activeFileField($model, 'image'); ?>

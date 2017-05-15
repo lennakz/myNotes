@@ -118,7 +118,8 @@ class ItemController extends Controller
 	public function actionUpdate($id)
 	{
 		$model = $this->loadModel($id);
-		$model->reminder = date('D M j H:i', $model->reminder);
+		if (!empty($model->reminder))
+			$model->reminder = date('D M j H:i', $model->reminder);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);

@@ -6532,3 +6532,263 @@ Stack trace:
 #12 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
 #13 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
 REQUEST_URI=/myNotes/item/update/38
+2017/05/16 00:45:26 [error] [exception.Error] Error: Call to undefined function issset() in /Users/admin/Documents/WebRoot/myNotes/protected/components/Reminder.php:24
+Stack trace:
+#0 /Users/admin/yii/framework/web/CBaseController.php(181): Reminder->run()
+#1 /Users/admin/Documents/WebRoot/myNotes/protected/views/layouts/bootstrap.php(15): CBaseController->widget('Reminder')
+#2 /Users/admin/yii/framework/web/CBaseController.php(126): require('/Users/admin/Do...')
+#3 /Users/admin/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/admin/Do...', Array, true)
+#4 /Users/admin/yii/framework/web/CController.php(784): CBaseController->renderFile('/Users/admin/Do...', Array, true)
+#5 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/NoteController.php(131): CController->render('index', Array)
+#6 /Users/admin/yii/framework/web/actions/CInlineAction.php(49): NoteController->actionIndex()
+#7 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Users/admin/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /Users/admin/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/admin/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#16 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('note/index')
+#17 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#19 {main}
+REQUEST_URI=/myNotes/note/index
+HTTP_REFERER=http://localhost:8888/myNotes/note/items/5
+---
+2017/05/16 00:45:36 [error] [exception.Error] Error: Call to undefined function issset() in /Users/admin/Documents/WebRoot/myNotes/protected/components/Reminder.php:24
+Stack trace:
+#0 /Users/admin/yii/framework/web/CBaseController.php(181): Reminder->run()
+#1 /Users/admin/Documents/WebRoot/myNotes/protected/views/layouts/bootstrap.php(15): CBaseController->widget('Reminder')
+#2 /Users/admin/yii/framework/web/CBaseController.php(126): require('/Users/admin/Do...')
+#3 /Users/admin/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/admin/Do...', Array, true)
+#4 /Users/admin/yii/framework/web/CController.php(784): CBaseController->renderFile('/Users/admin/Do...', Array, true)
+#5 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/NoteController.php(131): CController->render('index', Array)
+#6 /Users/admin/yii/framework/web/actions/CInlineAction.php(49): NoteController->actionIndex()
+#7 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Users/admin/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /Users/admin/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/admin/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#16 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('note/index')
+#17 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#19 {main}
+REQUEST_URI=/myNotes/note/index
+HTTP_REFERER=http://localhost:8888/myNotes/note/items/5
+---
+2017/05/16 00:45:37 [error] [exception.Error] Error: Call to undefined function issset() in /Users/admin/Documents/WebRoot/myNotes/protected/components/Reminder.php:24
+Stack trace:
+#0 /Users/admin/yii/framework/web/CBaseController.php(181): Reminder->run()
+#1 /Users/admin/Documents/WebRoot/myNotes/protected/views/layouts/bootstrap.php(15): CBaseController->widget('Reminder')
+#2 /Users/admin/yii/framework/web/CBaseController.php(126): require('/Users/admin/Do...')
+#3 /Users/admin/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/admin/Do...', Array, true)
+#4 /Users/admin/yii/framework/web/CController.php(784): CBaseController->renderFile('/Users/admin/Do...', Array, true)
+#5 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/NoteController.php(131): CController->render('index', Array)
+#6 /Users/admin/yii/framework/web/actions/CInlineAction.php(49): NoteController->actionIndex()
+#7 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Users/admin/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /Users/admin/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/admin/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#16 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('note/index')
+#17 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#19 {main}
+REQUEST_URI=/myNotes/note/index
+HTTP_REFERER=http://localhost:8888/myNotes/note/items/5
+---
+2017/05/16 00:45:39 [error] [exception.Error] Error: Call to undefined function issset() in /Users/admin/Documents/WebRoot/myNotes/protected/components/Reminder.php:24
+Stack trace:
+#0 /Users/admin/yii/framework/web/CBaseController.php(181): Reminder->run()
+#1 /Users/admin/Documents/WebRoot/myNotes/protected/views/layouts/bootstrap.php(15): CBaseController->widget('Reminder')
+#2 /Users/admin/yii/framework/web/CBaseController.php(126): require('/Users/admin/Do...')
+#3 /Users/admin/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/admin/Do...', Array, true)
+#4 /Users/admin/yii/framework/web/CController.php(784): CBaseController->renderFile('/Users/admin/Do...', Array, true)
+#5 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/NoteController.php(131): CController->render('index', Array)
+#6 /Users/admin/yii/framework/web/actions/CInlineAction.php(49): NoteController->actionIndex()
+#7 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Users/admin/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /Users/admin/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/admin/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#16 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('note/index')
+#17 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#19 {main}
+REQUEST_URI=/myNotes/note/index
+HTTP_REFERER=http://localhost:8888/myNotes/note/items/5
+---
+2017/05/16 00:45:40 [error] [exception.Error] Error: Call to undefined function issset() in /Users/admin/Documents/WebRoot/myNotes/protected/components/Reminder.php:24
+Stack trace:
+#0 /Users/admin/yii/framework/web/CBaseController.php(181): Reminder->run()
+#1 /Users/admin/Documents/WebRoot/myNotes/protected/views/layouts/bootstrap.php(15): CBaseController->widget('Reminder')
+#2 /Users/admin/yii/framework/web/CBaseController.php(126): require('/Users/admin/Do...')
+#3 /Users/admin/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/admin/Do...', Array, true)
+#4 /Users/admin/yii/framework/web/CController.php(784): CBaseController->renderFile('/Users/admin/Do...', Array, true)
+#5 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/NoteController.php(131): CController->render('index', Array)
+#6 /Users/admin/yii/framework/web/actions/CInlineAction.php(49): NoteController->actionIndex()
+#7 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Users/admin/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /Users/admin/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/admin/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#16 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('note/index')
+#17 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#19 {main}
+REQUEST_URI=/myNotes/note/index
+HTTP_REFERER=http://localhost:8888/myNotes/note/items/5
+---
+2017/05/16 00:45:43 [error] [exception.Error] Error: Call to undefined function issset() in /Users/admin/Documents/WebRoot/myNotes/protected/components/Reminder.php:24
+Stack trace:
+#0 /Users/admin/yii/framework/web/CBaseController.php(181): Reminder->run()
+#1 /Users/admin/Documents/WebRoot/myNotes/protected/views/layouts/bootstrap.php(15): CBaseController->widget('Reminder')
+#2 /Users/admin/yii/framework/web/CBaseController.php(126): require('/Users/admin/Do...')
+#3 /Users/admin/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/admin/Do...', Array, true)
+#4 /Users/admin/yii/framework/web/CController.php(784): CBaseController->renderFile('/Users/admin/Do...', Array, true)
+#5 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/NoteController.php(131): CController->render('index', Array)
+#6 /Users/admin/yii/framework/web/actions/CInlineAction.php(49): NoteController->actionIndex()
+#7 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Users/admin/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /Users/admin/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/admin/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#16 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('note/index')
+#17 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#19 {main}
+REQUEST_URI=/myNotes/note/index
+HTTP_REFERER=http://localhost:8888/myNotes/note/items/5
+---
+2017/05/16 00:45:45 [error] [exception.Error] Error: Call to undefined function issset() in /Users/admin/Documents/WebRoot/myNotes/protected/components/Reminder.php:24
+Stack trace:
+#0 /Users/admin/yii/framework/web/CBaseController.php(181): Reminder->run()
+#1 /Users/admin/Documents/WebRoot/myNotes/protected/views/layouts/bootstrap.php(15): CBaseController->widget('Reminder')
+#2 /Users/admin/yii/framework/web/CBaseController.php(126): require('/Users/admin/Do...')
+#3 /Users/admin/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/admin/Do...', Array, true)
+#4 /Users/admin/yii/framework/web/CController.php(784): CBaseController->renderFile('/Users/admin/Do...', Array, true)
+#5 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/NoteController.php(131): CController->render('index', Array)
+#6 /Users/admin/yii/framework/web/actions/CInlineAction.php(49): NoteController->actionIndex()
+#7 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Users/admin/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /Users/admin/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/admin/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#16 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('note/index')
+#17 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#19 {main}
+REQUEST_URI=/myNotes/note/index
+HTTP_REFERER=http://localhost:8888/myNotes/note/items/5
+---
+2017/05/16 00:47:49 [error] [php] date() expects parameter 2 to be integer, string given (/Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php:121)
+Stack trace:
+#0 /Users/admin/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#1 /Users/admin/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): ItemController->runAction()
+#4 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/admin/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): ItemController->filterAccessControl()
+#7 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/admin/yii/framework/web/CController.php(265): ItemController->runActionWithFilters()
+#10 /Users/admin/yii/framework/web/CWebApplication.php(282): ItemController->run()
+#11 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/item/update/43
+2017/05/16 00:48:56 [error] [php] date() expects parameter 2 to be integer, string given (/Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php:122)
+Stack trace:
+#0 /Users/admin/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#1 /Users/admin/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): ItemController->runAction()
+#4 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/admin/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): ItemController->filterAccessControl()
+#7 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/admin/yii/framework/web/CController.php(265): ItemController->runActionWithFilters()
+#10 /Users/admin/yii/framework/web/CWebApplication.php(282): ItemController->run()
+#11 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/item/update/43
+2017/05/16 00:49:01 [error] [php] date() expects parameter 2 to be integer, string given (/Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php:122)
+Stack trace:
+#0 /Users/admin/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#1 /Users/admin/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): ItemController->runAction()
+#4 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/admin/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): ItemController->filterAccessControl()
+#7 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/admin/yii/framework/web/CController.php(265): ItemController->runActionWithFilters()
+#10 /Users/admin/yii/framework/web/CWebApplication.php(282): ItemController->run()
+#11 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/item/update/43
+2017/05/16 00:49:14 [error] [php] date() expects parameter 2 to be integer, string given (/Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php:122)
+Stack trace:
+#0 /Users/admin/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#1 /Users/admin/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): ItemController->runAction()
+#4 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/admin/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): ItemController->filterAccessControl()
+#7 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/admin/yii/framework/web/CController.php(265): ItemController->runActionWithFilters()
+#10 /Users/admin/yii/framework/web/CWebApplication.php(282): ItemController->run()
+#11 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/item/update/43
+2017/05/16 00:49:41 [error] [php] date() expects parameter 2 to be integer, string given (/Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php:122)
+Stack trace:
+#0 /Users/admin/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#1 /Users/admin/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): ItemController->runAction()
+#4 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/admin/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): ItemController->filterAccessControl()
+#7 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/admin/yii/framework/web/CController.php(265): ItemController->runActionWithFilters()
+#10 /Users/admin/yii/framework/web/CWebApplication.php(282): ItemController->run()
+#11 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/item/update/42

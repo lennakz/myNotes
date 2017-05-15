@@ -21,15 +21,11 @@ class Reminder extends CWidget
 		{
 			foreach ($note->Items as $item)
 			{
-				if ($item->reminder <= time())
+				if (!empty($item->reminder) and $item->reminder <= time())
 					$p['returnYes'][] = $item;
-				else
-					$p['returnNo'][] = $item;
 			}
 		}
-		
-		//dump($p['returnYes']);exit;
-		
+			
 		$this->render('reminder', $p);
     }
 }

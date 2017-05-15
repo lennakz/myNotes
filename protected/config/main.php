@@ -14,6 +14,9 @@ return array(
 	
 	// language
 	'language' => 'en',
+	
+	// timezone
+	'timeZone' => 'America/Vancouver',
 
 	// autoloading model and component classes
 	'import'=>array(

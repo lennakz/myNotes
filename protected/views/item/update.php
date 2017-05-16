@@ -60,7 +60,12 @@
 					'minuteMax' => '60',
 					'timezone' => null,
 					//'separator' => '-'
-				) // jquery plugin options
+				), // jquery plugin options
+			
+				'htmlOptions' => array(
+					'autocomplete' => 'off',
+					'readonly' => 'true'
+				),
 			));
 		?>
 		<?php echo $form->error($model,'reminder'); ?>

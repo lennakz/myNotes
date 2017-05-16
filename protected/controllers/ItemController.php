@@ -119,7 +119,7 @@ class ItemController extends Controller
 	{
 		$model = $this->loadModel($id);
 		if (!empty($model->reminder))
-			$model->reminder = date('D M j H:i', $model->reminder);
+			$model->reminder = date("D M j \- H:i", $model->reminder);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -129,7 +129,7 @@ class ItemController extends Controller
 			$time =$_POST['Item']['reminder'];
 			$model->attributes = $_POST['Item'];
 			$model->quantity = $_POST['Item']['quantity'];
-			$model->reminder = strtotime($_POST['Item']['reminder']);
+			$model->reminder = strtotime(str_replace('- ', '', $_POST['Item']['reminder']));
 			$model->comment = $_POST['Item']['comment'];
 			
 			if ($model->save())

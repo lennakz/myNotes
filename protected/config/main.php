@@ -45,6 +45,7 @@ return array(
 			'scriptMap' => array(
 				//'jquery.js'     => false,
 				'jquery.min.js' => 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js',
+				'jquery-ui.min.js' => 'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'
 				//'core.css'      => false,
 				//'styles.css'    => false,
 				//'pager.css'     => false,

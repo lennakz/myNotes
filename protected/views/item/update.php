@@ -4,25 +4,23 @@
 
 ?>
 
+<h1 class="text-center"><?php echo $model->name; ?></h1>
 
+<?php
+$form = $this->beginWidget('CActiveForm', array(
+	'id' => 'item-form',
+	'htmlOptions' => array(
+		'class' => 'form-horizontal',
+		'enctype' => 'multipart/form-data'
+	),
+	// Please note: When you enable ajax validation, make sure the corresponding
+	// controller action is handling ajax validation correctly.
+	// There is a call to performAjaxValidation() commented in generated controller code.
+	// See class documentation of CActiveForm for details on this.
+	'enableAjaxValidation' => false,
+));
 
-	<h1 class="text-center"><?php echo $model->name; ?></h1>
-
-	<?php
-	$form = $this->beginWidget('CActiveForm', array(
-		'id' => 'item-form',
-		'htmlOptions' => array(
-			'class' => 'form-horizontal',
-			'enctype' => 'multipart/form-data'
-		),
-		// Please note: When you enable ajax validation, make sure the corresponding
-		// controller action is handling ajax validation correctly.
-		// There is a call to performAjaxValidation() commented in generated controller code.
-		// See class documentation of CActiveForm for details on this.
-		'enableAjaxValidation' => false,
-	));
-
-	?>
+?>
 
 	<p class="text-center text-danger">Fields with <span>*</span> are required.</p>
 
@@ -45,21 +43,20 @@
 		<?php echo $form->textArea($model, 'comment'); ?>
 		<?php echo $form->error($model, 'comment'); ?>
 	</div>
-
+	
 	<div class="form-group">
 		<?php echo $form->labelEx($model,'reminder',array('class'=>'control-label')); ?>
-		<?php Yii::import('application.extensions.CJuiDateTimePicker.CJuiDateTimePicker');
-			$this->widget('CJuiDateTimePicker',array(
+		<?php Yii::import('application.extensions.BootstrapDateTimePicker.BootstrapDateTimePicker');
+			$this->widget('BootstrapDateTimePicker',array(
 				'model'=>$model, //Model object
 				'attribute'=>'reminder', //attribute name
-				'mode'=>'datetime', //use "time","date" or "datetime" (default)
 				'options'=>array(
-					'currentText' => 'Now',
-					'dateFormat'=>'D M d',
-					'hourMax' => '24',
-					'minuteMax' => '60',
-					'timezone' => null,
-					//'separator' => '-'
+					'format' => "D M d - hh:ii",
+					'autoclose' => 'true',
+					'todayBtn' => 'true',
+					'startDate' => "2017-05-01 00:00",
+					'minuteStep' => 15,
+					'todayHighlight' => 'true'
 				), // jquery plugin options
 			
 				'htmlOptions' => array(

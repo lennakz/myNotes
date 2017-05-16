@@ -7,18 +7,18 @@
 <h1 class="text-center"><?php echo $model->name; ?></h1>
 
 <?php
-$form = $this->beginWidget('CActiveForm', array(
-	'id' => 'item-form',
-	'htmlOptions' => array(
-		'class' => 'form-horizontal',
-		'enctype' => 'multipart/form-data'
-	),
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
-	'enableAjaxValidation' => false,
-));
+	$form = $this->beginWidget('CActiveForm', array(
+		'id' => 'item-form',
+		'htmlOptions' => array(
+			'class' => 'form-horizontal',
+			'enctype' => 'multipart/form-data'
+		),
+		// Please note: When you enable ajax validation, make sure the corresponding
+		// controller action is handling ajax validation correctly.
+		// There is a call to performAjaxValidation() commented in generated controller code.
+		// See class documentation of CActiveForm for details on this.
+		'enableAjaxValidation' => false,
+	));
 
 ?>
 
@@ -44,6 +44,7 @@ $form = $this->beginWidget('CActiveForm', array(
 		<?php echo $form->error($model, 'comment'); ?>
 	</div>
 	
+	<?php /*
 	<div class="form-group">
 		<?php echo $form->labelEx($model,'reminder',array('class'=>'control-label')); ?>
 		<?php Yii::import('application.extensions.BootstrapDateTimePicker.BootstrapDateTimePicker');
@@ -62,6 +63,28 @@ $form = $this->beginWidget('CActiveForm', array(
 				'htmlOptions' => array(
 					'autocomplete' => 'off',
 					'readonly' => 'true'
+				),
+			));
+		?>
+		<?php echo $form->error($model,'reminder'); ?>
+	</div>
+	 
+	 */ ?>
+	
+	<div class="form-group">
+		<?php echo $form->labelEx($model,'reminder',array('class'=>'control-label')); ?>
+		<?php Yii::import('application.extensions.DateTimePicker.DateTimePicker');
+			$this->widget('DateTimePicker',array(
+				'model'=>$model, //Model object
+				'attribute'=>'reminder', //attribute name
+				'options'=>array(
+					
+					
+				), // jquery plugin options
+			
+				'htmlOptions' => array(
+					'autocomplete' => 'off',
+					//'readonly' => 'true'
 				),
 			));
 		?>

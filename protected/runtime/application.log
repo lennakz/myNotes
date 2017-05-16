@@ -7092,3 +7092,115 @@ Stack trace:
 REQUEST_URI=/myNotes/assets/assets/bootstrap-datetimepicker.min.css
 HTTP_REFERER=http://localhost:8888/myNotes/item/update/39
 ---
+2017/05/16 16:01:47 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "js/material-datetime-picker.js.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/material-dat...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/js/material-datetime-picker.js.map
+---
+2017/05/16 16:03:37 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "js/material-datetime-picker.js.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/material-dat...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/js/material-datetime-picker.js.map
+---
+2017/05/16 16:06:34 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "js/material-datetime-picker.js.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/material-dat...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/js/material-datetime-picker.js.map
+---
+2017/05/16 16:06:42 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "js/material-datetime-picker.js.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/material-dat...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/js/material-datetime-picker.js.map
+---
+2017/05/16 16:06:44 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "js/material-datetime-picker.js.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/material-dat...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/js/material-datetime-picker.js.map
+---
+2017/05/16 16:07:00 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "js/material-datetime-picker.js.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/material-dat...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/js/material-datetime-picker.js.map
+---
+2017/05/16 16:07:02 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "js/material-datetime-picker.js.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('js/material-dat...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/js/material-datetime-picker.js.map
+---
+2017/05/16 16:09:24 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/datetimepicker.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/datetimepic...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/datetimepicker.css
+HTTP_REFERER=http://localhost:8888/myNotes/item/update/43
+---
+2017/05/16 16:09:30 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/datetimepicker.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/datetimepic...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/datetimepicker.css
+HTTP_REFERER=http://localhost:8888/myNotes/item/update/43
+---
+2017/05/16 16:09:34 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/datetimepicker.css". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/datetimepic...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/css/datetimepicker.css
+HTTP_REFERER=http://localhost:8888/myNotes/item/update/43
+---
+2017/05/16 16:48:24 [error] [php] include(BootstrapDateTimePicker.php): failed to open stream: No such file or directory (/Users/admin/yii/framework/YiiBase.php:432)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 /Users/admin/yii/framework/YiiBase.php(303): class_exists()
+#2 /Users/admin/yii/framework/web/CWidgetFactory.php(146): import()
+#3 /Users/admin/yii/framework/web/CBaseController.php(146): CWidgetFactory->createWidget()
+#4 /Users/admin/yii/framework/web/CBaseController.php(180): ItemController->createWidget()
+#5 /Users/admin/Documents/WebRoot/myNotes/protected/views/item/update.php(81): ItemController->widget()
+#6 /Users/admin/yii/framework/web/CBaseController.php(126): require()
+#7 /Users/admin/yii/framework/web/CBaseController.php(95): ItemController->renderInternal()
+#8 /Users/admin/yii/framework/web/CController.php(869): ItemController->renderFile()
+#9 /Users/admin/yii/framework/web/CController.php(782): ItemController->renderPartial()
+#10 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php(140): ItemController->render()
+#11 unknown(0): ItemController->actionUpdate()
+#12 /Users/admin/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#13 /Users/admin/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#14 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#15 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): ItemController->runAction()
+#16 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#17 /Users/admin/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#18 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): ItemController->filterAccessControl()
+#19 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#20 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#21 /Users/admin/yii/framework/web/CController.php(265): ItemController->runActionWithFilters()
+#22 /Users/admin/yii/framework/web/CWebApplication.php(282): ItemController->run()
+#23 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#24 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#25 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/item/update/43

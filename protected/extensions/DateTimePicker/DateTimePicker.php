@@ -2,15 +2,15 @@
 /**
  * BootstrapDateTimePicker class file.
  * Made for DateTime Picker
- * http://www.malot.fr/bootstrap-datetimepicker/
+ * https://github.com/xdan/datetimepicker
  *
  * @author Mykola Kotok <mykola.kotok@gmail.com>
  */
 
 Yii::import('zii.widgets.jui.CJuiDatePicker');
-class BootstrapDateTimePicker extends CJuiDatePicker
+class DateTimePicker extends CJuiDatePicker
 {
-	const ASSETS_NAME='/bootstrap-datetimepicker.min';
+	const ASSETS_NAME='/jquery.datetimepicker';
 	
 	public function run()
 	{
@@ -38,10 +38,9 @@ class BootstrapDateTimePicker extends CJuiDatePicker
 		$cs = Yii::app()->getClientScript();
 		
 		$baseUrl = Yii::app()->request->baseUrl;
-		//$assets = Yii::app()->getAssetManager()->publish(dirname(__FILE__).DIRECTORY_SEPARATOR.'assets');
-		//$cs->registerCssFile($baseUrl.'/css'.self::ASSETS_NAME.'.css');
-		$cs->registerCssFile($baseUrl.'/css/datetimepicker.css');
-		$cs->registerScriptFile($baseUrl.'/js'.self::ASSETS_NAME.'.js',CClientScript::POS_HEAD);
+		
+		$cs->registerCssFile($baseUrl.'/css'.self::ASSETS_NAME.'.min.css');
+		$cs->registerScriptFile($baseUrl.'/js'.self::ASSETS_NAME.'.full.js',CClientScript::POS_HEAD);
 		
 		$cs->registerScript(__CLASS__.'#'.$id, $js);
 

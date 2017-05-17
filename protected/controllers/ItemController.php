@@ -134,8 +134,8 @@ class ItemController extends Controller
 			{
 				$link = Yii::app()->request->baseUrl . '/uploads/' . $model->Note->title . '/' . $model->id . '/' . time() . '_' . $file['name']['image'];
 				$model->image = $link;
-				//move_uploaded_file($file['tmp_name']['image'], $link);
-				dump($model);exit;
+				move_uploaded_file($file['tmp_name']['image'], $link);
+				//dump($model);exit;
 			}
 				
 			

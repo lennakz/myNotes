@@ -13,8 +13,9 @@ form {
 		width: 100%;
 	}
 	.btn {
+		display: block;
 		width: 40%;
-		margin: auto;
+		margin: 20px auto;
 	}
 	.text-danger {
 		margin-top: 5px;
@@ -27,11 +28,5 @@ form {
 }
 
 @media only screen and (max-width: 767px) {
-	form {
-		.btn {
-			display: block;
-			width: 40%;
-			
-		}
-	}
+
 }

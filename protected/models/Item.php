@@ -12,7 +12,7 @@
  * @property integer $completed
  * @property integer $exclamation
  * @property string $reminder
- * @property string $image
+ * @property string $image path to image storage on this web site
  * @property integer $created
  * @property integer $updated
  * 
@@ -41,8 +41,7 @@ class Item extends CActiveRecord
 			array('name, completed, exclamation, reminder, image', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, note_id, quantity, comment, completed, exclamation, reminder, image, created, updated', 'safe', 'on' => 'search'),
-			array('image', 'file','types'=>'jpg, gif, png', 'allowEmpty'=>true, 'on'=>'update')
+			array('id, name, note_id, quantity, comment, completed, exclamation, reminder, image, created, updated', 'safe', 'on' => 'search')
 		);
 	}
 

@@ -117,6 +117,8 @@ class ItemController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
+		$this->layout = '//layouts/items';
+		
 		$model = $this->loadModel($id);
 		if (!empty($model->reminder))
 			$model->reminder = date("D M j \- H:i", $model->reminder);
@@ -126,6 +128,17 @@ class ItemController extends Controller
 
 		if (isset($_POST['Item']))
 		{
+			$file = $_FILES['Item'];
+			
+			if ($file['size']['image'] > 0)
+			{
+				$link = Yii::app()->request->baseUrl . '/uploads/' . $model->Note->title . '/' . $model->id . '/' . time() . '_' . $file['name']['image'];
+				$model->image = $link;
+				//move_uploaded_file($file['tmp_name']['image'], $link);
+				dump($model);exit;
+			}
+				
+			
 			$time =$_POST['Item']['reminder'];
 			$model->attributes = $_POST['Item'];
 			$model->quantity = $_POST['Item']['quantity'];

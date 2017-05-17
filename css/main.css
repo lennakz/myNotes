@@ -118,18 +118,15 @@ and open the template in the editor.
 form input, form textarea {
   width: 100%; }
 form .btn {
+  display: block;
   width: 40%;
-  margin: auto; }
+  margin: 20px auto; }
 form .text-danger {
   margin-top: 5px; }
 form label {
   position: relative;
   bottom: 7px; }
 
-@media only screen and (max-width: 767px) {
-  form .btn {
-    display: block;
-    width: 40%; } }
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -533,6 +530,27 @@ and open the template in the editor.
     padding: 15px 0 15px 20px; }
     #map-note form {
       margin-top: 20px; } }
+@media screen and (max-width: 767px) {
+  .xdsoft_datetimepicker {
+    width: 80% !important;
+    margin: auto !important;
+    position: absolute;
+    left: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    height: 70% !important; }
+    .xdsoft_datetimepicker .xdsoft_datepicker {
+      float: none !important;
+      width: auto !important;
+      margin-bottom: 20px; }
+    .xdsoft_datetimepicker .xdsoft_timepicker {
+      float: none !important;
+      width: auto !important; }
+      .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box {
+        height: 100px; }
+    .xdsoft_datetimepicker .xdsoft_prev, .xdsoft_datetimepicker .xdsoft_next {
+      margin: auto !important; } }
 .breadcrumb {
   border-radius: 0; }
 

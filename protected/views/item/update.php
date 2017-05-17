@@ -4,6 +4,22 @@
 
 ?>
 
+<style>
+	@media screen and (max-width: 767px) {
+		.xdsoft_datetimepicker {
+			width: 80% !important;
+			margin: auto !important;
+			position: absolute;
+			left: 0 !important;
+			right: 0 !important;
+			top: 0 !important;
+			bottom: 0 !important;
+			height: 80% !important;
+		}
+	}
+
+</style>
+
 <h1 class="text-center"><?php echo $model->name; ?></h1>
 
 <?php

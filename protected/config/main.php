@@ -43,16 +43,29 @@ return array(
 
         // disable default yii scripts
 			'scriptMap' => array(
-				//'jquery.js'     => false,
-				'jquery.min.js' => 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js',
-				'jquery-ui.min.js' => 'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'
+				'jquery.js'     => false,
+				'jquery.min.js' => false//'../../js/jquery-3.2.1.min.js' //'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js',
+				//'jquery-ui.min.js' => 'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'
 				//'core.css'      => false,
 				//'styles.css'    => false,
 				//'pager.css'     => false,
 				//'default.css'   => false,
 			),
+			'packages' => array(
+				'jquery' => array(
+					'baseUrl' => 'js/',
+					'js' => array('jquery-3.2.1.min.js'),
+				),
+				'bootstrap' => array(
+					'baseUrl' => 'bootstrap/',
+					'js' => array('bootstrap.min.js'),
+					'css' => array(
+						'bootstrap.min.css'
+					),
+					'depends' => array('jquery'), // cause load jquery before load this.
+				),
+			),
 		),
-		
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,

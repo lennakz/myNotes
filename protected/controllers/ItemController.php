@@ -128,13 +128,17 @@ class ItemController extends Controller
 
 		if (isset($_POST['Item']))
 		{
-			$file = $_FILES['Item'];
+			$file = $_FILES['image'];
 			
-			if ($file['size']['image'] > 0)
+			if ($file['size'] > 0)
 			{
-				$link = Yii::app()->request->baseUrl . '/uploads/' . $model->Note->title . '/' . $model->id . '/' . time() . '_' . $file['name']['image'];
+				$link = Yii::app()->request->baseUrl . '/uploads/' . $model->Note->title . '/' . $model->id . '/' . time() . '_' . $file['name'];
 				$model->image = $link;
-				move_uploaded_file($file['tmp_name']['image'], $link);
+				$uploadedFile = CUploadedFile::getInstanceByName('image');
+				if (!empty($uploadedFile))
+					$uploadedFile->saveAs($link);
+				
+				//dump($model);dump($uploadedFile);exit;
 				//dump($model);exit;
 			}
 				

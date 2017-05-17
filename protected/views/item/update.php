@@ -69,9 +69,7 @@
 		</div>
 
 		<div class="form-group">
-			<?php echo $form->labelEx($model, 'image', array('class' => 'control-label')); ?>
-			<?php echo CHtml::activeFileField($model, 'image'); ?>
-			<?php echo $form->error($model, 'image'); ?>
+			<?php echo CHtml::fileField('image'); ?>
 		</div>
 
 		<div class="form-group">

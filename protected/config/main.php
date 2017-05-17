@@ -2,54 +2,44 @@
 
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
-
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 return array(
-	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Notes',
-
+	'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
+	'name' => 'My Notes',
 	// preloading 'log' component
-	'preload'=>array('log'),
-	
+	'preload' => array('log'),
 	// language
 	'language' => 'en',
-	
 	// timezone
 	'timeZone' => 'America/Vancouver',
-
 	// autoloading model and component classes
-	'import'=>array(
+	'import' => array(
 		'application.models.*',
 		'application.components.*',
 	),
-
-	'modules'=>array(
+	'modules' => array(
 		// uncomment the following to enable the Gii tool
-		
-		'gii'=>array(
-			'class'=>'system.gii.GiiModule',
-			'password'=>false,
+
+		'gii' => array(
+			'class' => 'system.gii.GiiModule',
+			'password' => false,
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			'ipFilters'=>array('127.0.0.1','::1'),
+			'ipFilters' => array('127.0.0.1', '::1'),
 		),
-		
 	),
-
 	// application components
-	'components'=>array(
-		
+	'components' => array(
 		'clientScript' => array(
-
-        // disable default yii scripts
+			// disable default yii scripts
 			'scriptMap' => array(
-				'jquery.js'     => false,
+				'jquery.js' => false,
 				'jquery.min.js' => false//'../../js/jquery-3.2.1.min.js' //'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js',
-				//'jquery-ui.min.js' => 'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'
-				//'core.css'      => false,
-				//'styles.css'    => false,
-				//'pager.css'     => false,
-				//'default.css'   => false,
+			//'jquery-ui.min.js' => 'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'
+			//'core.css'      => false,
+			//'styles.css'    => false,
+			//'pager.css'     => false,
+			//'default.css'   => false,
 			),
 			'packages' => array(
 				'jquery' => array(
@@ -66,58 +56,50 @@ return array(
 				),
 			),
 		),
-		'user'=>array(
+		'user' => array(
 			// enable cookie-based authentication
-			'allowAutoLogin'=>true,
+			'allowAutoLogin' => true,
 		),
-
 		// uncomment the following to enable URLs in path-format
-		
-		'urlManager'=>array(
-			'urlFormat'=>'path',
-			'rules'=>array(
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-				'about'=>'site/about',
-				'contact'=>'site/contact',
-				'login'=>'site/login',
+		'urlManager' => array(
+			'urlFormat' => 'path',
+			'rules' => array(
+				'<controller:\w+>/<id:\d+>' => '<controller>/view',
+				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+				'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+				'about' => 'site/about',
+				'contact' => 'site/contact',
+				'login' => 'site/login',
 			),
 		),
-		
-
 		// database settings are configured in database.php
-		'db'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/data.sqlite',
+		'db' => array(
+			'connectionString' => 'sqlite:' . dirname(__FILE__) . '/../data/data.sqlite',
 		),
-
-		'errorHandler'=>array(
+		'errorHandler' => array(
 			// use 'site/error' action to display errors
-			'errorAction'=>YII_DEBUG ? null : 'site/error',
+			'errorAction' => YII_DEBUG ? null : 'site/error',
 		),
-
-		'log'=>array(
-			'class'=>'CLogRouter',
-			'routes'=>array(
+		'log' => array(
+			'class' => 'CLogRouter',
+			'routes' => array(
 				array(
-					'class'=>'CFileLogRoute',
-					'levels'=>'error, warning',
+					'class' => 'CFileLogRoute',
+					'levels' => 'error, warning',
 				),
-				// uncomment the following to show log messages on web pages
-				/*
-				array(
-					'class'=>'CWebLogRoute',
-				),
-				*/
+			// uncomment the following to show log messages on web pages
+			/*
+			  array(
+			  'class'=>'CWebLogRoute',
+			  ),
+			 */
 			),
 		),
-
 	),
-
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
-	'params'=>array(
+	'params' => array(
 		// this is used in contact page
-		'adminEmail'=>'mykola.kotok@gmail.com',
+		'adminEmail' => 'mykola.kotok@gmail.com'
 	),
 );

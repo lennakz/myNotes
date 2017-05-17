@@ -9,10 +9,16 @@ $(function() {
 	// Adding new items to the list throught ajax
 	$('.ajax-form').submit(function() {
 		var $form = $(this);
+		var formdata = false;
+		if (window.FormData){
+			formdata = new FormData($form[0]);
+		}
 		$.ajax({
 			url: $form.attr('action'),
 			method: $form.attr('method'),
-			data: $form.serialize(),
+			data: formdata ? formdata : $form.serialize(),
+			contentType : false,
+			processData : false,
 			dataType: 'json'
 		}).done(function(response) {
 			if (response.status === 'error') {
@@ -27,6 +33,9 @@ $(function() {
 				$($form.data('error-target')).removeClass('alert alert-danger');
 				$('.ajax-form .input-visible').val('');
 			}
+			$('#add-picture-form').val('');
+			$('#file-name').html('');
+			$('#picture-loaded').html('0');
 		}).fail(function( jqXHR, textStatus, errorThrown ) {
 			console.log(textStatus);
 		});

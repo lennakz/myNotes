@@ -71,7 +71,7 @@
 		<div class="form-group">
 			<?php echo CHtml::fileField('image'); ?>
 		</div>
-
+		
 		<div class="form-group">
 			<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class' => 'btn btn-success')); ?>
 		</div>

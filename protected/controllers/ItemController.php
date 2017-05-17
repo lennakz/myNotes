@@ -36,9 +36,9 @@ class ItemController extends Controller
 				'actions' => array('admin'),
 				'users' => array('admin'),
 			),
-			array('deny', // deny all users
-				'users' => array('*'),
-			),
+//			array('deny', // deny all users
+//				'users' => array('*'),
+//			),
 		);
 	}
 
@@ -56,11 +56,24 @@ class ItemController extends Controller
 	public function actionAjaxCreate()
 	{
 		$model = new Item;
-		
+				
 		if (!isset($_POST['Item']))
 			throw new CHttpException('No Item data received', 400);
 		
 		$model->attributes = $_POST['Item'];
+		
+		$file = $_FILES['file'];
+		$folder = 'uploads/' . $model->Note->id . '/' . $model->id . '/';
+		$fileName = time() . '_' . $file['name'];
+		$link = $folder . $fileName;
+		
+		if(!is_writable($folder))
+			mkdir($folder, 0777, true);
+		
+		$uploadedFile = CUploadedFile::getInstanceByName('file');
+		$uploadedFile->saveAs($link);
+		
+		$model->image = $link;
 		
 		// Split string when 2 whitespaces, put first part to name, second part to quantity
 		$entries = preg_split('/(\s{2,})/', $_POST['Item']['name']);
@@ -117,6 +130,8 @@ class ItemController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
+		//dump(realpath('uploads/'));exit;
+		
 		$this->layout = '//layouts/items';
 		
 		$model = $this->loadModel($id);
@@ -132,17 +147,19 @@ class ItemController extends Controller
 			
 			if ($file['size'] > 0)
 			{
-				$link = Yii::app()->request->baseUrl . '/uploads/' . $model->Note->title . '/' . $model->id . '/' . time() . '_' . $file['name'];
+				$folder = 'uploads/' . $model->Note->id . '/' . $model->id . '/';
+				$fileName = time() . '_' . $file['name'];
+				$link = $folder . $fileName;
+				
+				if(!is_writable($folder))
+					mkdir($folder, 0777, true);
+				
 				$model->image = $link;
+				
 				$uploadedFile = CUploadedFile::getInstanceByName('image');
-				if (!empty($uploadedFile))
-					$uploadedFile->saveAs($link);
-				
-				//dump($model);dump($uploadedFile);exit;
-				//dump($model);exit;
+				$uploadedFile->saveAs($link);
 			}
-				
-			
+						
 			$time =$_POST['Item']['reminder'];
 			$model->attributes = $_POST['Item'];
 			$model->quantity = $_POST['Item']['quantity'];

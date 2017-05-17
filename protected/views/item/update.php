@@ -84,7 +84,7 @@
 			
 				'htmlOptions' => array(
 					'autocomplete' => 'off',
-					//'readonly' => 'true'
+					'onfocus' => 'blur()'
 				),
 			));
 		?>

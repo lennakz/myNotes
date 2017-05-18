@@ -69,7 +69,7 @@
 		</div>
 
 		<div class="form-group">
-			<?php echo CHtml::fileField('file'); ?>
+			<?php echo CHtml::fileField('file', '', ['multiple' => 'multiple']); ?>
 		</div>
 		
 		<div class="form-group">

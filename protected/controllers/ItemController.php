@@ -162,8 +162,7 @@ class ItemController extends Controller
 				$model->image = $link;
 				
 				$uploadedFile = CUploadedFile::getInstanceByName('file');
-				dump($uploadedFile->tempName);exit;
-				tempImageResize(300, 300, $uploadedFile);
+				//tempImageResize(300, 300, $uploadedFile);
 				$uploadedFile->saveAs($link);
 			}
 						

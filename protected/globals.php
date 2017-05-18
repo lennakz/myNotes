@@ -61,10 +61,12 @@ function array_msort($array, $cols)
  * @param int $width required width
  * @param int $height required height
  * @param obj $image CUploadedFile object
+ * @param int $quality quality of resized image from 0 to 100 (default = 100)
  */
-function tempImageResize($width, $height, $image)
+function tempImageResize($width, $height, $image, $quality = 100)
 {
-	if ($image->type !== 'image/jpeg' or $image->type !== 'image/png' or $image->type !== 'image/gif')
+	//dump($image->type);exit;
+	if (!($image->type == 'image/jpeg' or $image->type == 'image/png' or $image->type == 'image/gif'))
 		return false;
 	
 	/* Get original image x y */
@@ -87,10 +89,10 @@ function tempImageResize($width, $height, $image)
 	switch ($image->type)
 	{
 		case 'image/jpeg':
-			imagejpeg($tmp, $image->tempName, 100);
+			imagejpeg($tmp, $image->tempName, $quality);
 			break;
 		case 'image/png':
-			imagepng($tmp, $image->tempName, 0);
+			imagepng($tmp, $image->tempName, (9 - floor($quality/11)));
 			break;
 		case 'image/gif':
 			imagegif($tmp, $image->tempName);

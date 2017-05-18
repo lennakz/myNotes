@@ -10511,3 +10511,436 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
 ---
+2017/05/17 22:23:13 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:23:23 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:32:25 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:32:41 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:33:26 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:33:37 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:34:58 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:35:06 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:35:19 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:35:30 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:35:54 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:36:15 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:38:07 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:38:09 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:38:16 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:39:59 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:40:07 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:40:44 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:40:50 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:41:08 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:41:15 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:41:49 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:42:00 [error] [php] Missing argument 4 for tempImageResize(), called in /Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php on line 165 and defined (/Users/admin/Documents/WebRoot/myNotes/protected/globals.php:66)
+Stack trace:
+#0 /Users/admin/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#1 /Users/admin/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): ItemController->runAction()
+#4 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/admin/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#6 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): ItemController->filterAccessControl()
+#7 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#8 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/admin/yii/framework/web/CController.php(265): ItemController->runActionWithFilters()
+#10 /Users/admin/yii/framework/web/CWebApplication.php(282): ItemController->run()
+#11 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/item/update/42
+2017/05/17 22:42:01 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:42:25 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:42:58 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:43:05 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:44:09 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:44:17 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:44:30 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:44:37 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:44:59 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:45:06 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:47:24 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:54:51 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:55:11 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:55:35 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:56:02 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:56:16 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:56:45 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:56:57 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:57:23 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 22:57:37 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 23:05:02 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 23:05:11 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 23:06:02 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 23:06:09 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 23:06:59 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 23:07:05 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 23:07:15 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 23:07:22 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 23:08:11 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 23:08:18 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---

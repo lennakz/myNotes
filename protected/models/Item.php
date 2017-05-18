@@ -121,6 +121,18 @@ class Item extends CActiveRecord
 		return parent::model($className);
 	}
 
+	public function beforeDelete()
+	{
+		$files = glob('uploads/'.$this->Note->id.'/'.$this->id.'/*'); // get all file names
+		foreach ($files as $file){ // iterate files
+			if (is_file($file))
+				unlink($file); // delete file
+		}
+		rmdir('uploads/'.$this->Note->id.'/'.$this->id);
+		
+		return parent::beforeDelete();
+	}
+	
 	// Update date
 	public function beforeSave()
 	{

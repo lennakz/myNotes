@@ -62,21 +62,9 @@ class ItemController extends Controller
 		
 		$model->attributes = $_POST['Item'];
 		
-		$file = $_FILES['file'];
-		$folder = 'uploads/' . $model->Note->id . '/' . $model->id . '/';
-		$fileName = time() . '_' . $file['name'];
-		$link = $folder . $fileName;
-		
-		if(!is_writable($folder))
-			mkdir($folder, 0777, true);
-		
-		$uploadedFile = CUploadedFile::getInstanceByName('file');
-		$uploadedFile->saveAs($link);
-		
-		$model->image = $link;
-		
 		// Split string when 2 whitespaces, put first part to name, second part to quantity
 		$entries = preg_split('/(\s{2,})/', $_POST['Item']['name']);
+		
 		if (!empty($entries[1]))
 		{
 			$model->name = $entries[0];
@@ -84,7 +72,22 @@ class ItemController extends Controller
 		}
 		
 		if ($model->save())
+		{
+			$file =$_FILES['file'];
+			$folder = 'uploads/' . $model->Note->id . '/' . $model->id;
+			$fileName = time() . '_' . $file['name'];
+			$link = $folder . '/' . $fileName;
+
+			if(!is_writable($folder))
+				mkdir($folder, 0777, true);
+
+			$uploadedFile = CUploadedFile::getInstanceByName('file');
+			$uploadedFile->saveAs($link);
+
+			$model->image = $link;
+			
 			$json = ['status' => 'ok', 'html' => $model->Note->renderItemsList()];
+		}
 		else 
 			$json = ['status' => 'error', 'errors' => $model->errors];
 		
@@ -99,6 +102,7 @@ class ItemController extends Controller
 	public function actionCreate()
 	{
 		$model = new Item;
+		
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -106,6 +110,7 @@ class ItemController extends Controller
 		if (isset($_POST['Item']))			
 		{
 			$model->attributes = $_POST['Item'];
+			
 			
 			$entries = preg_split('/(\s{2,})/', $_POST['Item']['name']);
 			if (!empty($entries[1]))
@@ -147,9 +152,9 @@ class ItemController extends Controller
 			
 			if ($file['size'] > 0)
 			{
-				$folder = 'uploads/' . $model->Note->id . '/' . $model->id . '/';
+				$folder = 'uploads/' . $model->Note->id . '/' . $model->id;
 				$fileName = time() . '_' . $file['name'];
-				$link = $folder . $fileName;
+				$link = $folder . '/' . $fileName;
 				
 				if(!is_writable($folder))
 					mkdir($folder, 0777, true);

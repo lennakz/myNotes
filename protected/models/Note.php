@@ -151,6 +151,21 @@ class Note extends CActiveRecord
 	public function beforeDelete()
 	{
 		Item::model()->deleteAllByAttributes(array('note_id' => $this->id));
+		
+		$folders = glob('uploads/'.$this->id.'/*'); // get all folders names
+		
+		foreach ($folders as $folder) // iterate folders
+		{
+			$files = glob($folder.'/*'); // get all file names inside each folder
+			
+			foreach ($files as $file) //iterate files
+				if (is_file($file))
+					unlink($file); // delete file
+				
+			rmdir($folder);
+		}
+		rmdir('uploads/'.$this->id);
+		
 		return parent::beforeDelete();
 	}
 

@@ -10024,3 +10024,339 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
 ---
+2017/05/17 19:59:07 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 19:59:15 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:00:47 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:11:15 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "item". in /Users/admin/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/admin/yii/framework/web/CController.php(270): CController->missingAction('item')
+#1 /Users/admin/yii/framework/web/CWebApplication.php(282): CController->run('item')
+#2 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('note/item/creat...')
+#3 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#5 {main}
+REQUEST_URI=/myNotes/note/item/create
+---
+2017/05/17 20:11:16 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:12:04 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:16:44 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:16:46 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:16:48 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:23:32 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:23:33 [error] [php] unlink(uploads/5/48): Operation not permitted (/Users/admin/Documents/WebRoot/myNotes/protected/models/Item.php:126)
+Stack trace:
+#0 /Users/admin/yii/framework/db/ar/CActiveRecord.php(1225): Item->beforeDelete()
+#1 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php(220): Item->delete()
+#2 unknown(0): ItemController->actionDelete()
+#3 /Users/admin/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#4 /Users/admin/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): ItemController->runAction()
+#7 /Users/admin/yii/framework/web/CController.php(1116): CFilterChain->run()
+#8 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): ItemController->filterPostOnly()
+#9 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Users/admin/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): ItemController->filterAccessControl()
+#13 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /Users/admin/yii/framework/web/CController.php(265): ItemController->runActionWithFilters()
+#16 /Users/admin/yii/framework/web/CWebApplication.php(282): ItemController->run()
+#17 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#19 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/item/delete/48?ajax
+2017/05/17 20:23:49 [error] [php] unlink(uploads/5/48): Operation not permitted (/Users/admin/Documents/WebRoot/myNotes/protected/models/Item.php:126)
+Stack trace:
+#0 /Users/admin/yii/framework/db/ar/CActiveRecord.php(1225): Item->beforeDelete()
+#1 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php(220): Item->delete()
+#2 unknown(0): ItemController->actionDelete()
+#3 /Users/admin/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#4 /Users/admin/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): ItemController->runAction()
+#7 /Users/admin/yii/framework/web/CController.php(1116): CFilterChain->run()
+#8 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): ItemController->filterPostOnly()
+#9 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Users/admin/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): ItemController->filterAccessControl()
+#13 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /Users/admin/yii/framework/web/CController.php(265): ItemController->runActionWithFilters()
+#16 /Users/admin/yii/framework/web/CWebApplication.php(282): ItemController->run()
+#17 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#19 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/item/delete/48?ajax
+2017/05/17 20:23:51 [error] [php] unlink(uploads/5/48): Operation not permitted (/Users/admin/Documents/WebRoot/myNotes/protected/models/Item.php:126)
+Stack trace:
+#0 /Users/admin/yii/framework/db/ar/CActiveRecord.php(1225): Item->beforeDelete()
+#1 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php(220): Item->delete()
+#2 unknown(0): ItemController->actionDelete()
+#3 /Users/admin/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#4 /Users/admin/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): ItemController->runAction()
+#7 /Users/admin/yii/framework/web/CController.php(1116): CFilterChain->run()
+#8 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): ItemController->filterPostOnly()
+#9 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /Users/admin/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): ItemController->filterAccessControl()
+#13 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /Users/admin/yii/framework/web/CController.php(265): ItemController->runActionWithFilters()
+#16 /Users/admin/yii/framework/web/CWebApplication.php(282): ItemController->run()
+#17 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#19 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/item/delete/46?ajax
+2017/05/17 20:26:11 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:27:17 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:32:16 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:32:19 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:32:23 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:32:36 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:33:20 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:33:23 [error] [php] rmdir(uploads/6): Directory not empty (/Users/admin/Documents/WebRoot/myNotes/protected/models/Note.php:154)
+Stack trace:
+#0 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/NoteController.php(111): Note->delete()
+#1 unknown(0): NoteController->actionDelete()
+#2 /Users/admin/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#3 /Users/admin/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): NoteController->runAction()
+#6 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/admin/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): NoteController->filterAccessControl()
+#9 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/admin/yii/framework/web/CController.php(265): NoteController->runActionWithFilters()
+#12 /Users/admin/yii/framework/web/CWebApplication.php(282): NoteController->run()
+#13 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/note/delete/6
+2017/05/17 20:33:24 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:42:28 [error] [php] rmdir(uploads/uploads/6/48): No such file or directory (/Users/admin/Documents/WebRoot/myNotes/protected/models/Note.php:165)
+Stack trace:
+#0 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/NoteController.php(111): Note->delete()
+#1 unknown(0): NoteController->actionDelete()
+#2 /Users/admin/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#3 /Users/admin/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): NoteController->runAction()
+#6 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/admin/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): NoteController->filterAccessControl()
+#9 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/admin/yii/framework/web/CController.php(265): NoteController->runActionWithFilters()
+#12 /Users/admin/yii/framework/web/CWebApplication.php(282): NoteController->run()
+#13 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/note/delete/6
+2017/05/17 20:42:29 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:49:56 [error] [php] rmdir(uploads/6/48): Directory not empty (/Users/admin/Documents/WebRoot/myNotes/protected/models/Note.php:165)
+Stack trace:
+#0 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/NoteController.php(111): Note->delete()
+#1 unknown(0): NoteController->actionDelete()
+#2 /Users/admin/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#3 /Users/admin/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#4 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): NoteController->runAction()
+#6 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/admin/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): NoteController->filterAccessControl()
+#9 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/admin/yii/framework/web/CController.php(265): NoteController->runActionWithFilters()
+#12 /Users/admin/yii/framework/web/CWebApplication.php(282): NoteController->run()
+#13 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CWebApplication->run()
+REQUEST_URI=/myNotes/note/delete/6
+2017/05/17 20:49:57 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:53:21 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:53:38 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:53:44 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:53:47 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:54:14 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/17 20:54:18 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---

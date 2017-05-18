@@ -69,7 +69,7 @@
 		</div>
 
 		<div class="form-group">
-			<?php echo CHtml::fileField('image'); ?>
+			<?php echo CHtml::fileField('file'); ?>
 		</div>
 		
 		<div class="form-group">

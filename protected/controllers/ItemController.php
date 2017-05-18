@@ -148,7 +148,7 @@ class ItemController extends Controller
 
 		if (isset($_POST['Item']))
 		{
-			$file = $_FILES['image'];
+			$file = $_FILES['file'];
 			
 			if ($file['size'] > 0)
 			{
@@ -161,7 +161,8 @@ class ItemController extends Controller
 				
 				$model->image = $link;
 				
-				$uploadedFile = CUploadedFile::getInstanceByName('image');
+				$uploadedFile = CUploadedFile::getInstanceByName('file');
+				tempImageResize(300, 300, $uploadedFile);
 				$uploadedFile->saveAs($link);
 			}
 						

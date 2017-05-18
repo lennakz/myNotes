@@ -4,6 +4,11 @@
 
 ?>
 
+<!-- For resize image client-side -->
+<script src="<?php echo Yii::app()->request->baseUrl ?>/js/canvasResize/exif.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl ?>/js/canvasResize/binaryajax.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl ?>/js/canvasResize/canvasResize.js"></script>
+
 <div class="container">
 
 	<h1 class="text-center"><?php echo $model->name; ?></h1>
@@ -69,13 +74,43 @@
 		</div>
 
 		<div class="form-group">
-			<?php echo CHtml::fileField('file', '', ['multiple' => 'multiple']); ?>
+			<?php echo CHtml::fileField('file'); ?>
 		</div>
+		
+		<input type="hidden" name="image-encoded" id="image-encoded">
 		
 		<div class="form-group">
 			<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class' => 'btn btn-success')); ?>
 		</div>
 
 	<?php $this->endWidget(); ?>
+		
+		<img>
 
 </div>
+
+<script>
+	$(function() {
+		
+		$('input[name=file]').change(function(e) {
+			
+			$('#image-encoded').val('');
+			
+			var file = e.target.files[0];
+		
+			canvasResize(file, {
+				width: 300,
+			    height: 0,
+				crop: false,
+				quality: 80,
+				//rotate: 90,
+				callback: function(data, width, height) {
+					$('input[name=file]').val('');
+					$('#image-encoded').val(data);
+				}
+			});
+			
+		});
+		console.log($('#image-encoded').val());
+	});
+</script> 

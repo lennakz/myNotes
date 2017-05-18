@@ -57,7 +57,7 @@ function array_msort($array, $cols)
 }
 
 /**
- * Temporary image resize before save
+ * Temporary image resize before save server-side
  * @param int $width required width
  * @param int $height required height
  * @param obj $image CUploadedFile object
@@ -105,4 +105,50 @@ function tempImageResize($width, $height, $image, $quality = 100)
 	/* cleanup memory */
 	imagedestroy($imageNew);
 	imagedestroy($tmp);
+}
+
+/**
+ * Convert received base64 encoded image and save it
+ * @param str $encodedImage encoded base64 image with prefix
+ * @param str $dir directory, where to save image
+ * @param int $quality quality of resized image from 0 to 100 (default = 100)
+ */
+
+function saveBase64($encodedImage, $dir, $quality = 100)
+{
+	if (strpos($encodedImage, 'jpeg') !== false)
+	{
+		$encodedImage = str_replace('data:image/jpeg;base64,', '', $encodedImage);
+		$encodedImage = str_replace(' ', '+', $encodedImage);
+		$imageDecouded = base64_decode($encodedImage);
+		$source = imagecreatefromstring($imageDecouded);
+		$fileName = time() . '.jpg';
+		imagejpeg($source, $dir.'/'.$fileName, $quality);
+	}
+	elseif (strpos($encodedImage, 'png') !== false)
+	{
+		$encodedImage = str_replace('data:image/png;base64,', '', $encodedImage);
+		$encodedImage = str_replace(' ', '+', $encodedImage);
+		$imageDecouded = base64_decode($encodedImage);
+		$source = imagecreatefromstring($imageDecouded);
+		$fileName = time() . '.png';
+		imagepng($source, $dir.'/'.$fileName, (9 - floor($quality/11)));
+	}
+	elseif (strpos($encodedImage, 'gif') !== false)
+	{
+		$encodedImage = str_replace('data:image/gif;base64,', '', $encodedImage);
+		$encodedImage = str_replace(' ', '+', $encodedImage);
+		$imageDecouded = base64_decode($encodedImage);
+		$source = imagecreatefromstring($imageDecouded);
+		$fileName = time() . '.gif';
+		imagegif($source, $dir.'/'.$fileName);
+	}
+	else
+	{
+		return false;
+	}
+	
+	imagedestroy($source);
+	
+	return $fileName;
 }

@@ -135,8 +135,6 @@ class ItemController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		//dump(realpath('uploads/'));exit;
-		
 		$this->layout = '//layouts/items';
 		
 		$model = $this->loadModel($id);
@@ -148,22 +146,26 @@ class ItemController extends Controller
 
 		if (isset($_POST['Item']))
 		{
-			$file = $_FILES['file'];
-			
-			if ($file['size'] > 0)
-			{
-				$folder = 'uploads/' . $model->Note->id . '/' . $model->id;
-				$fileName = time() . '_' . $file['name'];
-				$link = $folder . '/' . $fileName;
-				
-				if(!is_writable($folder))
+			$folder = 'uploads/' . $model->Note->id . '/' . $model->id;
+						
+			if(!is_writable($folder))
 					mkdir($folder, 0777, true);
+			
+			if (!empty($_POST['image-encoded']))
+			{
+				$imageEncouded = $_POST['image-encoded']; // Encoded base64 with data:image/jpeg;base64, prefix
 				
-				$model->image = $link;
+				$fileName = saveBase64($imageEncouded, $folder); // Save image and return filename
+			}
 				
+			if ($_FILES['file']['error'] === 0)
+			{
+				$file =$_FILES['file'];
 				$uploadedFile = CUploadedFile::getInstanceByName('file');
-				//tempImageResize(300, 300, $uploadedFile);
-				$uploadedFile->saveAs($link);
+				$fileName = time().'.'.$uploadedFile->getExtensionName();
+											
+				//tempImageResize(300, 300, $uploadedFile); server-side resize
+				$uploadedFile->saveAs($folder.'/'.$fileName);
 			}
 						
 			$time =$_POST['Item']['reminder'];
@@ -171,6 +173,7 @@ class ItemController extends Controller
 			$model->quantity = $_POST['Item']['quantity'];
 			$model->reminder = strtotime(str_replace('- ', '', $_POST['Item']['reminder']));
 			$model->comment = $_POST['Item']['comment'];
+			$model->image = $folder.'/'.$fileName;
 			
 			if ($model->save())
 				$this->redirect(Yii::app()->request->baseUrl . '/note/items/' . $model->Note->id);

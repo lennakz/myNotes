@@ -73,18 +73,29 @@ class ItemController extends Controller
 		
 		if ($model->save())
 		{
-			$file =$_FILES['file'];
 			$folder = 'uploads/' . $model->Note->id . '/' . $model->id;
-			$fileName = time() . '_' . $file['name'];
-			$link = $folder . '/' . $fileName;
-
+			
 			if(!is_writable($folder))
 				mkdir($folder, 0777, true);
-
-			$uploadedFile = CUploadedFile::getInstanceByName('file');
-			$uploadedFile->saveAs($link);
-
-			$model->image = $link;
+			
+			if (!empty($_POST['image-encoded']))
+			{
+				$imageEncouded = $_POST['image-encoded']; // Encoded base64 with data:image/jpeg;base64, prefix
+			
+				$fileName = saveBase64($imageEncouded, $folder); // Save image and return filename
+			}
+			
+			if ($_FILES['file']['error'] === 0)
+			{
+				$file =$_FILES['file'];
+				$uploadedFile = CUploadedFile::getInstanceByName('file');
+				$fileName = time().'.'.$uploadedFile->getExtensionName();
+											
+				//tempImageResize(300, 300, $uploadedFile); server-side resize
+				$uploadedFile->saveAs($folder.'/'.$fileName);
+			}
+			
+			$model->image = $folder.'/'.$fileName;
 			
 			$json = ['status' => 'ok', 'html' => $model->Note->renderItemsList()];
 		}

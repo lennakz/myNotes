@@ -111,6 +111,5 @@
 			});
 			
 		});
-		console.log($('#image-encoded').val());
 	});
 </script> 

@@ -3,7 +3,13 @@
 /* @var $items Item[] */
 /* @var $note Note */
 ?>
+<!-- For swipe left menu -->
 <script src="<?php echo Yii::app()->request->baseUrl ?>/js/swiped.min.js"></script>
+
+<!-- For resize image client-side -->
+<script src="<?php echo Yii::app()->request->baseUrl ?>/js/canvasResize/exif.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl ?>/js/canvasResize/binaryajax.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl ?>/js/canvasResize/canvasResize.js"></script>
 
 <style>
 	form {
@@ -63,7 +69,7 @@
 					<input id="add-picture-form"
 						   type="file"
 						   name="file" style="display: none">
-					
+					<input type="hidden" name="image-encoded" id="image-encoded">
 					<button type="submit" class="addBtn">Add</button>
 				</form>
 				<a href="#" id="add-picture"><i class="fa fa-camera" aria-hidden="true"></i>&nbsp;&nbsp;<span id="picture-loaded">0</span></a>
@@ -83,10 +89,26 @@
 	$(function() {
 		$('#add-picture').on('click', function() {
 			$('#add-picture-form').trigger('click');
-			$(':file').change(function() {
-				$('#file-name').html($(this).val());
-				$('#picture-loaded').html('1');
+		});
+		$('input[name=file]').change(function(e) {
+			$('#file-name').html($(this).val());
+			$('#picture-loaded').html('1');
+			$('#image-encoded').val('');
+
+			var file = e.target.files[0];
+
+			canvasResize(file, {
+				width: 300,
+				height: 0,
+				crop: false,
+				quality: 80,
+				//rotate: 90,
+				callback: function(data, width, height) {
+					$('input[name=file]').val('');
+					$('#image-encoded').val(data);
+				}
 			});
-		});	
+			console.log($('#image-encoded').val());
+		});
 	});
 </script>

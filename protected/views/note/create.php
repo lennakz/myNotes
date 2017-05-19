@@ -27,7 +27,7 @@
 
 	<div class="form-group">
 		<?php echo $form->labelEx($model, 'title', array('class' => 'control-label')); ?>
-		<?php echo $form->textArea($model, 'title'); ?>
+		<?php echo $form->textField($model, 'title'); ?>
 		<?php echo $form->error($model, 'title', array('class' => 'text-danger text-center')); ?>
 	</div>
 

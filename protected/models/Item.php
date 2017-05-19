@@ -71,6 +71,7 @@ class Item extends CActiveRecord
 			'completed' => 'Completed',
 			'exclamation' => 'Exclamation',
 			'reminder' => 'Reminder',
+			'image' => 'Image Source',
 			'created' => 'Created',
 			'updated' => 'Updated',
 		);
@@ -102,6 +103,7 @@ class Item extends CActiveRecord
 		$criteria->compare('completed', $this->completed);
 		$criteria->compare('exclamation', $this->completed);
 		$criteria->compare('reminder', $this->reminder);
+		$criteria->compare('image', $this->image);
 		$criteria->compare('created', $this->created);
 		$criteria->compare('updated', $this->updated);
 
@@ -123,12 +125,19 @@ class Item extends CActiveRecord
 
 	public function beforeDelete()
 	{
+		
 		$files = glob('uploads/'.$this->Note->id.'/'.$this->id.'/*'); // get all file names
-		foreach ($files as $file){ // iterate files
-			if (is_file($file))
-				unlink($file); // delete file
+		
+		if (!empty($files))
+		{
+			foreach ($files as $file){ // iterate files
+				if (is_file($file))
+					unlink($file); // delete file
+			}
 		}
-		rmdir('uploads/'.$this->Note->id.'/'.$this->id);
+		
+		if (file_exists('uploads/'.$this->Note->id.'/'.$this->id))
+			rmdir('uploads/'.$this->Note->id.'/'.$this->id);
 		
 		return parent::beforeDelete();
 	}

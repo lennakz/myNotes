@@ -91,7 +91,7 @@
 			$('#add-picture-form').trigger('click');
 		});
 		$('input[name=file]').change(function(e) {
-			$('#file-name').html($(this).val());
+			$('#file-name').html($(this).val().replace('C:\\fakepath\\', 'File name: '));
 			$('#picture-loaded').html('1');
 			$('#image-encoded').val('');
 

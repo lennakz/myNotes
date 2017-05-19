@@ -17,8 +17,16 @@ and open the template in the editor.
 @import 'base/map';
 @import 'base/item';
 
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
 .breadcrumb {
 	border-radius: 0;
+}
+
+#logo-name {
+	font-family: 'Pacifico', cursive;
 }
 
 // Round Add button

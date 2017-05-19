@@ -95,7 +95,11 @@ class ItemController extends Controller
 				$uploadedFile->saveAs($folder.'/'.$fileName);
 			}
 			
-			$model->image = $folder.'/'.$fileName;
+			if (!empty($folder.'/'.$fileName))
+			{
+				$model->image = $folder.'/'.$fileName;
+				$model->save();
+			}
 			
 			$json = ['status' => 'ok', 'html' => $model->Note->renderItemsList()];
 		}

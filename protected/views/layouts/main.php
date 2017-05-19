@@ -9,10 +9,11 @@
 		->registerLinkTag('shortcut icon', 'image/x-icon', Yii::app()->request->baseUrl.'/images/icons/icon-72x72.png')
 		->registerLinkTag('manifest', null, Yii::app()->request->baseUrl.'/manifest.json') // For Mobile app simulation
 		->registerLinkTag('icon', null, Yii::app()->request->baseUrl.'/images/icons/icon-home-screen.png', null, array('sizes' => '256x256')) // Icon for home screnn
+		->registerCssFile(Yii::app()->request->baseUrl.'/css/font-awesome.min.css')
+		->registerCssFile(Yii::app()->request->baseUrl.'/css/font-google.css')
 		->registerCssFile(Yii::app()->request->baseUrl.'/css/main.css')
 		->registerCoreScript('jquery')
 		->registerCoreScript('bootstrap')
-		->registerScriptFile('https://use.fontawesome.com/b860453c18.js')
 		->registerScriptFile(Yii::app()->request->baseUrl.'/js/scripts.js')
 	?>
 
@@ -31,7 +32,7 @@
 					</a>
 				<?php endif ?>
 				<a class="navbar-brand" href="<?php echo Yii::app()->request->baseUrl ?>/">
-					<span>myNotes</span>
+					<span id="logo-name">myNotes</span>
 				</a>
 			</div>
 			<div class="pull-right">

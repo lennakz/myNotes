@@ -154,17 +154,24 @@ class Note extends CActiveRecord
 		
 		$folders = glob('uploads/'.$this->id.'/*'); // get all folders names
 		
-		foreach ($folders as $folder) // iterate folders
+		if (!empty($folders)) 
 		{
-			$files = glob($folder.'/*'); // get all file names inside each folder
-			
-			foreach ($files as $file) //iterate files
-				if (is_file($file))
-					unlink($file); // delete file
+			foreach ($folders as $folder) // iterate folders
+			{
+				$files = glob($folder.'/*'); // get all file names inside each folder
 				
-			rmdir($folder);
+				if (!empty($files))
+				{
+					foreach ($files as $file) //iterate files
+						if (is_file($file))
+							unlink($file); // delete file	
+				}
+				
+				rmdir($folder);
+			}
 		}
-		rmdir('uploads/'.$this->id);
+		if (file_exists('uploads/'.$this->id))
+			rmdir('uploads/'.$this->id);
 		
 		return parent::beforeDelete();
 	}

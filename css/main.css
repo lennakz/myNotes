@@ -198,7 +198,7 @@ and open the template in the editor.
             text-shadow: 0 1px 0 #fff;
             opacity: .2; }
           .items .items-body ul .hidden-buttons #button-exclamation:hover {
-            background-color: yellow;
+            background-color: #888;
             color: white; }
             .items .items-body ul .hidden-buttons #button-exclamation:hover i {
               opacity: .8;
@@ -216,7 +216,7 @@ and open the template in the editor.
             text-shadow: 0 1px 0 #fff;
             opacity: .2; }
           .items .items-body ul .hidden-buttons #button-edit:hover {
-            background-color: green;
+            background-color: #888;
             color: white; }
             .items .items-body ul .hidden-buttons #button-edit:hover i {
               opacity: .8;
@@ -293,7 +293,7 @@ and open the template in the editor.
         text-shadow: 0 1px 0 #fff;
         opacity: .2; }
       .items .items-body #image-button:hover {
-        background-color: lightblue;
+        background-color: #888;
         color: white; }
         .items .items-body #image-button:hover span {
           opacity: .8;

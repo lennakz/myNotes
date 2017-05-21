@@ -114,7 +114,7 @@
 				<a href="javascript:void(0)" id="item-check" class="pull-left"><?php if ($m->completed == 0): ?><i class="fa fa-square-o" aria-hidden="true"></i><?php else: ?><i class="fa fa-check-square-o" aria-hidden="true"></i><?php endif ?></a>
 				<!-- Item text itself -->
 				<div id="item-text"><?php echo ucwords($m->name) ?></div>
-				<?php if (!empty($m->image)): ?>
+				<?php if (!empty($m->image) and (strpos($m->image, '.jpg') or strpos($m->image, '.png') or strpos($m->image, '.gif'))): ?>
 					<a id="image-button" data-toggle="collapse" data-target="#image<?php echo $m->id ?>"><span class="glyphicon glyphicon-picture"></span></a>
 					<!-- Show images -->
 					<div id="image<?php echo $m->id ?>" class="collapse image-content">
@@ -131,7 +131,7 @@
 				   href="<?php echo Yii::app()->request->baseUrl ?>/item/delete/<?php echo $m->id ?>?ajax" 
 				   id="button-delete"><i class="fa fa-times" aria-hidden="true"></i></a>
 		</li>
-		<?php if (!empty($m->image)): ?>
+		<?php if (!empty($m->image) and (strpos($m->image, '.jpg') or strpos($m->image, '.png') or strpos($m->image, '.gif'))): ?>
 			<!-- The Modal -->
 			<div id="myModal<?php echo $m->id ?>" class="modal">
 				<span class="close">&times;</span>

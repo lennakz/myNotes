@@ -73,30 +73,35 @@ class ItemController extends Controller
 		
 		if ($model->save())
 		{
-			$folder = 'uploads/' . $model->Note->id . '/' . $model->id;
-			
-			if(!is_writable($folder))
-				mkdir($folder, 0777, true);
-			
 			if (!empty($_POST['image-encoded']))
 			{
+				$folder = 'uploads/' . $model->Note->id . '/' . $model->id;
+			
+				if(!is_writable($folder))
+					mkdir($folder, 0777, true);
+				
 				$imageEncouded = $_POST['image-encoded']; // Encoded base64 with data:image/jpeg;base64, prefix
 			
 				$fileName = saveBase64($imageEncouded, $folder); // Save image and return filename
+				
+				$model->image = $folder.'/'.$fileName;
+				$model->save();
 			}
 			
 			if ($_FILES['file']['error'] === 0)
 			{
+				$folder = 'uploads/' . $model->Note->id . '/' . $model->id;
+			
+				if(!is_writable($folder))
+					mkdir($folder, 0777, true);
+				
 				$file =$_FILES['file'];
 				$uploadedFile = CUploadedFile::getInstanceByName('file');
 				$fileName = time().'.'.$uploadedFile->getExtensionName();
 											
 				//tempImageResize(300, 300, $uploadedFile); server-side resize
 				$uploadedFile->saveAs($folder.'/'.$fileName);
-			}
-			
-			if (!empty($folder.'/'.$fileName))
-			{
+				
 				$model->image = $folder.'/'.$fileName;
 				$model->save();
 			}

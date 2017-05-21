@@ -37,7 +37,9 @@ $(function() {
 			$('#file-name').html('');
 			$('#picture-loaded').html('0');
 		}).fail(function( jqXHR, textStatus, errorThrown ) {
+			console.log(jqXHR);
 			console.log(textStatus);
+			console.log(errorThrown);
 		});
 		
 		return false;

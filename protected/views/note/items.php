@@ -90,7 +90,7 @@
 		$('#add-picture').on('click', function() {
 			$('#add-picture-form').trigger('click');
 		});
-		$('input[name=file]').change(function(e) {
+		$('#add-picture-form').change(function(e) {
 			$('#file-name').html($(this).val().replace('C:\\fakepath\\', 'File name: '));
 			$('#picture-loaded').html('1');
 			$('#image-encoded').val('');
@@ -98,17 +98,16 @@
 			var file = e.target.files[0];
 
 			canvasResize(file, {
-				width: 300,
+				width: 500,
 				height: 0,
 				crop: false,
-				quality: 80,
+				quality: 90,
 				//rotate: 90,
 				callback: function(data, width, height) {
-					$('input[name=file]').val('');
+					$('#add-picture-form').val('');
 					$('#image-encoded').val(data);
 				}
 			});
-			console.log($('#image-encoded').val());
 		});
 	});
 </script>

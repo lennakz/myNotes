@@ -84,7 +84,7 @@ class ItemController extends Controller
 			
 				$fileName = saveBase64($imageEncouded, $folder); // Save image and return filename
 				
-				$model->image = $folder.'/'.$fileName;
+				$model->file .= $folder.'/'.$fileName .'|devider|';
 				$model->save();
 			}
 			
@@ -102,7 +102,7 @@ class ItemController extends Controller
 				//tempImageResize(300, 300, $uploadedFile); server-side resize
 				$uploadedFile->saveAs($folder.'/'.$fileName);
 				
-				$model->image = $folder.'/'.$fileName;
+				$model->file .= $folder.'/'.$fileName.'|devider|';
 				$model->save();
 			}
 			
@@ -193,7 +193,7 @@ class ItemController extends Controller
 			$model->quantity = $_POST['Item']['quantity'];
 			$model->reminder = strtotime(str_replace('- ', '', $_POST['Item']['reminder']));
 			$model->comment = $_POST['Item']['comment'];
-			$model->image = $folder.'/'.$fileName;
+			$model->file .= $folder.'/'.$fileName.'|devider|';
 			
 			if ($model->save())
 				$this->redirect(Yii::app()->request->baseUrl . '/note/items/' . $model->Note->id);

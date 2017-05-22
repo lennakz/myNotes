@@ -12,11 +12,12 @@
  * @property integer $completed
  * @property integer $exclamation
  * @property string $reminder
- * @property string $image path to image storage on this web site
+ * @property string $file path to file storage on this web site
  * @property integer $created
  * @property integer $updated
  * 
  * @property Note $Note Relation to note
+ * @property File[] $Files Relation to files
  */
 class Item extends CActiveRecord
 {
@@ -38,10 +39,10 @@ class Item extends CActiveRecord
 		return array(
 			array('name', 'required'),
 			array('note_id, completed, exclamation, created, updated', 'numerical', 'integerOnly' => true),
-			array('name, completed, exclamation, reminder, image', 'safe'),
+			array('name, completed, exclamation, reminder, file', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, note_id, quantity, comment, completed, exclamation, reminder, image, created, updated', 'safe', 'on' => 'search')
+			array('id, name, note_id, quantity, comment, completed, exclamation, reminder, file, created, updated', 'safe', 'on' => 'search')
 		);
 	}
 
@@ -53,7 +54,8 @@ class Item extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'Note' => array(self::BELONGS_TO, 'Note', 'note_id')
+			'Note' => array(self::BELONGS_TO, 'Note', 'note_id'),
+			'Files' => array(self::HAS_MANY, 'File', 'file_id'),
 		);
 	}
 
@@ -71,7 +73,7 @@ class Item extends CActiveRecord
 			'completed' => 'Completed',
 			'exclamation' => 'Exclamation',
 			'reminder' => 'Reminder',
-			'image' => 'Image Source',
+			'file' => 'File Source',
 			'created' => 'Created',
 			'updated' => 'Updated',
 		);
@@ -103,7 +105,7 @@ class Item extends CActiveRecord
 		$criteria->compare('completed', $this->completed);
 		$criteria->compare('exclamation', $this->completed);
 		$criteria->compare('reminder', $this->reminder);
-		$criteria->compare('image', $this->image);
+		$criteria->compare('file', $this->file);
 		$criteria->compare('created', $this->created);
 		$criteria->compare('updated', $this->updated);
 
@@ -125,6 +127,7 @@ class Item extends CActiveRecord
 
 	public function beforeDelete()
 	{
+		File::model()->deleteAllByAttributes(array('item_id' => $this->id));
 		
 		$files = glob('uploads/'.$this->Note->id.'/'.$this->id.'/*'); // get all file names
 		

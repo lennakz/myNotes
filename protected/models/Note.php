@@ -182,6 +182,13 @@ class Note extends CActiveRecord
 		
 		$array = $this->Items;
 		
+		foreach ($array as $item)
+		{
+			$links = explode('|devider|', $item->file);
+			array_pop($links);
+			$item->file = $links;
+		}
+		
 		$p['items'] = array_msort($array, array('exclamation' => SORT_DESC, 'completed' => SORT_ASC, 'updated' => SORT_DESC));
 		
 		return $c->renderPartial('/note/_items', $p, true);

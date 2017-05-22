@@ -3091,3 +3091,33 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
 ---
+2017/05/22 13:34:57 [error] [exception.CDbException] CDbException: The table "file" for active record class "File" cannot be found in the database. in /Users/admin/yii/framework/db/ar/CActiveRecord.php:2387
+Stack trace:
+#0 /Users/admin/yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(File))
+#1 /Users/admin/yii/framework/db/ar/CActiveRecord.php(661): CActiveRecord->getMetaData()
+#2 /Users/admin/yii/framework/db/ar/CActiveRecord.php(1839): CActiveRecord->getTableSchema()
+#3 /Users/admin/Documents/WebRoot/myNotes/protected/models/Item.php(130): CActiveRecord->deleteAllByAttributes(Array)
+#4 /Users/admin/yii/framework/db/ar/CActiveRecord.php(1225): Item->beforeDelete()
+#5 /Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php(244): CActiveRecord->delete()
+#6 [internal function]: ItemController->actionDelete('36')
+#7 /Users/admin/yii/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(ItemController), Array)
+#8 /Users/admin/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ItemController), Object(ReflectionMethod), Array)
+#9 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /Users/admin/yii/framework/web/CController.php(1116): CFilterChain->run()
+#12 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#13 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /Users/admin/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /Users/admin/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /Users/admin/yii/framework/web/CWebApplication.php(282): CController->run('delete')
+#21 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('item/delete')
+#22 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#23 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#24 {main}
+REQUEST_URI=/myNotes/item/delete/36?ajax
+HTTP_REFERER=http://localhost:8888/myNotes/note/items/4
+---

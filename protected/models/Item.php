@@ -127,8 +127,6 @@ class Item extends CActiveRecord
 
 	public function beforeDelete()
 	{
-		File::model()->deleteAllByAttributes(array('item_id' => $this->id));
-		
 		$files = glob('uploads/'.$this->Note->id.'/'.$this->id.'/*'); // get all file names
 		
 		if (!empty($files))

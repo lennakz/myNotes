@@ -8,6 +8,8 @@ $(function() {
 
 	// Adding new items to the list throught ajax
 	$('.ajax-form').submit(function() {
+		$('.addBtn span').hide();
+		$('#loading').show();
 		var $form = $(this);
 		var formdata = false;
 		if (window.FormData){
@@ -36,6 +38,8 @@ $(function() {
 			$('#add-picture-form').val('');
 			$('#file-name').html('');
 			$('#picture-loaded').html('0');
+			$('#loading').hide();
+			$('.addBtn span').show();
 		}).fail(function( jqXHR, textStatus, errorThrown ) {
 			console.log(jqXHR);
 			console.log(textStatus);
@@ -88,7 +92,7 @@ $(function() {
 	$('body').on('click', '#add-file-button', function() {
 		$('#hidden-add-file').trigger('click');
 		var dataId = $(this).data('id');
-			
+							
 		$('#hidden-add-file').change(function(e) {
 			$('#hidden-add-image').val('');
 
@@ -110,6 +114,8 @@ $(function() {
 			else {
 				$('#hidden-add-form').trigger('submit');
 			}
+			$('a[data-id="' + dataId + '"] span').hide();
+			$('a[data-id="' + dataId + '"] #loading-item').show();
 		});
 			
 		$('#hidden-add-form').submit(function() {
@@ -118,7 +124,7 @@ $(function() {
 			if (window.FormData){
 				formdata = new FormData($form[0]);
 			}
-			$('#loading').show();
+			
 			$.ajax({
 				url: baseUrl + '/item/ajaxAddFile/' + dataId,
 				method: 'post',
@@ -128,7 +134,8 @@ $(function() {
 			}).done(function(response) {
 				var target = $form.data('target');
 				$(target).html(response);
-				$('#loading').hide();
+				$('a[data-id="' + dataId + '"] #loading-item').hide();
+				$('a[data-id="' + dataId + '"] span').show();
 			});
 
 		return false;

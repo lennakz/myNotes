@@ -31,7 +31,7 @@
 				<!-- Item text itself -->
 				<div id="item-text"><?php echo ucwords($m->name) ?></div>
 				<?php if (!empty($m->file)): ?>
-					<a class="image-button" id="image-button" data-toggle="collapse" data-target=".image<?php echo $m->id ?>"><span class="glyphicon glyphicon-picture"></span></a>
+					<a class="image-button" id="image-button" data-toggle="collapse" data-target=".image<?php echo $m->id ?>"><span class="glyphicon glyphicon-picture"></span><img width="20" height="20" id="loading-item" src="<?php echo Yii::app()->request->baseUrl ?>/images/loading.gif"></a>
 					<!-- Show images -->
 					<div class="image<?php echo $m->id ?> collapse image-content">
 						<?php foreach ($m->file as $key => $file): ?>
@@ -46,10 +46,14 @@
 						   data-id="<?php echo $m->id ?>"
 						   href="javascript:void(0)">
 							<span class="glyphicon glyphicon-plus"></span>
+							<img width="20" height="20" id="loading-item" src="<?php echo Yii::app()->request->baseUrl ?>/images/loading.gif">
 						</a>
 					</div>
 				<?php else: ?>
-					<a class="image-button" id="add-file-button" data-id="<?php echo $m->id ?>"><span class="glyphicon glyphicon-plus"></span></a>
+					<a class="image-button" id="add-file-button" data-id="<?php echo $m->id ?>">
+						<span class="glyphicon glyphicon-plus"></span>
+						<img width="20" height="20" id="loading-item" src="<?php echo Yii::app()->request->baseUrl ?>/images/loading.gif">
+					</a>
 				<?php endif ?>
 				<!-- On double space show quantity separated -->
 				<span class="items-quantity"><?php echo $m->quantity ?></span>

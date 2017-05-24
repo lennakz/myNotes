@@ -12,37 +12,32 @@
 <script src="<?php echo Yii::app()->request->baseUrl ?>/js/canvasResize/canvasResize.js"></script>
 
 <style>
-	form {
-		position: relative;
-	}
-	#add-picture {
-		position: absolute;
-		right: 27%;
-		color: #000;
-		padding: 11px 14px;
-		text-decoration: none;
-	}
-		
-	#add-picture:hover {
-		color: blue;
-		text-decoration: none;
-	}
-	#add-picture:visited, #add-picture:active {
-		text-decoration: none;
-	}
-	#file-name {
-		position: relative;
-		top: 5px;
-		left: 0;
-	}
-	.input-visible {
-		color: #000;
-		border-radius: 0;
-	}
-	#loading {
-		display: none;
-	}
+form {
+	position: relative;
+}
+#add-picture {
+	position: absolute;
+	right: 27%;
+	color: #000;
+	padding: 11px 14px;
+	text-decoration: none;
+}
 
+#add-picture:hover {
+	color: blue;
+	text-decoration: none;
+}
+#add-picture:visited, #add-picture:active {
+	text-decoration: none;
+}
+#file-name {
+	position: relative;
+	top: 5px;
+	left: 0;
+}
+#loading, #loading-item {
+	display: none;
+}
 </style>
 	
 
@@ -73,7 +68,7 @@
 						   type="file"
 						   name="file" style="display: none">
 					<input type="hidden" name="image-encoded" id="image-encoded">
-					<button type="submit" class="addBtn">Add <img width="20" height="20" id="loading" src="<?php echo Yii::app()->request->baseUrl ?>/images/loading.gif"></button>
+					<button type="submit" class="addBtn"><span>Add</span><img width="20" height="20" id="loading" src="<?php echo Yii::app()->request->baseUrl ?>/images/loading.gif"></button>
 				</form>
 				<a href="#" id="add-picture"><i class="fa fa-camera" aria-hidden="true"></i>&nbsp;&nbsp;<span id="picture-loaded">0</span></a>
 			</div>

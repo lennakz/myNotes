@@ -39,6 +39,9 @@
 		color: #000;
 		border-radius: 0;
 	}
+	#loading {
+		display: none;
+	}
 
 </style>
 	
@@ -70,7 +73,7 @@
 						   type="file"
 						   name="file" style="display: none">
 					<input type="hidden" name="image-encoded" id="image-encoded">
-					<button type="submit" class="addBtn">Add</button>
+					<button type="submit" class="addBtn">Add <img width="20" height="20" id="loading" src="<?php echo Yii::app()->request->baseUrl ?>/images/loading.gif"></button>
 				</form>
 				<a href="#" id="add-picture"><i class="fa fa-camera" aria-hidden="true"></i>&nbsp;&nbsp;<span id="picture-loaded">0</span></a>
 			</div>

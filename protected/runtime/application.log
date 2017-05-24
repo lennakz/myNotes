@@ -4451,3 +4451,72 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
 ---
+2017/05/24 13:43:40 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "image/loading.gif". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('image/loading.g...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/image/loading.gif
+HTTP_REFERER=http://localhost:8888/myNotes/note/items/4
+---
+2017/05/24 13:43:40 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "image/loading.gif". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('image/loading.g...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/image/loading.gif
+HTTP_REFERER=http://localhost:8888/myNotes/note/items/4
+---
+2017/05/24 13:43:40 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/24 13:44:12 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/24 13:44:59 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/24 13:47:25 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "bootstrap/bootstrap.min.css.map". in /Users/admin/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bootstrap/boots...')
+#1 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/myNotes/bootstrap/bootstrap.min.css.map
+---
+2017/05/24 13:48:23 [error] [exception.CHttpException.No Item data received] CHttpException: 400 in /Users/admin/Documents/WebRoot/myNotes/protected/controllers/ItemController.php:61
+Stack trace:
+#0 /Users/admin/yii/framework/web/actions/CInlineAction.php(49): ItemController->actionAjaxCreate()
+#1 /Users/admin/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/admin/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /Users/admin/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/admin/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /Users/admin/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Users/admin/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /Users/admin/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/admin/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/admin/yii/framework/web/CWebApplication.php(282): CController->run('ajaxCreate')
+#10 /Users/admin/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('item/ajaxCreate')
+#11 /Users/admin/yii/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Users/admin/Documents/WebRoot/myNotes/index.php(18): CApplication->run()
+#13 {main}
+REQUEST_URI=/myNotes/item/ajaxCreate
+HTTP_REFERER=http://localhost:8888/myNotes/note/items/4
+---

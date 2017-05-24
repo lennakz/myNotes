@@ -118,6 +118,7 @@ $(function() {
 			if (window.FormData){
 				formdata = new FormData($form[0]);
 			}
+			$('#loading').show();
 			$.ajax({
 				url: baseUrl + '/item/ajaxAddFile/' + dataId,
 				method: 'post',
@@ -127,6 +128,7 @@ $(function() {
 			}).done(function(response) {
 				var target = $form.data('target');
 				$(target).html(response);
+				$('#loading').hide();
 			});
 
 		return false;

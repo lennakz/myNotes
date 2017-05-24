@@ -87,6 +87,7 @@ $(function() {
 	// Add a new picture to database
 	$('body').on('click', '#add-file-button', function() {
 		$('#hidden-add-file').trigger('click');
+		var dataId = $(this).data('id');
 		
 		$('#hidden-add-file').change(function(e) {
 			$('#hidden-add-image').val('');
@@ -114,8 +115,8 @@ $(function() {
 				formdata = new FormData($form[0]);
 			}
 			$.ajax({
-				url: $form.attr('action'),
-				method: $form.attr('method'),
+				url: baseUrl + '/item/ajaxAddFile/' + dataId,
+				method: 'post',
 				data: formdata ? formdata : $form.serialize(),
 				contentType : false,
 				processData : false

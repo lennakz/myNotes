@@ -24,14 +24,14 @@
 		<li	id="item"
 			class="<?php if ($m->completed == 0) echo 'unchecked'; else echo 'checked'; if ($m->exclamation == 1) echo ' exclamation'; ?>"
 			data-link="<?php echo Yii::app()->request->baseUrl ?>/item/ajaxCompleteUpdate/<?php echo $m->id ?>"
-			data-link2="<?php echo Yii::app()->request->baseUrl ?>/item/ajaxExclamationUpdate/<?php echo $m->id ?>"
+			data-add-exclamation="<?php echo Yii::app()->request->baseUrl ?>/item/ajaxExclamationUpdate/<?php echo $m->id ?>"
 			data-target="#ajax-container" >
 				<!-- Check/uncheck button -->
 				<a href="javascript:void(0)" id="item-check" class="pull-left"><?php if ($m->completed == 0): ?><i class="fa fa-square-o" aria-hidden="true"></i><?php else: ?><i class="fa fa-check-square-o" aria-hidden="true"></i><?php endif ?></a>
 				<!-- Item text itself -->
 				<div id="item-text"><?php echo ucwords($m->name) ?></div>
 				<?php if (!empty($m->file)): ?>
-					<a id="image-button" data-toggle="collapse" data-target="#image<?php echo $m->id ?>"><span class="glyphicon glyphicon-picture"></span></a>
+					<a class="image-button" id="image-button" data-toggle="collapse" data-target="#image<?php echo $m->id ?>"><span class="glyphicon glyphicon-picture"></span></a>
 					<!-- Show images -->
 					<div id="image<?php echo $m->id ?>" class="collapse image-content">
 						<?php foreach ($m->file as $key => $file): ?>
@@ -41,11 +41,24 @@
 								<a class="file-download-button" href="<?php echo Yii::app()->request->baseUrl.'/'.$file ?>"><span class="glyphicon glyphicon-file"></span></a>
 							<?php endif ?>
 						<?php endforeach ?>
-						<a class="add-file-button" href="<?php echo Yii::app()->request->baseUrl.'/'.$file ?>"><span class="glyphicon glyphicon-plus"></span></a>
+						<a id="add-file-button<?php echo $m->id ?>"
+						   class="add-file-button" 
+						   href="javascript:void(0)">
+							<span class="glyphicon glyphicon-plus"></span>
+						</a>
 					</div>
 				<?php else: ?>
-					<a id="image-button" data-toggle="collapse" data-target="#image<?php echo $m->id ?>"><span class="glyphicon glyphicon-plus"></span></a>
+					<a class="image-button" id="add-file-button<?php echo $m->id ?>" ><span class="glyphicon glyphicon-plus"></span></a>
 				<?php endif ?>
+				<form style="display: none"
+					  data-target="#ajax-container"
+					  id="hidden-add-form"
+					  action="<?php echo Yii::app()->request->baseUrl ?>/item/ajaxAddFile/<?php echo $m->id ?>"
+					  method="post"
+					  enctype="multipart/form-data">
+					<input id="hidden-add-image" name="hidden-add-image" type="text">
+					<input id="hidden-add-file" name="hidden-add-file" type="file">
+				</form>
 				<!-- On double space show quantity separated -->
 				<span class="items-quantity"><?php echo $m->quantity ?></span>
 				<!-- Delete item button -->
@@ -83,6 +96,8 @@
 
 
 <script>
+	
+	var baseUrl = <?php echo Yii::app()->request->baseUrl ?>;
 	// Swipe left each items
 	$(function() {
 		var a2 = Swiped.init({

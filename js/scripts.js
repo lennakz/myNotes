@@ -75,13 +75,59 @@ $(function() {
 	$('body').on('click', '#button-exclamation', function() {
 		var $item = $(this).parent().next();
 		$.ajax({
-			url: $item.attr('data-link2')
+			url: $item.attr('data-add-exclamation')
 		}).done(function(response) {
 			var target = $item.data('target');
 			$(target).html(response);
 		});
 		
 		return false;
+	});
+	
+	// Add a new picture to database
+	$('body').on('click', '#add-file-button', function() {
+		$('#hidden-add-file').trigger('click');
+		
+		$('#hidden-add-file').change(function(e) {
+			$('#hidden-add-image').val('');
+
+			var file = e.target.files[0];
+			
+			canvasResize(file, {
+				width: 500,
+				height: 0,
+				crop: false,
+				quality: 90,
+				//rotate: 90,
+				callback: function(data, width, height) {
+					$('#hidden-add-file').val('');
+					$('#hidden-add-image').val(data);
+				}
+			});
+			$('#hidden-add-form').trigger('submit');
+		});
+			
+		$('#hidden-add-form').submit(function() {
+			var $form = $(this);
+			var formdata = false;
+			if (window.FormData){
+				formdata = new FormData($form[0]);
+			}
+			$.ajax({
+				url: $form.attr('action'),
+				method: $form.attr('method'),
+				data: formdata ? formdata : $form.serialize(),
+				contentType : false,
+				processData : false
+			}).done(function(response) {
+				var target = $form.data('target');
+				$(target).html(response);
+			});
+
+		return false;
+
+		});
+		
 	});
 	
 	// Show and hide navigation menu for mobile

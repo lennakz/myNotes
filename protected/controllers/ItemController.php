@@ -85,14 +85,14 @@ class ItemController extends Controller
 				$fileName = saveBase64($imageEncouded, $folder); // Save image and return filename
 				
 				$model->file .= $folder.'/'.$fileName .'|devider|';
-				$model->save();
+				$model->save(false);
 			}
 			
 			if ($_FILES['file']['error'] === 0)
 			{
 				$folder = 'uploads/' . $model->Note->id . '/' . $model->id;
 			
-				if(!is_writable($folder))
+				if (!is_writable($folder))
 					mkdir($folder, 0777, true);
 				
 				$file =$_FILES['file'];
@@ -103,14 +103,16 @@ class ItemController extends Controller
 				$uploadedFile->saveAs($folder.'/'.$fileName);
 				
 				$model->file .= $folder.'/'.$fileName.'|devider|';
-				$model->save();
+				$model->save(false);
 			}
 			
 			$json = ['status' => 'ok', 'html' => $model->Note->renderItemsList()];
 		}
-		else 
+		else
+		{
 			$json = ['status' => 'error', 'errors' => $model->errors];
-		
+		}
+			
 		echo json_encode($json);
 		exit;
 	}
@@ -188,7 +190,7 @@ class ItemController extends Controller
 				$uploadedFile->saveAs($folder.'/'.$fileName);
 			}
 						
-			$time =$_POST['Item']['reminder'];
+			$time = $_POST['Item']['reminder'];
 			$model->attributes = $_POST['Item'];
 			$model->quantity = $_POST['Item']['quantity'];
 			$model->reminder = strtotime(str_replace('- ', '', $_POST['Item']['reminder']));
@@ -228,7 +230,47 @@ class ItemController extends Controller
 			$model->exclamation = 1;
 		else
 			$model->exclamation = 0;
-		//dump($model->completed);exit;
+		
+		if ($model->save())
+			echo $model->Note->renderItemsList();
+	}
+	
+	public function actionAjaxAddFile($id)
+	{
+		$model = $this->loadModel($id);
+		
+		//dump($_POST);dump($_FILES);exit;
+		
+		if (!empty($_POST['hidden-add-image']))
+		{
+			$folder = 'uploads/' . $model->Note->id . '/' . $model->id;
+		
+			if(!is_writable($folder))
+				mkdir($folder, 0777, true);
+			
+			$imageEncouded = $_POST['hidden-add-image']; // Encoded base64 with data:image/jpeg;base64, prefix
+
+			$fileName = saveBase64($imageEncouded, $folder); // Save image and return filename
+		}
+
+		if ($_FILES['hidden-add-file']['error'] === 0)
+		{
+			$file =$_FILES['hidden-add-file'];
+			
+			$folder = 'uploads/' . $model->Note->id . '/' . $model->id;
+		
+			if(!is_writable($folder))
+				mkdir($folder, 0777, true);
+			
+			$uploadedFile = CUploadedFile::getInstanceByName('hidden-add-file');
+			$fileName = time().'.'.$uploadedFile->getExtensionName();
+
+			//tempImageResize(300, 300, $uploadedFile); server-side resize
+			$uploadedFile->saveAs($folder.'/'.$fileName);
+		}
+
+		$model->file .= $folder.'/'.$fileName.'|devider|';
+				
 		if ($model->save())
 			echo $model->Note->renderItemsList();
 	}

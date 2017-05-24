@@ -36,6 +36,7 @@ $(function() {
 				$('.ajax-form .input-visible').val('');
 			}
 			$('#add-picture-form').val('');
+			$('#image-encoded').val('');
 			$('#file-name').html('');
 			$('#picture-loaded').html('0');
 			$('#loading').hide();

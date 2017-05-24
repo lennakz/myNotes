@@ -336,6 +336,12 @@ and open the template in the editor.
 			display: inline-block;
 			height: 60px;
 			width: 60px;
+			position: relative;
+			
+			img {
+				position: absolute;
+				top: 20px;
+			}
 			
 			span {
 				font-size: 34px;
@@ -387,6 +393,7 @@ and open the template in the editor.
 
 		/* Style the input */
 		input {
+			color: #000;
 			border: none;
 			width: 75%;
 			padding: 10px 60px 10px 10px;

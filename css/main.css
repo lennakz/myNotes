@@ -384,7 +384,11 @@ and open the template in the editor.
       text-align: center;
       display: inline-block;
       height: 60px;
-      width: 60px; }
+      width: 60px;
+      position: relative; }
+      .items .items-body .file-download-button img, .items .items-body .add-file-button img {
+        position: absolute;
+        top: 20px; }
       .items .items-body .file-download-button span, .items .items-body .add-file-button span {
         font-size: 34px;
         vertical-align: middle;
@@ -417,6 +421,7 @@ and open the template in the editor.
         display: table;
         clear: both; }
     .items .items-body input {
+      color: #000;
       border: none;
       width: 75%;
       padding: 10px 60px 10px 10px;

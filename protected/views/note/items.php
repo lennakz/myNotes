@@ -91,7 +91,7 @@
 			$('#add-picture-form').trigger('click');
 		});
 		$('#add-picture-form').change(function(e) {
-			$('#file-name').html($(this).val().replace('C:\\fakepath\\', 'File name: '));
+			//$('#file-name').html($(this).val().replace('C:\\fakepath\\', 'File name: '));
 			$('#picture-loaded').html('1');
 			$('#image-encoded').val('');
 

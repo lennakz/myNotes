@@ -87,12 +87,13 @@
 <form style="display: none"
 	data-target="#ajax-container"
 	id="hidden-add-form"
-	enctype="multipart/form-data">
+	enctype="multipart/form-data"
+	method="post">
   <input id="hidden-add-image" name="hidden-add-image" type="text">
   <input id="hidden-add-file" name="hidden-add-file" type="file">
 </form>
 
-
+<h6></h6>
 
 <script>
 	var baseUrl = "<?php echo Yii::app()->request->baseUrl ?>";

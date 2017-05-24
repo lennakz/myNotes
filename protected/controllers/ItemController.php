@@ -239,8 +239,6 @@ class ItemController extends Controller
 	{
 		$model = $this->loadModel($id);
 		
-		//dump($_POST);dump($_FILES);exit;
-		
 		if (!empty($_POST['hidden-add-image']))
 		{
 			$folder = 'uploads/' . $model->Note->id . '/' . $model->id;

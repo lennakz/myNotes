@@ -88,24 +88,28 @@ $(function() {
 	$('body').on('click', '#add-file-button', function() {
 		$('#hidden-add-file').trigger('click');
 		var dataId = $(this).data('id');
-		
+			
 		$('#hidden-add-file').change(function(e) {
 			$('#hidden-add-image').val('');
 
 			var file = e.target.files[0];
-			
-			canvasResize(file, {
-				width: 500,
-				height: 0,
-				crop: false,
-				quality: 90,
-				//rotate: 90,
-				callback: function(data, width, height) {
-					$('#hidden-add-file').val('');
-					$('#hidden-add-image').val(data);
-				}
-			});
-			$('#hidden-add-form').trigger('submit');
+			if (file.type === 'image/jpeg' || file.type === 'image/png' || file.type === 'image/gif') {
+				canvasResize(file, {
+					width: 500,
+					height: 0,
+					crop: false,
+					quality: 90,
+					//rotate: 90,
+					callback: function(data, width, height) {
+						$('#hidden-add-file').val('');
+						$('#hidden-add-image').val(data);
+						$('#hidden-add-form').trigger('submit');
+					}
+				});
+			}
+			else {
+				$('#hidden-add-form').trigger('submit');
+			}
 		});
 			
 		$('#hidden-add-form').submit(function() {
@@ -128,8 +132,8 @@ $(function() {
 		return false;
 
 		});
-		
 	});
+	
 	
 	// Show and hide navigation menu for mobile
 	$('#menu-button').on('click', function() {

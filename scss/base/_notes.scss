@@ -56,11 +56,17 @@ and open the template in the editor.
 	padding: 8px 10px;
 	background-color: rgba(0,0,0,0);
 	font-size: 15px;
+	transition: all 0.3s;
 	
 	&:active, &:focus, &:visited {
 		outline: 0 !important;
 		box-shadow: none  !important;
 		text-decoration: none;
+	}
+	&:hover {
+		box-shadow: 0 0 15px #fff;
+		text-decoration: none;
+		transition: all 0.3s;
 	}
 }
 #place-on-map-button {
@@ -139,10 +145,15 @@ and open the template in the editor.
 			margin-top: 25px;
 		}
 		.note-update-form {
+			
 			display: none;
+			
 			input {
 				width: 75%;
 				margin-top: 15px;
+				&:focus {
+					outline: #5cb85c solid 2px;
+				}
 			}
 		}
 	}

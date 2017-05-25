@@ -60,17 +60,15 @@ body {
 		span {
 			font-size: 35px;
 			position: absolute;
-			line-height: 65px;
-			left: 0;
-			height: 100%;
-			width: 100%;
-			text-align: center;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
 			color: #FFF;
 			transition: all 0.5s;
 		}
 	}
 	#view-all-notes-map-button {
-		background-color: #57A429;
+		background-color: #337ab7;
 		border-radius: 999em;
 		width: 70px;
 		height: 70px;
@@ -85,16 +83,15 @@ body {
 		display: inline-block;
 		transition: all 0.5s;
 		&:hover {
-			background-color: #060;
+			background-color: #0b4577;
 			transition: all 0.5s;
 		}
 		span {
+			font-size: 25px;
 			position: absolute;
-			line-height: 65px;
-			left: 0;
-			height: 100%;
-			width: 100%;
-			text-align: center;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
 			color: #FFF;
 			transition: all 0.5s;
 		}

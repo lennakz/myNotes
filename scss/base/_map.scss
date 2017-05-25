@@ -1,34 +1,28 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 2-May-2017, 4:45:16 PM
-    Author     : admin
-*/
-
 #map {
-	height: 100px;
+	height: 400px;
 	width: 100%;
 }
-#save-marker, #delete-marker {
+#map-note {
+	padding: 15px 0 15px 20px;
 	
-}
-#save-marker {
-	margin-right: 20px;
+	form {
+		margin-top: 20px;
+	}
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
+	
 	#map {
-		height: 400px;
+		height: calc(100vh - 106px);
 		width: 100%;
 	}
-	#map-note {
-		padding: 15px 0 15px 20px;
-		form {
-			margin-top: 20px;
-		}
+	
+	#save-marker, #delete-marker {
+
+	}
+	
+	#save-marker {
+		margin-right: 20px;
 	}
 }
 

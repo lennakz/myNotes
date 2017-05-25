@@ -29,6 +29,7 @@ nav {
       padding: 10px !important;
       color: #57A429 !important; }
     nav .navbar-header .icon-brand {
+      text-align: center;
       filter: invert(100%);
       width: 30px;
       height: auto; }
@@ -52,8 +53,7 @@ nav {
   nav #menu-button {
     display: inline-block;
     cursor: pointer;
-    margin-top: 5px;
-    margin-right: 10px; }
+    margin-top: 5px; }
   nav .icon-bar1, nav .icon-bar2, nav .icon-bar3 {
     width: 35px;
     height: 5px;
@@ -116,7 +116,8 @@ and open the template in the editor.
     Author     : admin
 */
 form input, form textarea {
-  width: 100%; }
+  width: 100%;
+  color: #000; }
 form .btn {
   display: block;
   width: 40%;
@@ -254,7 +255,7 @@ and open the template in the editor.
           padding: 5px;
           width: 60px;
           height: 60px;
-          display: inline-block; }
+          float: left; }
           .items .items-body ul #item .image-modal-button img {
             vertical-align: top !important; }
           .items .items-body ul #item .image-modal-button:hover {
@@ -285,6 +286,9 @@ and open the template in the editor.
             .items .items-body ul .hidden-buttons #button-exclamation:hover i {
               opacity: .8;
               text-shadow: 0 0 0 #000; }
+          .items .items-body ul .hidden-buttons #button-exclamation:focus, .items .items-body ul .hidden-buttons #button-exclamation:active, .items .items-body ul .hidden-buttons #button-exclamation:visited {
+            outline: none;
+            background-color: inherit; }
         .items .items-body ul .hidden-buttons #button-edit {
           text-align: center;
           position: absolute;
@@ -303,6 +307,9 @@ and open the template in the editor.
             .items .items-body ul .hidden-buttons #button-edit:hover i {
               opacity: .8;
               text-shadow: 0 0 0 #000; }
+          .items .items-body ul .hidden-buttons #button-edit:focus, .items .items-body ul .hidden-buttons #button-edit:active, .items .items-body ul .hidden-buttons #button-edit:visited {
+            outline: none;
+            background-color: inherit; }
       .items .items-body ul #button-delete {
         text-align: center;
         width: 60px;
@@ -321,6 +328,9 @@ and open the template in the editor.
           .items .items-body ul #button-delete:hover i {
             opacity: .8;
             text-shadow: 0 0 0 #000; }
+        .items .items-body ul #button-delete:focus, .items .items-body ul #button-delete:active, .items .items-body ul #button-delete:visited {
+          outline: none;
+          background-color: inherit; }
       .items .items-body ul #item-check {
         text-align: center;
         margin-right: 15px;
@@ -334,9 +344,13 @@ and open the template in the editor.
           text-shadow: 0 1px 0 #fff;
           opacity: .2; }
         .items .items-body ul #item-check:hover {
-          background-color: yellow;
           color: white; }
           .items .items-body ul #item-check:hover i {
+            opacity: .8;
+            text-shadow: 0 0 0 #000; }
+        .items .items-body ul #item-check:visited, .items .items-body ul #item-check:active, .items .items-body ul #item-check:focus {
+          color: white; }
+          .items .items-body ul #item-check:visited i, .items .items-body ul #item-check:active i, .items .items-body ul #item-check:focus i {
             opacity: .8;
             text-shadow: 0 0 0 #000; }
       .items .items-body ul #item-text {
@@ -365,38 +379,51 @@ and open the template in the editor.
       position: relative;
       right: 180px;
       text-align: center;
-      top: 0;
       height: 60px;
       width: 60px;
-      padding-top: 16px;
       cursor: pointer; }
       .items .items-body .image-button span {
         color: #000;
         text-shadow: 0 1px 0 #fff;
-        opacity: .2; }
+        opacity: .2;
+        top: 50%;
+        transform: translateY(-50%);
+        line-height: inherit; }
       .items .items-body .image-button:hover {
         background-color: #888;
         color: white; }
         .items .items-body .image-button:hover span {
           opacity: .8;
           text-shadow: 0 0 0 #000; }
+      .items .items-body .image-button:focus, .items .items-body .image-button:active, .items .items-body .image-button:visited {
+        outline: none;
+        background-color: inherit; }
+      .items .items-body .image-button img {
+        vertical-align: baseline;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%); }
     .items .items-body .file-download-button, .items .items-body .add-file-button {
       text-align: center;
-      display: inline-block;
       height: 60px;
       width: 60px;
-      position: relative; }
+      padding: 5px;
+      float: left; }
       .items .items-body .file-download-button img, .items .items-body .add-file-button img {
-        position: absolute;
-        top: 20px; }
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        vertical-align: baseline; }
       .items .items-body .file-download-button span, .items .items-body .add-file-button span {
         font-size: 34px;
-        vertical-align: middle;
+        vertical-align: -webkit-baseline-middle;
         color: #000;
         text-shadow: 0 1px 0 #fff;
         opacity: .2;
         position: relative;
-        top: 13px; }
+        top: 50%;
+        transform: translateY(-50%);
+        line-height: inherit; }
       .items .items-body .file-download-button:hover, .items .items-body .add-file-button:hover {
         background-color: #888;
         color: white; }
@@ -440,6 +467,8 @@ and open the template in the editor.
       transition: 0.3s; }
       .items .items-body .addBtn:hover {
         background-color: #bbb; }
+      .items .items-body .addBtn:focus, .items .items-body .addBtn:visited {
+        outline: none; }
 
 @media screen and (max-width: 767px) {
   .items .items-body {
@@ -455,23 +484,68 @@ and open the template in the editor.
         position: absolute;
         right: 60px;
         top: 0; }
+        .items .items-body ul .hidden-buttons #button-exclamation:hover {
+          background-color: inherit; }
+          .items .items-body ul .hidden-buttons #button-exclamation:hover span {
+            text-shadow: 0 1px 0 #fff;
+            opacity: .2; }
+        .items .items-body ul .hidden-buttons #button-exclamation:active, .items .items-body ul .hidden-buttons #button-exclamation:focus, .items .items-body ul .hidden-buttons #button-exclamation:visited {
+          background-color: #888; }
       .items .items-body ul .hidden-buttons #button-edit {
         position: absolute;
         right: 120px;
         top: 0; }
+        .items .items-body ul .hidden-buttons #button-edit:hover {
+          background-color: inherit; }
+          .items .items-body ul .hidden-buttons #button-edit:hover span {
+            text-shadow: 0 1px 0 #fff;
+            opacity: .2; }
+        .items .items-body ul .hidden-buttons #button-edit:active, .items .items-body ul .hidden-buttons #button-edit:focus, .items .items-body ul .hidden-buttons #button-edit:visited {
+          background-color: #888; }
       .items .items-body ul .hidden-buttons #button-delete {
         position: absolute;
         right: 0;
         top: 0; }
+        .items .items-body ul .hidden-buttons #button-delete:hover {
+          background-color: inherit; }
+          .items .items-body ul .hidden-buttons #button-delete:hover span {
+            text-shadow: 0 1px 0 #fff;
+            opacity: .2; }
+        .items .items-body ul .hidden-buttons #button-delete:active, .items .items-body ul .hidden-buttons #button-delete:focus, .items .items-body ul .hidden-buttons #button-delete:visited {
+          background-color: #f44336; }
     .items .items-body .items-quantity {
       left: 80%; }
     .items .items-body #item-check {
       position: relative;
       top: -12px; }
+      .items .items-body #item-check:hover {
+        background-color: inherit; }
+        .items .items-body #item-check:hover i {
+          text-shadow: 0 1px 0 #fff;
+          opacity: .2; }
+      .items .items-body #item-check:active, .items .items-body #item-check:focus, .items .items-body #item-check:visited {
+        background-color: #888;
+        outline: none; }
     .items .items-body #item-text {
       width: 60%; }
     .items .items-body .image-button {
       right: 0; }
+      .items .items-body .image-button:hover {
+        background-color: inherit; }
+        .items .items-body .image-button:hover span {
+          text-shadow: 0 1px 0 #fff;
+          opacity: .2; }
+      .items .items-body .image-button:active, .items .items-body .image-button:focus, .items .items-body .image-button:visited {
+        background-color: #888;
+        outline: none; }
+    .items .items-body .add-file-button:hover {
+      background-color: inherit; }
+      .items .items-body .add-file-button:hover span {
+        text-shadow: 0 1px 0 #fff;
+        opacity: .2; }
+    .items .items-body .add-file-button:active, .items .items-body .add-file-button:focus, .items .items-body .add-file-button:visited {
+      background-color: #888;
+      outline: none; }
     .items .items-body .header {
       background-color: #060;
       padding: 10px 30px 30px 30px;
@@ -568,11 +642,16 @@ and open the template in the editor.
   border: 1px solid #fff;
   padding: 8px 10px;
   background-color: transparent;
-  font-size: 15px; }
+  font-size: 15px;
+  transition: all 0.3s; }
   #edit-button:active, #edit-button:focus, #edit-button:visited, #note-delete-button:active, #note-delete-button:focus, #note-delete-button:visited {
     outline: 0 !important;
     box-shadow: none  !important;
     text-decoration: none; }
+  #edit-button:hover, #note-delete-button:hover {
+    box-shadow: 0 0 15px #fff;
+    text-decoration: none;
+    transition: all 0.3s; }
 
 #place-on-map-button {
   color: #bbb;
@@ -637,35 +716,28 @@ and open the template in the editor.
     .notes #overlay-text .note-update-form input {
       width: 75%;
       margin-top: 15px; }
+      .notes #overlay-text .note-update-form input:focus {
+        outline: #5cb85c solid 2px; }
 
 @media screen and (max-width: 767px) {
   #note-button {
     width: 50%; } }
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 2-May-2017, 4:45:16 PM
-    Author     : admin
-*/
 #map {
-  height: 100px;
+  height: 400px;
   width: 100%; }
 
-#save-marker {
-  margin-right: 20px; }
+#map-note {
+  padding: 15px 0 15px 20px; }
+  #map-note form {
+    margin-top: 20px; }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   #map {
-    height: 400px;
+    height: calc(100vh - 106px);
     width: 100%; }
 
-  #map-note {
-    padding: 15px 0 15px 20px; }
-    #map-note form {
-      margin-top: 20px; } }
+  #save-marker {
+    margin-right: 20px; } }
 @media screen and (max-width: 767px) {
   .xdsoft_datetimepicker {
     width: 80% !important;
@@ -725,15 +797,13 @@ body {
     .button-background #create-note-button span {
       font-size: 35px;
       position: absolute;
-      line-height: 65px;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      text-align: center;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
       color: #FFF;
       transition: all 0.5s; }
   .button-background #view-all-notes-map-button {
-    background-color: #57A429;
+    background-color: #337ab7;
     border-radius: 999em;
     width: 70px;
     height: 70px;
@@ -748,15 +818,14 @@ body {
     display: inline-block;
     transition: all 0.5s; }
     .button-background #view-all-notes-map-button:hover {
-      background-color: #060;
+      background-color: #0b4577;
       transition: all 0.5s; }
     .button-background #view-all-notes-map-button span {
+      font-size: 25px;
       position: absolute;
-      line-height: 65px;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      text-align: center;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
       color: #FFF;
       transition: all 0.5s; }
 

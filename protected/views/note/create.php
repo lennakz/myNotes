@@ -27,13 +27,13 @@
 
 	<div class="form-group">
 		<?php echo $form->labelEx($model, 'title', array('class' => 'control-label')); ?>
-		<?php echo $form->textField($model, 'title'); ?>
+		<?php echo $form->textField($model, 'title', array('autocomplete' => 'off', 'autofocus' => 'autofocus')); ?>
 		<?php echo $form->error($model, 'title', array('class' => 'text-danger text-center')); ?>
 	</div>
 
 	<div class="form-group">
 		<?php echo $form->labelEx($model, 'description', array('class' => 'control-label')); ?>
-		<?php echo $form->textArea($model, 'description', array('rows' => 6, 'cols' => 50)); ?>
+		<?php echo $form->textArea($model, 'description', array('rows' => 6, 'cols' => 50, 'autocomplete' => 'off')); ?>
 		<?php echo $form->error($model, 'description', array('class' => 'text-danger text-center')); ?>
 	</div>
 	

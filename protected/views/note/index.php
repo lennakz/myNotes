@@ -37,7 +37,7 @@
 	
 	<div class="button-background">
 		<a href="<?php echo Yii::app()->request->baseUrl ?>/note/create/" id="create-note-button" class="button-round"><span>+</span></a>
-		<a href="<?php echo Yii::app()->request->baseUrl ?>/note/viewmap/" id="view-all-notes-map-button" class="button-round"><span>GM</span></a>
+		<a href="<?php echo Yii::app()->request->baseUrl ?>/note/viewmap/" id="view-all-notes-map-button" class="button-round"><span class="glyphicon glyphicon-map-marker"></span></a>
 	</div>
 		
 </section>

@@ -141,7 +141,7 @@ and open the template in the editor.
 					padding: 5px;
 				    width: 60px;
 					height: 60px;
-					display: inline-block;
+					float: left;					
 					
 					img {
 						vertical-align: top !important;
@@ -188,6 +188,11 @@ and open the template in the editor.
 							text-shadow: 0 0 0 #000;
 						}
 					}
+					
+					&:focus, &:active, &:visited {
+						outline: none;
+						background-color: inherit;
+					}
 				}
 
 				#button-edit {
@@ -214,6 +219,11 @@ and open the template in the editor.
 							text-shadow: 0 0 0 #000;
 						}
 					}
+					
+					&:focus, &:active, &:visited {
+						outline: none;
+						background-color: inherit;
+					}
 				}
 			}
 			
@@ -221,7 +231,6 @@ and open the template in the editor.
 				text-align: center;
 				width: 60px;
 				height: 60px;
-				
 				position: absolute;
 				right: 0;
 				top: 0;
@@ -243,6 +252,11 @@ and open the template in the editor.
 						text-shadow: 0 0 0 #000;
 					}
 				}
+				
+				&:focus, &:active, &:visited {
+					outline: none;
+					background-color: inherit;
+				}
 			}
 		
 			#item-check {
@@ -261,7 +275,14 @@ and open the template in the editor.
 				}
 				
 				&:hover {
-					background-color: yellow;
+					color: white;
+					i {
+						opacity: .8;
+						text-shadow: 0 0 0 #000;
+					}
+				}
+				
+				&:visited, &:active, &:focus {
 					color: white;
 					i {
 						opacity: .8;
@@ -308,16 +329,17 @@ and open the template in the editor.
 			position: relative;
 			right: 180px;
 			text-align: center;
-			top: 0;
 			height: 60px;
 			width: 60px;
-			padding-top: 16px;
 			cursor: pointer;
 			
 			span {
 				color: #000;
 				text-shadow: 0 1px 0 #fff;
 				opacity: .2;
+				top: 50%;
+				transform: translateY(-50%);
+				line-height: inherit;
 			}
 
 			&:hover {
@@ -329,28 +351,44 @@ and open the template in the editor.
 					text-shadow: 0 0 0 #000;
 				}
 			}
+			
+			&:focus, &:active, &:visited {
+				outline: none;
+				background-color: inherit;
+			}
+			
+			img {
+				vertical-align: baseline;
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+			}
 		}
 		
 		.file-download-button, .add-file-button {
 			text-align: center;
-			display: inline-block;
 			height: 60px;
 			width: 60px;
-			position: relative;
+			padding: 5px;
+			float: left;
 			
 			img {
-				position: absolute;
-				top: 20px;
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+				vertical-align: baseline;
 			}
 			
 			span {
 				font-size: 34px;
-				vertical-align: middle;
+				vertical-align: -webkit-baseline-middle;
 				color: #000;
 				text-shadow: 0 1px 0 #fff;
 				opacity: .2;
 				position: relative;
-				top: 13px;
+				top: 50%;
+				transform: translateY(-50%);
+				line-height: inherit;
 			}
 			
 			&:hover {
@@ -417,6 +455,10 @@ and open the template in the editor.
 			&:hover {
 				background-color: #bbb;
 			}
+			
+			&:focus, &:visited {
+				outline: none;
+			}
 		}
 	}
 }
@@ -438,18 +480,48 @@ and open the template in the editor.
 						position: absolute;
 						right: 60px;
 						top: 0;
+						&:hover {
+							background-color: inherit;
+							span {
+								text-shadow: 0 1px 0 #fff;
+								opacity: .2;
+							}
+						}
+						&:active, &:focus, &:visited {
+							background-color: #888;
+						}
 					}
 
 					#button-edit {
 						position: absolute;
 						right: 120px;
 						top: 0;
+						&:hover {
+							background-color: inherit;
+							span {
+								text-shadow: 0 1px 0 #fff;
+								opacity: .2;
+							}
+						}
+						&:active, &:focus, &:visited {
+							background-color: #888;
+						}
 					}
 					
 					#button-delete {
 						position: absolute;
 						right: 0;
 						top: 0;
+						&:hover {
+							background-color: inherit;
+							span {
+								text-shadow: 0 1px 0 #fff;
+								opacity: .2;
+							}
+						}
+						&:active, &:focus, &:visited {
+							background-color: #f44336;
+						}
 					}
 				}
 				
@@ -462,6 +534,17 @@ and open the template in the editor.
 			#item-check {
 				position: relative;
 				top: -12px;
+				&:hover {
+					background-color: inherit;
+					i {
+						text-shadow: 0 1px 0 #fff;
+						opacity: .2;
+					}
+				}
+				&:active, &:focus, &:visited {
+					background-color: #888;
+					outline: none;
+				}
 			}
 			
 			#item-text {
@@ -470,6 +553,31 @@ and open the template in the editor.
 			
 			.image-button {
 				right: 0;
+				&:hover {
+					background-color: inherit;
+					span {
+						text-shadow: 0 1px 0 #fff;
+						opacity: .2;
+					}
+				}
+				&:active, &:focus, &:visited {
+					background-color: #888;
+					outline: none;
+				}
+			}
+			
+			.add-file-button {
+				&:hover {
+					background-color: inherit;
+					span {
+						text-shadow: 0 1px 0 #fff;
+						opacity: .2;
+					}
+				}
+				&:active, &:focus, &:visited {
+					background-color: #888;
+					outline: none;
+				}
 			}
 
 			.header {

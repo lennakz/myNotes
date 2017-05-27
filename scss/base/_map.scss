@@ -1,28 +1,121 @@
-#map {
-	height: 400px;
-	width: 100%;
-}
-#map-note {
-	padding: 15px 0 15px 20px;
+
+.viewmap, .addmap {
 	
-	form {
-		margin-top: 20px;
+	#map {
+		height: 400px;
+		width: 100%;
 	}
 }
 
 @media screen and (max-width: 767px) {
-	
-	#map {
-		height: calc(100vh - 106px);
-		width: 100%;
-	}
-	
-	#save-marker, #delete-marker {
+	.viewmap, .addmap {
+		
+		margin-top: -20px;
+		
+		.map-header {
+			width: 80%;
+			position: fixed;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 2;
+		}
 
-	}
-	
-	#save-marker {
-		margin-right: 20px;
+		h4 {
+			top: 70px;
+		}
+			
+		h5 {
+			top: 50px;
+		}
+		
+		#map {
+			height: calc(100vh - 50px);
+			width: 100%;
+		}
+		
+		#map-note {
+						
+			.map-menu-button {
+				background-color: #57A429;
+				border-radius: 50%;
+				border: none;
+				width: 70px;
+				height: 70px;
+				box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.26);
+				position: fixed;
+				bottom: 30px;
+				left: 15px;
+				
+				&:hover, &:focus, &:active, &:visited {
+					outline: none;
+				}
+				
+				span {
+					font-size: 35px;
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					color: #FFF;
+				}
+			}
+			
+			.map-form {
+				position: fixed;
+				bottom: 101px;
+				height: 140px;
+				width: 100%;
+				display: none;
+				
+				form {
+					height: 250px;
+					position: absolute;
+					
+					#save-marker, #delete-marker {
+						border-radius: 50%;
+						border: none;
+						width: 50px;
+						height: 50px;
+						box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.26);
+						position: relative;
+						left: 25px;
+						display: block;
+					}
+
+					#save-marker {
+						background-color: lightseagreen;
+						bottom: -15px;
+						
+						&:focus {
+							outline: none;
+						}
+
+						.save-marker-text {
+							font-size: 18px;
+							position: absolute;
+							top: 10px;
+							left: 55px;
+						}
+					}
+
+					#delete-marker {
+						background-color: tomato;
+						bottom: -30px;
+						
+						&:focus {
+							outline: none;
+						}
+
+						.delete-marker-text {
+							font-size: 18px;
+							position: absolute;
+							top: 10px;
+							left: 55px;
+						}
+					}
+				}	
+			}
+		}
 	}
 }
 

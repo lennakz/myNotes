@@ -567,14 +567,14 @@ and open the template in the editor.
 			}
 			
 			.add-file-button {
-				&:hover {
+				&:hover, &:focus, &:visited {
 					background-color: inherit;
 					span {
 						text-shadow: 0 1px 0 #fff;
 						opacity: .2;
 					}
 				}
-				&:active, &:focus, &:visited {
+				 &:active {
 					background-color: #888;
 					outline: none;
 				}

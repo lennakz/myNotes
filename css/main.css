@@ -538,12 +538,12 @@ and open the template in the editor.
       .items .items-body .image-button:active, .items .items-body .image-button:focus, .items .items-body .image-button:visited {
         background-color: #888;
         outline: none; }
-    .items .items-body .add-file-button:hover {
+    .items .items-body .add-file-button:hover, .items .items-body .add-file-button:focus, .items .items-body .add-file-button:visited {
       background-color: inherit; }
-      .items .items-body .add-file-button:hover span {
+      .items .items-body .add-file-button:hover span, .items .items-body .add-file-button:focus span, .items .items-body .add-file-button:visited span {
         text-shadow: 0 1px 0 #fff;
         opacity: .2; }
-    .items .items-body .add-file-button:active, .items .items-body .add-file-button:focus, .items .items-body .add-file-button:visited {
+    .items .items-body .add-file-button:active {
       background-color: #888;
       outline: none; }
     .items .items-body .header {
@@ -722,22 +722,83 @@ and open the template in the editor.
 @media screen and (max-width: 767px) {
   #note-button {
     width: 50%; } }
-#map {
+.viewmap #map, .addmap #map {
   height: 400px;
   width: 100%; }
 
-#map-note {
-  padding: 15px 0 15px 20px; }
-  #map-note form {
-    margin-top: 20px; }
-
 @media screen and (max-width: 767px) {
-  #map {
-    height: calc(100vh - 106px);
-    width: 100%; }
-
-  #save-marker {
-    margin-right: 20px; } }
+  .viewmap, .addmap {
+    margin-top: -20px; }
+    .viewmap .map-header, .addmap .map-header {
+      width: 80%;
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2; }
+    .viewmap h4, .addmap h4 {
+      top: 70px; }
+    .viewmap h5, .addmap h5 {
+      top: 50px; }
+    .viewmap #map, .addmap #map {
+      height: calc(100vh - 50px);
+      width: 100%; }
+    .viewmap #map-note .map-menu-button, .addmap #map-note .map-menu-button {
+      background-color: #57A429;
+      border-radius: 50%;
+      border: none;
+      width: 70px;
+      height: 70px;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.26);
+      position: fixed;
+      bottom: 30px;
+      left: 15px; }
+      .viewmap #map-note .map-menu-button:hover, .viewmap #map-note .map-menu-button:focus, .viewmap #map-note .map-menu-button:active, .viewmap #map-note .map-menu-button:visited, .addmap #map-note .map-menu-button:hover, .addmap #map-note .map-menu-button:focus, .addmap #map-note .map-menu-button:active, .addmap #map-note .map-menu-button:visited {
+        outline: none; }
+      .viewmap #map-note .map-menu-button span, .addmap #map-note .map-menu-button span {
+        font-size: 35px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: #FFF; }
+    .viewmap #map-note .map-form, .addmap #map-note .map-form {
+      position: fixed;
+      bottom: 101px;
+      height: 140px;
+      width: 100%;
+      display: none; }
+      .viewmap #map-note .map-form form, .addmap #map-note .map-form form {
+        height: 250px;
+        position: absolute; }
+        .viewmap #map-note .map-form form #save-marker, .viewmap #map-note .map-form form #delete-marker, .addmap #map-note .map-form form #save-marker, .addmap #map-note .map-form form #delete-marker {
+          border-radius: 50%;
+          border: none;
+          width: 50px;
+          height: 50px;
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.26);
+          position: relative;
+          left: 25px;
+          display: block; }
+        .viewmap #map-note .map-form form #save-marker, .addmap #map-note .map-form form #save-marker {
+          background-color: lightseagreen;
+          bottom: -15px; }
+          .viewmap #map-note .map-form form #save-marker:focus, .addmap #map-note .map-form form #save-marker:focus {
+            outline: none; }
+          .viewmap #map-note .map-form form #save-marker .save-marker-text, .addmap #map-note .map-form form #save-marker .save-marker-text {
+            font-size: 18px;
+            position: absolute;
+            top: 10px;
+            left: 55px; }
+        .viewmap #map-note .map-form form #delete-marker, .addmap #map-note .map-form form #delete-marker {
+          background-color: tomato;
+          bottom: -30px; }
+          .viewmap #map-note .map-form form #delete-marker:focus, .addmap #map-note .map-form form #delete-marker:focus {
+            outline: none; }
+          .viewmap #map-note .map-form form #delete-marker .delete-marker-text, .addmap #map-note .map-form form #delete-marker .delete-marker-text {
+            font-size: 18px;
+            position: absolute;
+            top: 10px;
+            left: 55px; } }
 @media screen and (max-width: 767px) {
   .xdsoft_datetimepicker {
     width: 80% !important;

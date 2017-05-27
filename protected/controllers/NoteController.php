@@ -148,6 +148,17 @@ class NoteController extends Controller
 		
 		$p['note'] = $this->loadModel($id);
 		
+		if (isset($_POST['Note']))
+		{
+			$p['note']->attributes = $_POST['Note'];
+			
+			if ($p['note']->save())
+				$this->redirect(Yii::app()->request->baseUrl . '/note/index');
+			
+			else
+				throw new CHttpException(400, 'Your request is empty');
+		}
+		
 		$this->render('addmap', $p);
 	}
 	
@@ -158,21 +169,6 @@ class NoteController extends Controller
 		$p['notes'] = Note::model()->findAllByAttributes(array('user_id' => Yii::app()->user->id));
 		
 		$this->render('viewmap', $p);
-	}
-	
-	public function actionSavePosition($id)
-	{	
-		$model = $this->loadModel($id);
-		
-		if (isset($_POST['Note']))
-		{
-			$model->attributes = $_POST['Note'];
-			
-			if ($model->save())
-				$this->redirect(Yii::app()->request->baseUrl . '/note/index');
-		}
-		
-		throw new CHttpException(400, 'Your request is empty');
 	}
 
 	/**

@@ -1,6 +1,10 @@
 <?php
 /* @var $this NoteController */
 /* @var $notes Note */
+
+
+//dump($notes);exit;
+
 ?>
 
 <div class="viewmap">
@@ -12,7 +16,10 @@
 </div>
 
 <script>
+	var array = <?= $json ?>;
+	
 	var map, infoWindow, marker;
+	var markers = [];
 	function initMap() {
 		map = new google.maps.Map(document.getElementById('map'), {
 			center: {lat: 49.258, lng: -123.194},
@@ -22,16 +29,15 @@
 			rotateControl: false
 		});
 		
-		<?php foreach ($notes as $k => $m): ?>
-			<?php if (!empty($m->lat) and !empty($m->lng)): ?>
-				lat = <?php echo $m->lat ?>
-				lng = <?php echo $m->lng ?>
-				marker<?php echo $k ?> = new google.maps.Marker({
-					position: {lat: lat, lng: lng},
-					map: map
-				});
-			<?php endif ?>
-		<?php endforeach; ?>
+		for (var note of array) {
+			var lat = parseFloat(note.lat);
+			var lng = parseFloat(note.lng);
+			var m = new google.maps.Marker({
+				position: {lat: lat, lng: lng},
+				map: map
+			});
+			markers.push(m);
+		}
 	}
 </script>
 

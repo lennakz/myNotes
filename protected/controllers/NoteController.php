@@ -167,6 +167,13 @@ class NoteController extends Controller
 		$this->layout = '//layouts/items';
 		
 		$p['notes'] = Note::model()->findAllByAttributes(array('user_id' => Yii::app()->user->id));
+		$array = [];
+		foreach ($p['notes'] as $note)
+		{
+			$array[] = $note->attributes;
+		}
+		
+		$p['json'] = json_encode($array);
 		
 		$this->render('viewmap', $p);
 	}

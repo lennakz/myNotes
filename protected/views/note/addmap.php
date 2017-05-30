@@ -105,7 +105,8 @@ $(function() {
 	
 	function deleteMarker() {
 		marker.setVisible(false);
-		marker.setPosition({lat: null, lng: null});
+		document.getElementById('note-lat').value = '';
+		document.getElementById('note-lng').value = '';
 	}
 
 </script>

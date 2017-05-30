@@ -355,7 +355,8 @@ and open the template in the editor.
             text-shadow: 0 0 0 #000; }
       .items .items-body ul #item-text {
         float: left;
-        padding-top: 15px; }
+        padding-top: 15px;
+        width: 50%; }
       .items .items-body ul li {
         position: relative;
         background: #eee;
@@ -370,8 +371,8 @@ and open the template in the editor.
           background: #ddd; }
     .items .items-body .items-quantity {
       position: absolute;
-      left: 70%;
-      top: 10px; }
+      right: 240px;
+      top: 15px; }
     .items .items-body .image-content {
       clear: both; }
     .items .items-body .image-button {
@@ -453,7 +454,8 @@ and open the template in the editor.
       width: 75%;
       padding: 10px 60px 10px 10px;
       float: left;
-      font-size: 16px; }
+      font-size: 16px;
+      border-radius: 0; }
     .items .items-body .addBtn {
       border: none;
       padding: 10px;
@@ -527,7 +529,7 @@ and open the template in the editor.
         background-color: #888;
         outline: none; }
     .items .items-body #item-text {
-      width: 60%; }
+      width: 56%; }
     .items .items-body .image-button {
       right: 0; }
       .items .items-body .image-button:hover {
@@ -566,7 +568,7 @@ and open the template in the editor.
     .items .items-body input {
       border: none;
       width: 75%;
-      padding: 10px;
+      padding: 10px 50px 10px 10px;
       float: left;
       font-size: 16px; }
     .items .items-body .addBtn {
@@ -798,7 +800,12 @@ and open the template in the editor.
             font-size: 18px;
             position: absolute;
             top: 10px;
-            left: 55px; } }
+            left: 55px; }
+
+  .viewmap .note-info {
+    position: fixed;
+    bottom: 70px;
+    left: 10px; } }
 @media screen and (max-width: 767px) {
   .xdsoft_datetimepicker {
     width: 80% !important;

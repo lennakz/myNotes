@@ -294,6 +294,7 @@ and open the template in the editor.
 			#item-text {
 				float: left;
 				padding-top: 15px;
+				width: 50%;
 			}
 					
 			li {
@@ -316,8 +317,8 @@ and open the template in the editor.
 		
 		.items-quantity {
 		    position: absolute;
-			left: 70%;
-			top: 10px;
+			right: 240px;
+			top: 15px;
 		}
 		
 		.image-content {
@@ -437,6 +438,7 @@ and open the template in the editor.
 			padding: 10px 60px 10px 10px;
 			float: left;
 			font-size: 16px;
+			border-radius: 0;
 		}
 
 		/* Style the "Add" button */
@@ -548,7 +550,7 @@ and open the template in the editor.
 			}
 			
 			#item-text {
-				width: 60%;
+				width: 56%;
 			}
 			
 			.image-button {
@@ -610,7 +612,7 @@ and open the template in the editor.
 			input {
 				border: none;
 				width: 75%;
-				padding: 10px;
+				padding: 10px 50px 10px 10px;;
 				float: left;
 				font-size: 16px;
 			}

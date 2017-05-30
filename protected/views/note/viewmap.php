@@ -12,6 +12,12 @@
 	<h5 class="text-center map-header">All Your Notes</h5>
 
 	<div id="map"></div>
+	
+	<div class="note-info">
+		<h4 id="title"></h4>
+		<p id="updated"></p>
+		<p id="description"></p>
+	</div>
 
 </div>
 
@@ -38,6 +44,21 @@
 			});
 			markers.push(m);
 		}
+		
+		markers.forEach(function(marker, index) {
+			marker.addListener('click', function() {
+				var note = array[index];
+				if (marker.getAnimation() !== null) {
+					marker.setAnimation(null);
+				} 
+				else {
+					marker.setAnimation(google.maps.Animation.BOUNCE);
+				}
+				document.getElementById('title').innerHTML = note.title;
+				document.getElementById('updated').innerHTML = note.updated;
+				document.getElementById('description').innerHTML = note.description;
+			});
+		}); 
 	}
 </script>
 

@@ -5,14 +5,9 @@
 
 <div class="addmap">
 
-	<div id="lat"></div>
-	<div id="lng"></div>
-	<br>
-	<div id="lat1"></div>
-	<div id="lng1"></div>
-	
 	<h5 class="text-center map-header">Place your note on the map</h5>
 	<h4 class="text-center map-header"><?php echo $note->title ?></h4>
+	<h5 id="location" class="text-center map-header"></h5>
 
 	<div id="map"></div>
 
@@ -53,19 +48,16 @@
 		type: 'post',
 		dataType: 'jsonp',
 		success: function(location) {
-			$('#lat').html(location.latitude);
-			$('#lng').html(location.longitude);
+			console.log(location);
 		}
 	});
 	
 	function getIP(json) {
-		document.write(json.ip);
+		console.log(json.ip);
 	};
 	
 	$.getJSON('https://ipinfo.io', function(data){
-		var coor = data.loc.split(',');
-		$('#lat1').html(coor[0]);
-		$('#lng1').html(coor[1]);
+		console.log(data);
 	});
 
 
@@ -109,32 +101,30 @@
 //			infoWindow.open(map, marker);
 //		});
 
-//		// Get current location
-//		if (navigator.geolocation) {
-//			navigator.geolocation.getCurrentPosition(function (position) {
-//				var pos = {
-//					lat: position.coords.latitude,
-//					lng: position.coords.longitude
-//				};
-//
-//				map.setCenter(pos);
-//			}, function () {
-//				handleLocationError(true, infoWindow, map.getCenter());
-//			});
-//		} else {
-//			// Browser doesn't support Geolocation
-//			handleLocationError(false, infoWindow, map.getCenter());
-//		}
-//		
+		// Get current location
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(function (position) {
+				var pos = {
+					lat: position.coords.latitude,
+					lng: position.coords.longitude
+				};
+
+				$('#location').html(pos.lat + ';' + pos.lng);
+			}, function () {
+				handleLocationError(true);
+			});
+		} else {
+			// Browser doesn't support Geolocation
+			handleLocationError(false);
+		}
+		
 	}
-//
-//	function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-//		infoWindow.setPosition(pos);
-//		infoWindow.setContent(browserHasGeolocation ?
-//				'Error: The Geolocation service failed.' :
-//				'Error: Your browser doesn\'t support geolocation.');
-//		infoWindow.open(map);
-//	}
+
+	function handleLocationError(browserHasGeolocation) {
+		$('#location').html(browserHasGeolocation ?
+				'Error: The Geolocation service failed.' :
+				'Error: Your browser doesn\'t support geolocation.');
+	}
 
 	function deleteMarker() {
 		marker.setVisible(false);

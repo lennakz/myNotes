@@ -23,6 +23,7 @@
 
 <script>
 	var array = <?= $json ?>;
+	var baseUrl = "<?= Yii::app()->request->baseUrl ?>";
 	
 	var map, infoWindow, marker;
 	var markers = [];
@@ -35,12 +36,20 @@
 			rotateControl: false
 		});
 		
+		var icon = {
+			url: baseUrl + '/images/icons/marker-icon.png', // url
+			scaledSize: new google.maps.Size(30, 30), // scaled size
+			origin: new google.maps.Point(0,0), // origin
+			anchor: new google.maps.Point(0, 0) // anchor
+		};
+		
 		for (var note of array) {
 			var lat = parseFloat(note.lat);
 			var lng = parseFloat(note.lng);
 			var m = new google.maps.Marker({
 				position: {lat: lat, lng: lng},
-				map: map
+				map: map,
+				icon: icon
 			});
 			markers.push(m);
 		}
@@ -48,12 +57,7 @@
 		markers.forEach(function(marker, index) {
 			marker.addListener('click', function() {
 				var note = array[index];
-				if (marker.getAnimation() !== null) {
-					marker.setAnimation(null);
-				} 
-				else {
-					marker.setAnimation(google.maps.Animation.BOUNCE);
-				}
+				marker.setIcon(baseUrl + '/images/icons/marker-icon-selected.png');
 				document.getElementById('title').innerHTML = note.title;
 				document.getElementById('updated').innerHTML = note.updated;
 				document.getElementById('description').innerHTML = note.description;

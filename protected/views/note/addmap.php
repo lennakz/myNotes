@@ -22,12 +22,6 @@
 			</form>
 		</div>
 	</div>
-
-	<div id="lat"></div>
-	<div id="lng"></div>
-	<br>
-	<div id="lat1"></div>
-	<div id="lng1"></div>
 	
 </div>
 
@@ -42,24 +36,6 @@
 		});
 
 	});
-
-	$.ajax({
-		url: '//freegeoip.net/json',
-		type: 'post',
-		dataType: 'jsonp',
-		success: function(location) {
-			console.log(location);
-		}
-	});
-	
-	function getIP(json) {
-		console.log(json.ip);
-	};
-	
-	$.getJSON('https://ipinfo.io', function(data){
-		console.log(data);
-	});
-
 
 	var map, infoWindow, marker;
 	function initMap() {
@@ -108,8 +84,13 @@
 					lat: position.coords.latitude,
 					lng: position.coords.longitude
 				};
-
-				$('#location').html(pos.lat + ';' + pos.lng);
+				
+				markerMy = new google.maps.Marker({
+					map: map,
+					draggable: false,
+					position: {lat: pos.lat, lng: pos.lng}
+				});
+				
 			}, function () {
 				handleLocationError(true);
 			});
